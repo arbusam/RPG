@@ -13,8 +13,6 @@ namespace RPG.Movement
         {
             UpdateAnimator();
         }
-
-
         public void MoveTo(Vector3 destination)
         {
             GetComponent<NavMeshAgent>().destination = destination;
