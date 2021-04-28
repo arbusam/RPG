@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using RPG.Movement;
 using RPG.Combat;
-using System;
+using RPG.Core;
 
 namespace RPG.Control
 {
@@ -14,9 +14,9 @@ namespace RPG.Control
 
         void Update()
         {
+            if (GetComponent<Health>().IsDead()) return;
             if (InteractWithCombat()) return;
             if (InteractWIthMovement()) return;
-            print("Nothing to do :(");
         }
 
         private bool InteractWithCombat()
@@ -26,10 +26,11 @@ namespace RPG.Control
             {
                 CombatTarget target = hit.transform.GetComponent<CombatTarget>();
                 if (target == null) continue;
+                if (!this.GetComponent<Fighter>().CanAttack(target.gameObject)) continue;
 
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButton(0))
                 {
-                    GetComponent<Fighter>().Attack(target);
+                    GetComponent<Fighter>().Attack(target.gameObject);
                 }
                 return true;
             }
