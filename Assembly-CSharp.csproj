@@ -46,6 +46,8 @@
      <Compile Include="Assets\Scripts\Core\ActionScheduler.cs" />
      <Compile Include="Assets\Scripts\Control\AIController.cs" />
      <Compile Include="Assets\Scripts\Control\PatrolPath.cs" />
+     <Compile Include="Assets\Scripts\CinematicControlRemover.cs" />
+     <Compile Include="Assets\Scripts\CinematicsStartSequence.cs" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />
      <None Include="Assets\Asset Packs\Animations by Explosive\README - Usage Rights for these assets 1.txt" />
@@ -648,6 +650,12 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+        <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+        <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
