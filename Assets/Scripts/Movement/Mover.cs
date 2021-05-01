@@ -7,6 +7,7 @@ using UnityEngine.AI;
 namespace RPG.Movement
 {
     [RequireComponent(typeof(ActionScheduler))]
+    [RequireComponent(typeof(NavMeshAgent))]
     public class Mover : MonoBehaviour, IAction
     {
         [SerializeField] Transform target;
@@ -20,6 +21,22 @@ namespace RPG.Movement
         void Update()
         {
             navMeshAgent.enabled = !GetComponent<Health>().IsDead();
+
+            if (Debug.isDebugBuild)
+            {
+                if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    if (this.tag == "Player")
+                    {
+                        navMeshAgent.speed = 20f;
+                    }
+                    
+                }
+                else
+                {
+                    navMeshAgent.speed = 5.66f;
+                }
+            }
 
             UpdateAnimator();
         }

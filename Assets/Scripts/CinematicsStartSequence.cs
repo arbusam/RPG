@@ -7,8 +7,16 @@ namespace RPG.Cinematics
 {
     public class CinematicsStartSequence : MonoBehaviour
     {
+
         void Start()
         {
+            foreach (CinematicsStartSequence intro in GameObject.FindObjectsOfType<CinematicsStartSequence>())
+            {
+                if (intro == this) continue;
+                Destroy(this.gameObject);
+            }
+            
+            DontDestroyOnLoad(this);
             GetComponent<PlayableDirector>().Play();
             GetComponent<CinematicControlRemover>().DisableControl(GetComponent<PlayableDirector>());
         }
