@@ -12,5 +12,15 @@ namespace RPG.Cinematics
             GetComponent<PlayableDirector>().Play();
             GetComponent<CinematicControlRemover>().DisableControl(GetComponent<PlayableDirector>());
         }
+
+        private void Update() {
+            if (Debug.isDebugBuild)
+            {
+                if (Input.GetKeyDown(KeyCode.C))
+                {
+                    GetComponent<PlayableDirector>().Stop();
+                }
+            }
+        }
     }
 }
