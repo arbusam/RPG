@@ -25,7 +25,11 @@ namespace RPG.Cinematics
         }
         void EnableControl(PlayableDirector director)
         {
-            player.GetComponent<PlayerControls>().enabled = true;
+            if (player != null)
+            {
+                player.GetComponent<PlayerControls>().enabled = true;
+            }
+            
         }
     }
 

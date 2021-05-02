@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using RPG.Core;
 using UnityEngine;
 using UnityEngine.AI;
+using RPG.Saving;
 
 namespace RPG.Movement
 {
     [RequireComponent(typeof(ActionScheduler))]
     [RequireComponent(typeof(NavMeshAgent))]
-    public class Mover : MonoBehaviour, IAction
+    public class Mover : MonoBehaviour, IAction, ISaveable
     {
         [SerializeField] Transform target;
 
@@ -64,6 +65,19 @@ namespace RPG.Movement
             Vector3 localVelocity = transform.InverseTransformDirection(velocity);
             float speed = localVelocity.z;
             GetComponent<Animator>().SetFloat("forwardSpeed", speed);
+        }
+
+        public object CaptureState()
+        {
+            return new SerializableVector3(transform.position);
+        }
+
+        public void RestoreState(object state)
+        {
+            GetComponent<NavMeshAgent>().enabled = false;
+            SerializableVector3 pos = (SerializableVector3)state;
+            transform.position = pos.ToVector();
+            GetComponent<NavMeshAgent>().enabled = true;
         }
     }
 
