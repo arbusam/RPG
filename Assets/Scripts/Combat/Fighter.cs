@@ -22,8 +22,7 @@ namespace RPG.Combat
 
         private void Start()
         {
-            currentWeapon = defaultWeapon;
-            EquipWeapon(currentWeapon);
+            EquipWeapon(defaultWeapon);
         }
 
         private void Update()
@@ -51,6 +50,7 @@ namespace RPG.Combat
 
         public void EquipWeapon(Weapon weapon)
         {
+            currentWeapon = weapon;
             Animator animator = GetComponent<Animator>();
             weapon.Spawn(rightHandTransform, leftHandTransform, animator);
         }

@@ -10,16 +10,18 @@ namespace RPG.Combat
 
         Health target = null;
         [SerializeField] float speed = 1;
+        [SerializeField] bool isHoming = false;
         float damage = 0;
 
         private void Start() {
-            this.transform.LookAt(GetAimLocation());
+            Destroy(this.gameObject, 10f);
         }
 
         void Update()
         {
             if (target == null) return;
             
+            if (isHoming && !target.IsDead()) this.transform.LookAt(GetAimLocation());
             this.transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
 
@@ -27,6 +29,7 @@ namespace RPG.Combat
         {
             this.target = target;
             this.damage = damage;
+            this.transform.LookAt(GetAimLocation());
         }
 
         private Vector3 GetAimLocation()
@@ -39,6 +42,7 @@ namespace RPG.Combat
         private void OnTriggerEnter(Collider other) {
             if (other.gameObject == target.gameObject)
             {
+                if (target.GetComponent<Health>().IsDead()) return;
                 target.TakeDamage(damage);
                 Destroy(this.gameObject);
             }

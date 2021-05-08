@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6302805104141046911}
   - component: {fileID: 6302805104141046908}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Follow Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6302805104141046910}
-  m_LocalRotation: {x: 0.15078175, y: -0.6908436, z: 0.1507818, w: 0.6908436}
+  m_LocalRotation: {x: 0.15077993, y: -0.690844, z: 0.15077993, w: 0.690844}
   m_LocalPosition: {x: 59.330555, y: 48.419228, z: -25.545967}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -79,7 +79,7 @@ GameObject:
   - component: {fileID: 6302805104300843466}
   - component: {fileID: 6302805104300843469}
   - component: {fileID: 6302805104300843468}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
