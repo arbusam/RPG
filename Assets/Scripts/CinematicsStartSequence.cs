@@ -1,22 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using RPG.Saving;
 using UnityEngine;
 using UnityEngine.Playables;
 
 namespace RPG.Cinematics
 {
-    public class CinematicsStartSequence : MonoBehaviour
+    public class CinematicsStartSequence : MonoBehaviour, ISaveable
     {
 
-        void Start()
+        [SerializeField] bool played = false;
+
+        public object CaptureState()
         {
-            foreach (CinematicsStartSequence intro in GameObject.FindObjectsOfType<CinematicsStartSequence>())
-            {
-                if (intro == this) continue;
-                Destroy(this.gameObject);
-            }
-            
-            DontDestroyOnLoad(this);
+            return played;
+        }
+
+        public void RestoreState(object state)
+        {
+            played = (bool)state;
+        }
+
+        public void StartSequence()
+        {
+            if (played) return;
+            played = true;
             GetComponent<PlayableDirector>().Play();
             GetComponent<CinematicControlRemover>().DisableControl(GetComponent<PlayableDirector>());
         }

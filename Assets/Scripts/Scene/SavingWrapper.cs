@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using RPG.Saving;
 using RPG.Scene;
+using RPG.Cinematics;
 using UnityEngine;
 
 public class SavingWrapper : MonoBehaviour
@@ -15,6 +16,12 @@ public class SavingWrapper : MonoBehaviour
         fader.FadeOutImmediate();
         yield return GetComponent<SavingSystem>().LoadLastScene(defaultSaveFile);
         yield return fader.FadeIn(fadeInTime);
+        yield return new WaitForSeconds(0.5f);
+        if (FindObjectOfType<CinematicsStartSequence>() != null)
+        {
+            FindObjectOfType<CinematicsStartSequence>().StartSequence();
+        }
+        
     }
 
     void Update()

@@ -23,14 +23,11 @@ namespace RPG.Movement
         {
             navMeshAgent.enabled = !GetComponent<Health>().IsDead();
 
-            if (Debug.isDebugBuild)
+            if (Debug.isDebugBuild && this.tag == "Player")
             {
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
-                    if (this.tag == "Player")
-                    {
-                        navMeshAgent.speed = 20f;
-                    }
+                    navMeshAgent.speed = 20f;
                     
                 }
                 else

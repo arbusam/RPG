@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using RPG.Movement;
 using RPG.Core;
+using System;
 
 namespace RPG.Combat
 {
@@ -11,12 +12,19 @@ namespace RPG.Combat
     public class Fighter : MonoBehaviour, IAction
     {
 
-        [SerializeField] float weaponRange = 2f;
-        [SerializeField] float timeBetweenAttacks = 1f;
-        [SerializeField] float weaponDamage = 1f;
+        [SerializeField] Transform rightHandTransform = null;
+        [SerializeField] Transform leftHandTransform = null;
+        [SerializeField] Weapon defaultWeapon = null;
+        Weapon currentWeapon;
 
         Transform target;
         float timeSinceLastAttack = Mathf.Infinity;
+
+        private void Start()
+        {
+            currentWeapon = defaultWeapon;
+            EquipWeapon(currentWeapon);
+        }
 
         private void Update()
         {
@@ -32,13 +40,19 @@ namespace RPG.Combat
             else
             {
                 GetComponent<Mover>().Cancel();
-                if (timeSinceLastAttack >= timeBetweenAttacks)
+                if (timeSinceLastAttack >= currentWeapon.TimeBetweenAttacks)
                 {
                     AttackBehavior();
                     timeSinceLastAttack = 0;
                 }
                 
             }
+        }
+
+        public void EquipWeapon(Weapon weapon)
+        {
+            Animator animator = GetComponent<Animator>();
+            weapon.Spawn(rightHandTransform, leftHandTransform, animator);
         }
 
         private void AttackBehavior()
@@ -50,7 +64,7 @@ namespace RPG.Combat
 
         private bool GetIsInRange()
         {
-            return Vector3.Distance(this.transform.position, target.transform.position) < weaponRange;
+            return Vector3.Distance(this.transform.position, target.transform.position) < currentWeapon.WeaponRange;
         }
 
         public void Attack(GameObject combatTarget)
@@ -74,12 +88,25 @@ namespace RPG.Combat
             return true;
         }
 
-        // Animation Event
+        // Animation Events
         void Hit()
         {
             if (target == null) return;
             Health healthComponent = target.GetComponent<Health>();
-            healthComponent.TakeDamage(weaponDamage);
+            if (currentWeapon.HasProjectile())
+            {
+                currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, healthComponent);
+            }
+            else
+            {
+                healthComponent.TakeDamage(currentWeapon.WeaponDamage);
+            }
+            
+        }
+
+        void Shoot()
+        {
+            Hit();
         }
     }
 
