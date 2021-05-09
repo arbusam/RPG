@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using RPG.Movement;
 using RPG.Core;
+using RPG.Saving;
 using System;
 
 namespace RPG.Combat
 {
     [RequireComponent(typeof(ActionScheduler))]
     [RequireComponent(typeof(Mover))]
-    public class Fighter : MonoBehaviour, IAction
+    public class Fighter : MonoBehaviour, IAction, ISaveable
     {
 
         [SerializeField] Transform rightHandTransform = null;
         [SerializeField] Transform leftHandTransform = null;
         [SerializeField] Weapon defaultWeapon = null;
+        public bool rapidFire = false;
         Weapon currentWeapon;
 
         Transform target;
@@ -22,7 +24,10 @@ namespace RPG.Combat
 
         private void Start()
         {
-            EquipWeapon(defaultWeapon);
+            if (currentWeapon == null)
+            {
+                EquipWeapon(defaultWeapon);
+            }
         }
 
         private void Update()
@@ -39,7 +44,7 @@ namespace RPG.Combat
             else
             {
                 GetComponent<Mover>().Cancel();
-                if (timeSinceLastAttack >= currentWeapon.TimeBetweenAttacks)
+                if (timeSinceLastAttack >= currentWeapon.TimeBetweenAttacks || rapidFire)
                 {
                     AttackBehavior();
                     timeSinceLastAttack = 0;
@@ -107,6 +112,18 @@ namespace RPG.Combat
         void Shoot()
         {
             Hit();
+        }
+
+        public object CaptureState()
+        {
+            return currentWeapon.name;
+        }
+
+        public void RestoreState(object state)
+        {
+            string weaponName = (string)state;
+            Weapon weapon = Resources.Load<Weapon>(weaponName);
+            EquipWeapon(weapon);
         }
     }
 

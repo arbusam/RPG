@@ -600,6 +600,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5425441170001936345, guid: f2980b980cfaf49c2be87d5890f58ea1, type: 3}
+      propertyPath: health
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6009794704432472728, guid: f2980b980cfaf49c2be87d5890f58ea1, type: 3}
       propertyPath: patrolPath
       value: 
@@ -1074,6 +1078,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5425441170001936345, guid: f2980b980cfaf49c2be87d5890f58ea1, type: 3}
+      propertyPath: health
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6009794704432472728, guid: f2980b980cfaf49c2be87d5890f58ea1, type: 3}
       propertyPath: wanderer
       value: 1
@@ -1143,6 +1151,10 @@ PrefabInstance:
     - target: {fileID: 1821433933151414869, guid: f2980b980cfaf49c2be87d5890f58ea1, type: 3}
       propertyPath: m_Name
       value: Enemy (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425441170001936345, guid: f2980b980cfaf49c2be87d5890f58ea1, type: 3}
+      propertyPath: health
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6009794704432472728, guid: f2980b980cfaf49c2be87d5890f58ea1, type: 3}
       propertyPath: wanderer
@@ -2204,6 +2216,10 @@ PrefabInstance:
     - target: {fileID: 1821433933151414869, guid: f2980b980cfaf49c2be87d5890f58ea1, type: 3}
       propertyPath: m_Name
       value: Enemy (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425441170001936345, guid: f2980b980cfaf49c2be87d5890f58ea1, type: 3}
+      propertyPath: health
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6009794704432472728, guid: f2980b980cfaf49c2be87d5890f58ea1, type: 3}
       propertyPath: wanderer
@@ -6428,6 +6444,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5425441170001936345, guid: f2980b980cfaf49c2be87d5890f58ea1, type: 3}
+      propertyPath: health
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6009794704432472728, guid: f2980b980cfaf49c2be87d5890f58ea1, type: 3}
       propertyPath: wanderer
       value: 1
@@ -6729,6 +6749,10 @@ PrefabInstance:
     - target: {fileID: 1821433933151414869, guid: f2980b980cfaf49c2be87d5890f58ea1, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425441170001936345, guid: f2980b980cfaf49c2be87d5890f58ea1, type: 3}
+      propertyPath: health
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6009794704432472728, guid: f2980b980cfaf49c2be87d5890f58ea1, type: 3}
       propertyPath: patrolPath
@@ -7470,6 +7494,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5425441170001936345, guid: f2980b980cfaf49c2be87d5890f58ea1, type: 3}
+      propertyPath: health
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6009794704432472728, guid: f2980b980cfaf49c2be87d5890f58ea1, type: 3}
       propertyPath: chaseDistance
       value: 3
@@ -7916,6 +7944,10 @@ PrefabInstance:
     - target: {fileID: 1821433933151414869, guid: f2980b980cfaf49c2be87d5890f58ea1, type: 3}
       propertyPath: m_Name
       value: Enemy (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425441170001936345, guid: f2980b980cfaf49c2be87d5890f58ea1, type: 3}
+      propertyPath: health
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6009794704432472728, guid: f2980b980cfaf49c2be87d5890f58ea1, type: 3}
       propertyPath: wanderer
@@ -8623,9 +8655,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7917093808903372721, guid: 0a2e72ecc6bff4875a77bd3b15245d06, type: 3}
-      propertyPath: defaultWeapon
-      value: 
-      objectReference: {fileID: 11400000, guid: 6846c4dc078074b728a3a6d191749451, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a2e72ecc6bff4875a77bd3b15245d06, type: 3}

@@ -26,11 +26,11 @@ public class SavingWrapper : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.L) && Debug.isDebugBuild)
         {
             Load();
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) && Debug.isDebugBuild)
         {
             Save();
         }
