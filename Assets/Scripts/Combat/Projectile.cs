@@ -11,10 +11,14 @@ namespace RPG.Combat
         Health target = null;
         [SerializeField] float speed = 1;
         [SerializeField] bool isHoming = false;
+        [SerializeField] GameObject hitEffect = null;
+        [SerializeField] float lifetimeSeconds = 10f;
+        [SerializeField] GameObject[] destroyOnHit = null;
+        [SerializeField] float lifeAfterImpact = 0f;
         float damage = 0;
 
         private void Start() {
-            Destroy(this.gameObject, 10f);
+            Destroy(this.gameObject, lifetimeSeconds);
         }
 
         void Update()
@@ -43,8 +47,17 @@ namespace RPG.Combat
             if (other.gameObject == target.gameObject)
             {
                 if (target.GetComponent<Health>().IsDead()) return;
+                if (hitEffect != null)
+                {
+                    GameObject newHitEffect = Instantiate(hitEffect, GetAimLocation(), this.transform.rotation);
+                    newHitEffect.name = "Hit Effect";
+                }
                 target.TakeDamage(damage);
-                Destroy(this.gameObject);
+                foreach (GameObject toDestroy in destroyOnHit)
+                {
+                    Destroy(toDestroy);
+                }
+                Destroy(this.gameObject, lifeAfterImpact);
             }
         }
     }

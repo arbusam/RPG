@@ -195,6 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 40
   isHoming: 0
+  hitEffect: {fileID: 6746285505840001249, guid: 252feaaf2cc504a59bc2cbd8edc4e34d, type: 3}
 --- !u!136 &4988922725789811434
 CapsuleCollider:
   m_ObjectHideFlags: 0
