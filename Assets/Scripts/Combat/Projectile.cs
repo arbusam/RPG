@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using RPG.Core;
+using RPG.Resources;
 using UnityEngine;
 
 namespace RPG.Combat
@@ -17,6 +15,8 @@ namespace RPG.Combat
         [SerializeField] float lifeAfterImpact = 0f;
         float damage = 0;
 
+        GameObject instigator = null;
+
         private void Start() {
             Destroy(this.gameObject, lifetimeSeconds);
         }
@@ -29,10 +29,11 @@ namespace RPG.Combat
             this.transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
 
-        public void SetTarget(Health target, float damage)
+        public void SetTarget(Health target, GameObject instigator, float damage)
         {
             this.target = target;
             this.damage = damage;
+            this.instigator = instigator;
             this.transform.LookAt(GetAimLocation());
         }
 
@@ -52,7 +53,7 @@ namespace RPG.Combat
                     GameObject newHitEffect = Instantiate(hitEffect, GetAimLocation(), this.transform.rotation);
                     newHitEffect.name = "Hit Effect";
                 }
-                target.TakeDamage(damage);
+                target.TakeDamage(instigator, damage);
                 foreach (GameObject toDestroy in destroyOnHit)
                 {
                     Destroy(toDestroy);

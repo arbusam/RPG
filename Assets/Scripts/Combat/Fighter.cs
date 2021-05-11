@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using RPG.Movement;
 using RPG.Core;
 using RPG.Saving;
-using System;
+using RPG.Resources;
 
 namespace RPG.Combat
 {
@@ -19,7 +17,31 @@ namespace RPG.Combat
         public bool rapidFire = false;
         Weapon currentWeapon;
 
+        public Weapon CurrentWeaapon
+        {
+            get
+            {
+                return currentWeapon;
+            }
+        }
+
+        bool isReady = false;
+        public bool IsReady
+        {
+            get
+            {
+                return isReady;
+            }
+        }
+
         Transform target;
+        public Transform Target
+        {
+            get
+            {
+                return target;
+            }
+        }
         float timeSinceLastAttack = Mathf.Infinity;
 
         private void Start()
@@ -33,6 +55,24 @@ namespace RPG.Combat
         private void Update()
         {
             timeSinceLastAttack += Time.deltaTime;
+
+            if (timeSinceLastAttack >= currentWeapon.TimeBetweenAttacks || rapidFire)
+            {
+                isReady = true;
+            }
+            else
+            {
+                isReady = false;
+            }
+
+            if (Input.GetKey(KeyCode.R))
+            {
+                rapidFire = true;
+            }
+            else
+            {
+                rapidFire = false;
+            }
 
             if (target == null) return;
             if (target.GetComponent<Health>().IsDead()) return;
@@ -55,6 +95,7 @@ namespace RPG.Combat
 
         public void EquipWeapon(Weapon weapon)
         {
+            if (weapon == null) return;
             currentWeapon = weapon;
             Animator animator = GetComponent<Animator>();
             weapon.Spawn(rightHandTransform, leftHandTransform, animator);
@@ -100,11 +141,11 @@ namespace RPG.Combat
             Health healthComponent = target.GetComponent<Health>();
             if (currentWeapon.HasProjectile())
             {
-                currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, healthComponent);
+                currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, healthComponent, gameObject);
             }
             else
             {
-                healthComponent.TakeDamage(currentWeapon.WeaponDamage);
+                healthComponent.TakeDamage(this.gameObject, currentWeapon.WeaponDamage);
             }
             
         }
@@ -122,7 +163,7 @@ namespace RPG.Combat
         public void RestoreState(object state)
         {
             string weaponName = (string)state;
-            Weapon weapon = Resources.Load<Weapon>(weaponName);
+            Weapon weapon = UnityEngine.Resources.Load<Weapon>(weaponName);
             EquipWeapon(weapon);
         }
     }
