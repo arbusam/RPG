@@ -72,7 +72,6 @@ namespace RPG.Resources
 
         public void TakeDamage(GameObject instigator, float damage)
         {
-            print(gameObject.name + " took " + damage + " damage");
 
             health.value = Mathf.Max(health.value - damage, 0);
             if (health.value <= 0)
@@ -89,7 +88,7 @@ namespace RPG.Resources
 
         public object CaptureState()
         {
-            return health;
+            return health.value;
         }
 
         public void RestoreState(object state)

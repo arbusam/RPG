@@ -37,7 +37,10 @@ namespace RPG.Stats
         }
 
         private void OnDisable() {
-            experience.onExperienceGained -= UpdateLevel;
+            if (experience != null)
+            {
+                experience.onExperienceGained -= UpdateLevel;
+            }
         }
 
         private void UpdateLevel() {
