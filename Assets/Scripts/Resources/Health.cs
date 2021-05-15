@@ -2,20 +2,30 @@ using UnityEngine;
 using RPG.Saving;
 using RPG.Stats;
 using RPG.Core;
+using GameDevTV.Utils;
 
 namespace RPG.Resources
 {
     public class Health : MonoBehaviour, ISaveable
     {
-        [SerializeField] float health = 100f;
+        LazyValue<float> health;
+        bool restoredHealth = false;
         BaseStats baseStats;
         public float HealthPoints
         {
             get
             {
-                return health;
+                return health.value;
             }
         }
+        public float MaxHealthPoints
+        {
+            get
+            {
+                return GetComponent<BaseStats>().GetStat(Stat.Health);
+            }
+        }
+
         bool isDead = false;
 
         public bool IsDead()
@@ -23,9 +33,34 @@ namespace RPG.Resources
             return isDead;
         }
 
-        private void Start() {
+        private void Awake() {
             baseStats = GetComponent<BaseStats>();
-            health = baseStats.GetHealth();
+            health = new LazyValue<float>(GetInitialHeath);
+            // if (!restoredHealth)
+            // {
+            //     health = baseStats.GetStat(Stat.Health);
+        }
+
+        private void Start() {
+            health.ForceInit();
+        }
+
+        private float GetInitialHeath()
+        {
+            return GetComponent<BaseStats>().GetStat(Stat.Health);
+        }
+
+        private void OnEnable() {
+            baseStats.onLevelUp += ResetHealth;
+        }
+
+        private void OnDisable() {
+            baseStats.onLevelUp -= ResetHealth;
+        }
+
+        private void ResetHealth()
+        {
+            health.value = baseStats.GetStat(Stat.Health);
         }
 
         private void Die()
@@ -37,15 +72,17 @@ namespace RPG.Resources
 
         public void TakeDamage(GameObject instigator, float damage)
         {
-            health = Mathf.Max(health-damage, 0);
-            if (health <= 0)
+            print(gameObject.name + " took " + damage + " damage");
+
+            health.value = Mathf.Max(health.value - damage, 0);
+            if (health.value <= 0)
             {
                 if (!isDead)
                 {
                     Die();
                     Experience experience = instigator.GetComponent<Experience>();
                     if (experience == null) return;
-                    experience.GainExperience(baseStats.GetExperienceAward());
+                    experience.GainExperience(baseStats.GetStat(Stat.ExperienceReward));
                 }
             }
         }
@@ -57,8 +94,12 @@ namespace RPG.Resources
 
         public void RestoreState(object state)
         {
-            health = (float)state;
+            restoredHealth = true;
+            health.value = (float)state;
+            if (health.value <= 0)
+            {
+                Die();
+            }
         }
-    }  
+    }
 }
-

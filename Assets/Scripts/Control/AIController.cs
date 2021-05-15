@@ -3,6 +3,8 @@ using RPG.Combat;
 using RPG.Core;
 using RPG.Movement;
 using RPG.Resources;
+using GameDevTV.Utils;
+using System;
 
 namespace RPG.Control
 {
@@ -19,13 +21,22 @@ namespace RPG.Control
 
         [SerializeField] bool wanderer = false;
 
-        Vector3 guardLocation;
+        LazyValue<Vector3> guardPosition;
         float timeSinceLastSeenPlayer = Mathf.Infinity;
         float timeWaited = Mathf.Infinity;
         int waypointIndex = 0;
 
+        private void Awake() {
+            guardPosition = new LazyValue<Vector3>(GetGuardPosition);
+        }
+
+        private Vector3 GetGuardPosition()
+        {
+            return this.transform.position;
+        }
+
         private void Start() {
-            guardLocation = this.transform.position;
+            guardPosition.ForceInit();
         }
 
         private void Update() {
@@ -56,7 +67,7 @@ namespace RPG.Control
         {
             if (wanderer) return;
 
-            Vector3 nextPosition = guardLocation;
+            Vector3 nextPosition = guardPosition.value;
 
             if (patrolPath != null)
             {

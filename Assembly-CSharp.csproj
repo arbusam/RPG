@@ -37,7 +37,10 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Combat\Fighter.cs" />
+     <Compile Include="Assets\Scripts\Combat\WeaponLabel.cs" />
      <Compile Include="Assets\Scripts\Core\FollowCamera.cs" />
+     <Compile Include="Assets\Scripts\Stats\IModifierProvider.cs" />
+     <Compile Include="Assets\Scripts\Stats\Stats.cs" />
      <Compile Include="Assets\Camera\CameraSwitcher.cs" />
      <Compile Include="Assets\Scripts\Scene\SavingWrapper.cs" />
      <Compile Include="Assets\Scripts\Core\IAction.cs" />
@@ -49,27 +52,28 @@
      <Compile Include="Assets\Scripts\Combat\WeaponPickup.cs" />
      <Compile Include="Assets\Scripts\Combat\Weapon.cs" />
      <Compile Include="Assets\Scripts\Saving\SavingSystem.cs" />
+     <Compile Include="Assets\Scripts\Stats\Experience.cs" />
      <Compile Include="Assets\Scripts\CinematicControlRemover.cs" />
      <Compile Include="Assets\Scripts\CinematicsStartSequence.cs" />
      <Compile Include="Assets\Scripts\Movement\Mover.cs" />
      <Compile Include="Assets\Scripts\Control\PlayerControls.cs" />
      <Compile Include="Assets\Scripts\Scene\Portal.cs" />
      <Compile Include="Assets\Scripts\Combat\Projectile.cs" />
+     <Compile Include="Assets\Scripts\Stats\CharacterClass.cs" />
+     <Compile Include="Assets\Scripts\Combat\EnemyHealthDisplay.cs" />
      <Compile Include="Assets\Scripts\Saving\SaveableEntity.cs" />
+     <Compile Include="Assets\Scripts\Resources\HealthDisplay.cs" />
      <Compile Include="Assets\Scripts\Control\AIController.cs" />
      <Compile Include="Assets\Camera\CameraSwitcher1.cs" />
      <Compile Include="Assets\Scripts\Resources\Health.cs" />
+     <Compile Include="Assets\Scripts\Stats\LevelDisplay.cs" />
+     <Compile Include="Assets\Scripts\Stats\XPDisplay.cs" />
+     <Compile Include="Assets\Scripts\Stats\BaseStats.cs" />
      <Compile Include="Assets\Scripts\Combat\CombatTarget.cs" />
      <Compile Include="Assets\Scripts\Core\ActionScheduler.cs" />
+     <Compile Include="Assets\Scripts\Stats\Progression.cs" />
      <Compile Include="Assets\Scripts\Scene\Fader.cs" />
-     <Compile Include="Assets\Stats\BaseStats.cs" />
-     <Compile Include="Assets\Stats\CharacterClass.cs" />
-     <Compile Include="Assets\Stats\Progression.cs" />
-     <Compile Include="Assets\Scripts\Resources\HealthDisplay.cs" />
-     <Compile Include="Assets\Scripts\Combat\EnemyHealthDisplay.cs" />
-     <Compile Include="Assets\Scripts\Combat\WeaponLabel.cs" />
-     <Compile Include="Assets\Scripts\Resources\Experience.cs" />
-     <Compile Include="Assets\Stats\Stats.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Utils\LazyValue.cs" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
      <None Include="Assets\Asset Packs\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />

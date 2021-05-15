@@ -11,8 +11,6 @@ namespace RPG.Combat
         [SerializeField] bool isHoming = false;
         [SerializeField] GameObject hitEffect = null;
         [SerializeField] float lifetimeSeconds = 10f;
-        [SerializeField] GameObject[] destroyOnHit = null;
-        [SerializeField] float lifeAfterImpact = 0f;
         float damage = 0;
 
         GameObject instigator = null;
@@ -44,21 +42,24 @@ namespace RPG.Combat
             return target.transform.position + Vector3.up * targetCapsule.height / 2;
         }
 
+        private Vector3 GetAimLocation(Transform enemy)
+        {
+            CapsuleCollider targetCapsule = target.GetComponent<CapsuleCollider>();
+            if (targetCapsule == null) return enemy.position;
+            return enemy.position + Vector3.up * targetCapsule.height / 2;
+        }
+
         private void OnTriggerEnter(Collider other) {
-            if (other.gameObject == target.gameObject)
+            if (other.gameObject.GetComponent<Health>() != null && other.gameObject != instigator)
             {
-                if (target.GetComponent<Health>().IsDead()) return;
+                if (other.GetComponent<Health>().IsDead()) return;
                 if (hitEffect != null)
                 {
-                    GameObject newHitEffect = Instantiate(hitEffect, GetAimLocation(), this.transform.rotation);
+                    GameObject newHitEffect = Instantiate(hitEffect, GetAimLocation(other.transform), this.transform.rotation);
                     newHitEffect.name = "Hit Effect";
                 }
-                target.TakeDamage(instigator, damage);
-                foreach (GameObject toDestroy in destroyOnHit)
-                {
-                    Destroy(toDestroy);
-                }
-                Destroy(this.gameObject, lifeAfterImpact);
+                other.GetComponent<Health>().TakeDamage(instigator, damage);
+                Destroy(this.gameObject);
             }
         }
     }

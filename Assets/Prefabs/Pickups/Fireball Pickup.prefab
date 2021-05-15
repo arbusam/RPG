@@ -84,6 +84,10 @@ PrefabInstance:
       propertyPath: m_Direction
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1949482813884316978, guid: 3c36725827a46491987d43b0f943ab94, type: 3}
+      propertyPath: weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 6846c4dc078074b728a3a6d191749451, type: 2}
     - target: {fileID: 8336947420396513637, guid: 3c36725827a46491987d43b0f943ab94, type: 3}
       propertyPath: m_Name
       value: Fireball Pickup

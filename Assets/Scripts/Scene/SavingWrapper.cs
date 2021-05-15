@@ -10,13 +10,19 @@ public class SavingWrapper : MonoBehaviour
 {
     const string defaultSaveFile = "save1";
     [SerializeField] float fadeInTime = 0.2f;
+    [SerializeField] float fadeWaitTime = 0.5f;
 
-    private IEnumerator Start() {
+    private void Awake()
+    {
+        StartCoroutine(LoadLastScene());
+    }
+
+    private IEnumerator LoadLastScene() {
         Fader fader = FindObjectOfType<Fader>();
         fader.FadeOutImmediate();
         yield return GetComponent<SavingSystem>().LoadLastScene(defaultSaveFile);
+        yield return new WaitForSeconds(fadeWaitTime);
         yield return fader.FadeIn(fadeInTime);
-        yield return new WaitForSeconds(0.5f);
         if (FindObjectOfType<CinematicsStartSequence>() != null)
         {
             FindObjectOfType<CinematicsStartSequence>().StartSequence();
@@ -34,6 +40,10 @@ public class SavingWrapper : MonoBehaviour
         {
             Save();
         }
+        if (Input.GetKeyDown(KeyCode.Delete) && Debug.isDebugBuild)
+        {
+            Delete();
+        }
     }
 
     public void Save()
@@ -44,5 +54,11 @@ public class SavingWrapper : MonoBehaviour
     public void Load()
     {
         GetComponent<SavingSystem>().Load(defaultSaveFile);
+    }
+
+    public void Delete()
+    {
+        GetComponent<SavingSystem>().Delete(defaultSaveFile);
+        print("Reset Save");
     }
 }

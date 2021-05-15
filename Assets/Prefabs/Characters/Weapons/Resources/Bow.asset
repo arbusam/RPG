@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponRange: 15
   timeBetweenAttacks: 1
-  weaponDamage: 1.5
+  weaponDamage: 2
   isRightHanded: 0
   projectile: {fileID: 419894636, guid: 4a6d187846f9b457fb0a7eb22b8d0361, type: 3}
   weaponPrefab: {fileID: 8750459462439570550, guid: d898f2c8c12c8482ba2476ed03bc9c8a, type: 3}

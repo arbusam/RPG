@@ -23,7 +23,7 @@ namespace RPG.Combat
                 text.text = "N/A";
                 return;
             }
-            text.text = target.GetComponent<Health>().HealthPoints.ToString();
+            text.text = target.GetComponent<Health>().HealthPoints.ToString() + "/" + target.GetComponent<Health>().MaxHealthPoints.ToString();
         }
     }
 }

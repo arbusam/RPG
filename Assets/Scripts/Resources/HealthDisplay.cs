@@ -15,7 +15,7 @@ namespace RPG.Resources
         }
 
         private void Update() {
-            text.text = health.HealthPoints.ToString();
+            text.text = health.HealthPoints.ToString() + "/" + health.MaxHealthPoints.ToString();
         }
     }
 }

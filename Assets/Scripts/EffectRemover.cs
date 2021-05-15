@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EffectRemover : MonoBehaviour
 {
+    [SerializeField] GameObject targetToDestroy = null;
     new ParticleSystem particleSystem;
 
     void Start()
@@ -15,7 +16,15 @@ public class EffectRemover : MonoBehaviour
     private void Update() {
         if (!particleSystem.IsAlive())
         {
-            Destroy(this.gameObject);
+            if (targetToDestroy != null)
+            {
+                Destroy(targetToDestroy);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+            
         }
     }
 }
