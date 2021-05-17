@@ -1,4 +1,5 @@
-using RPG.Resources;
+using RPG.Control;
+using RPG.Attributes;
 using UnityEngine;
 
 namespace RPG.Combat
@@ -14,6 +15,7 @@ namespace RPG.Combat
         [SerializeField] AnimatorOverrideController animatorOverride = null;
 
         const string weaponName = "Weapon";
+        public CursorMapping cursorMapping;
 
         public float WeaponRange
         {

@@ -25,8 +25,8 @@ namespace RPG.Cinematics
         {
             if (played) return;
             played = true;
-            GetComponent<PlayableDirector>().Play();
             GetComponent<CinematicControlRemover>().DisableControl(GetComponent<PlayableDirector>());
+            GetComponent<PlayableDirector>().Play();
         }
 
         private void Update() {

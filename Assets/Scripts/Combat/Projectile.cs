@@ -1,5 +1,6 @@
-using RPG.Resources;
+using RPG.Attributes;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace RPG.Combat
 {
@@ -11,6 +12,11 @@ namespace RPG.Combat
         [SerializeField] bool isHoming = false;
         [SerializeField] GameObject hitEffect = null;
         [SerializeField] float lifetimeSeconds = 10f;
+        [SerializeField] float lifeAfterImpact = 1f;
+        [SerializeField] GameObject[] destroyOnHit = null;
+
+        [SerializeField] UnityEvent hit;
+
         float damage = 0;
 
         GameObject instigator = null;
@@ -49,18 +55,25 @@ namespace RPG.Combat
             return enemy.position + Vector3.up * targetCapsule.height / 2;
         }
 
-        private void OnTriggerEnter(Collider other) {
-            if (other.gameObject.GetComponent<Health>() != null && other.gameObject != instigator)
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.GetComponent<Health>() != target) return;
+            if (target.IsDead()) return;
+            target.TakeDamage(instigator, damage);
+
+            speed = 0;
+
+            hit.Invoke();
+
+            if (hitEffect != null)
             {
-                if (other.GetComponent<Health>().IsDead()) return;
-                if (hitEffect != null)
-                {
-                    GameObject newHitEffect = Instantiate(hitEffect, GetAimLocation(other.transform), this.transform.rotation);
-                    newHitEffect.name = "Hit Effect";
-                }
-                other.GetComponent<Health>().TakeDamage(instigator, damage);
-                Destroy(this.gameObject);
+                Instantiate(hitEffect, GetAimLocation(), transform.rotation);
             }
+            foreach(GameObject toDestroy in destroyOnHit)
+            {
+                Destroy(toDestroy);
+            }
+            Destroy(gameObject, lifeAfterImpact);
         }
     }
 }

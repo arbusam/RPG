@@ -19,3 +19,7 @@ MonoBehaviour:
   projectile: {fileID: 419894636, guid: 4a6d187846f9b457fb0a7eb22b8d0361, type: 3}
   weaponPrefab: {fileID: 8750459462439570550, guid: d898f2c8c12c8482ba2476ed03bc9c8a, type: 3}
   animatorOverride: {fileID: 22100000, guid: 478b75a76523c469185f6669cf77ee48, type: 2}
+  cursorMapping:
+    type: 0
+    texture: {fileID: 2800000, guid: d65d95ca16518034fa82669a92d0b6e7, type: 3}
+    hotspot: {x: 0, y: 0}

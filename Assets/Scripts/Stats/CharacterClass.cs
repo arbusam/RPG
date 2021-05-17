@@ -5,6 +5,7 @@ namespace RPG.Stats
         Player,
         CloseCombat,
         Mage,
-        Archer
+        Archer,
+        Minion
     }
 }

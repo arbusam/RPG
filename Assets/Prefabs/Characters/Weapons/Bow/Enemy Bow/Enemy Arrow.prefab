@@ -63,6 +63,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6752649589866108325, guid: 4a6d187846f9b457fb0a7eb22b8d0361, type: 3}
+      propertyPath: Mute
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7550588510679453016, guid: 4a6d187846f9b457fb0a7eb22b8d0361, type: 3}
       propertyPath: m_Name
       value: Enemy Arrow

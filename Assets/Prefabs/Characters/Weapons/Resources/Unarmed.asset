@@ -19,3 +19,7 @@ MonoBehaviour:
   projectile: {fileID: 0}
   weaponPrefab: {fileID: 0}
   animatorOverride: {fileID: 0}
+  cursorMapping:
+    type: 0
+    texture: {fileID: 0}
+    hotspot: {x: 0, y: 0}

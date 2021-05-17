@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.AI;
+using RPG.Control;
 
 namespace RPG.Scene
 {
@@ -32,13 +33,17 @@ namespace RPG.Scene
         {
             if (sceneToLoad < 0)
             {
-                Debug.LogError(this.name + "'s sceneToNull is not set");
+                Debug.LogError(this.name + "'s sceneToLoad is not set");
                 yield break;
             }
 
             DontDestroyOnLoad(this.gameObject);
 
             Fader fader = FindObjectOfType<Fader>();
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+            player.GetComponent<PlayerControls>().SetCursor(CursorType.None);
+            player.GetComponent<PlayerControls>().enabled = false;
             
             yield return fader.FadeOut(fadeOutTime);
 
@@ -48,6 +53,11 @@ namespace RPG.Scene
 
             yield return SceneManager.LoadSceneAsync(sceneToLoad);
 
+            player = GameObject.FindGameObjectWithTag("Player");
+
+            player.GetComponent<PlayerControls>().SetCursor(CursorType.None);
+            player.GetComponent<PlayerControls>().enabled = false;
+
             wrapper.Load();
             
             Portal otherPortal = GetOtherPortal();
@@ -56,6 +66,8 @@ namespace RPG.Scene
             yield return new WaitForSeconds(fadeWaitTime);
             yield return fader.FadeIn(fadeInTime);
             wrapper.Save();
+
+            player.GetComponent<PlayerControls>().enabled = true;
             Destroy(this.gameObject);
         }
 

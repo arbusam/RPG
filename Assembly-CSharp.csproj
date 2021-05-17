@@ -62,10 +62,10 @@
      <Compile Include="Assets\Scripts\Stats\CharacterClass.cs" />
      <Compile Include="Assets\Scripts\Combat\EnemyHealthDisplay.cs" />
      <Compile Include="Assets\Scripts\Saving\SaveableEntity.cs" />
-     <Compile Include="Assets\Scripts\Resources\HealthDisplay.cs" />
+     <Compile Include="Assets\Scripts\Attributes\HealthDisplay.cs" />
      <Compile Include="Assets\Scripts\Control\AIController.cs" />
      <Compile Include="Assets\Camera\CameraSwitcher1.cs" />
-     <Compile Include="Assets\Scripts\Resources\Health.cs" />
+     <Compile Include="Assets\Scripts\Attributes\Health.cs" />
      <Compile Include="Assets\Scripts\Stats\LevelDisplay.cs" />
      <Compile Include="Assets\Scripts\Stats\XPDisplay.cs" />
      <Compile Include="Assets\Scripts\Stats\BaseStats.cs" />
@@ -74,6 +74,14 @@
      <Compile Include="Assets\Scripts\Stats\Progression.cs" />
      <Compile Include="Assets\Scripts\Scene\Fader.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Utils\LazyValue.cs" />
+     <Compile Include="Assets\Scripts\Control\IRaycastable.cs" />
+     <Compile Include="Assets\Scripts\Control\Cursor.cs" />
+     <Compile Include="Assets\Scripts\Core\CameraFacing.cs" />
+     <Compile Include="Assets\Scripts\UI\DamageText.cs" />
+     <Compile Include="Assets\Scripts\ReplaceWithPrefab.cs" />
+     <Compile Include="Assets\Scripts\UI\DamageTextSpawner.cs" />
+     <Compile Include="Assets\Scripts\Destroyer.cs" />
+     <Compile Include="Assets\Scripts\Attributes\HealthBar.cs" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
      <None Include="Assets\Asset Packs\BOXOPHOBIC\Skybox Cubemap Extended\Core\Shaders\Skybox Cubemap Extended.shader" />
