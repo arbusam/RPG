@@ -8,8 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: mat_fx_smoke_01
-  m_Shader: {fileID: 7, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _FADING_ON _SOFTPARTICLES_ON
+  m_Shader: {fileID: 200, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _FADING_ON _GLOSSYREFLECTIONS_OFF _SOFTPARTICLES_ON
   m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -120,8 +120,9 @@ Material:
     - _SoftParticlesFarFadeDistance: 3
     - _SoftParticlesNearFadeDistance: 0
     - _SpecularHighlights: 1
-    - _SrcBlend: 5
+    - _SrcBlend: 1
     - _Surface: 1
+    - _UVSec: 0
     - _WorkflowMode: 1
     - _ZWrite: 0
     m_Colors:
