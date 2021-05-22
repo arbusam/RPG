@@ -14,6 +14,7 @@ namespace RPG.Attributes
         BaseStats baseStats;
 
         [SerializeField] UnityEvent<float> takeDamage;
+        [SerializeField] UnityEvent onDie;
 
         public float HealthPoints
         {
@@ -78,6 +79,7 @@ namespace RPG.Attributes
 
         private void Die()
         {
+            onDie.Invoke();
             isDead = true;
             GetComponent<Animator>().SetTrigger("die");
             GetComponent<ActionScheduler>().StopCurrentAction();

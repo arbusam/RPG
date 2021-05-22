@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chaseDistance: 5
   suspisionTime: 2
+  agroCooldownTime: 5
   waitTime: 1
+  shoutDistance: 5
   patrolPath: {fileID: 0}
   waypointTolerance: 1
   wanderer: 0
@@ -112,9 +114,69 @@ PrefabInstance:
       propertyPath: health
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: -1768897539650785055, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1768897539650785055, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1768897539650785055, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1768897539650785055, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6009794704432472728}
+    - target: {fileID: -1768897539650785055, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1768897539650785055, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1768897539650785055, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AggrevateNearbyEnemies
+      objectReference: {fileID: 0}
+    - target: {fileID: -1768897539650785055, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 6009794704432472728}
+    - target: {fileID: -1768897539650785055, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1768897539650785055, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Aggrevate
+      objectReference: {fileID: 0}
+    - target: {fileID: -1768897539650785055, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RPG.Control.AIController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -1768897539650785055, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: RPG.Control.AIController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -1768897539650785055, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1768897539650785055, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
+      propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: -1768897539650785055, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 538124692, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
       propertyPath: m_Speed
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1175455073, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
       propertyPath: weapon

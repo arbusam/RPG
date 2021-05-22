@@ -8,9 +8,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: mat_fx_fire_01
-  m_Shader: {fileID: 101, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION _FADING_ON _SOFTPARTICLES_ON
-  m_LightmapFlags: 2
+  m_Shader: {fileID: 200, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _EMISSION _SOFTPARTICLES_ON
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
   m_CustomRenderQueue: -1
@@ -52,7 +52,15 @@ Material:
         m_Texture: {fileID: 2800000, guid: 0152e34d879bd824db6f38da8f357687, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Occlusion:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -95,27 +103,35 @@ Material:
     - _DistortionEnabled: 0
     - _DistortionStrength: 1
     - _DistortionStrengthScaled: 0.1
-    - _DstBlend: 1
+    - _DstBlend: 0
+    - _EmissionEnabled: 0
     - _EmissionScale: 1
     - _FlipbookBlending: 0
     - _FlipbookMode: 0
+    - _GlossMapScale: 1
     - _Glossiness: 1
+    - _GlossyReflections: 1
     - _InvFade: 3
+    - _LightingEnabled: 0
     - _Lightmapping: 0
-    - _Mode: 2
+    - _Metallic: 0
+    - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _Refract_Tile: 0.1
     - _Refraction_Amount: 0.05
+    - _Shininess: 0.078125
+    - _SmoothnessTextureChannel: 0
     - _SoftParticlesEnabled: 1
     - _SoftParticlesFarFadeDistance: 1
     - _SoftParticlesNearFadeDistance: 0
-    - _SrcBlend: 5
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
     - _Surface: 1
     - _UVPrim: 0
     - _UVSec: 0
-    - _ZWrite: 0
+    - _ZWrite: 1
     - _emiss_intensity: 0.2
     - _node_34: 0.1
     - _node_77: 0
@@ -124,8 +140,10 @@ Material:
     - _BaseColorAddSubDiff: {r: 1, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
     - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 32, g: 12.528301, b: 12.528301, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 1, b: 0, a: 0}
+    - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _SpecularColor: {r: 0, g: 0, b: 0, a: 1}
     - _TintColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

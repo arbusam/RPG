@@ -14,20 +14,31 @@ namespace RPG.Control
         [SerializeField] float chaseDistance = 5f;
 
         [SerializeField] float suspisionTime = 2f;
+        [SerializeField] float agroCooldownTime = 5f;
         [SerializeField] float waitTime = 1f;
+
+        [SerializeField] float shoutDistance = 5f;
 
         [SerializeField] PatrolPath patrolPath;
         [SerializeField] float waypointTolerance = 1f;
 
         [SerializeField] bool wanderer = false;
 
+        Fighter fighter;
+        GameObject player;
+
+        bool hasShout = true;
+
         LazyValue<Vector3> guardPosition;
         float timeSinceLastSeenPlayer = Mathf.Infinity;
         float timeWaited = Mathf.Infinity;
+        float timeSinceAggrevated = Mathf.Infinity;
         int waypointIndex = 0;
 
         private void Awake() {
             guardPosition = new LazyValue<Vector3>(GetGuardPosition);
+            fighter = GetComponent<Fighter>();
+            player = GameObject.FindWithTag("Player");
         }
 
         private Vector3 GetGuardPosition()
@@ -39,31 +50,70 @@ namespace RPG.Control
             guardPosition.ForceInit();
         }
 
-        private void Update() {
+        private void Update()
+        {
             if (GetComponent<Health>().IsDead()) return;
 
-            GameObject player = GameObject.FindWithTag("Player");
-            
-            float distance = Vector3.Distance(this.transform.position, player.transform.position);
-            if (distance <= chaseDistance)
+            if (IsAggrevated() && fighter.CanAttack(player))
             {
-                timeSinceLastSeenPlayer = 0;
-                GetComponent<Fighter>().Attack(player);
+                AttackBehavior(player);
             }
             else if (timeSinceLastSeenPlayer <= suspisionTime)
             {
-                GetComponent<ActionScheduler>().StopCurrentAction();
+                hasShout = true;
+                SuspicionBehavior();
             }
             else
             {
-                Patrol();
+                hasShout = true;
+                PatrolBehavior();
             }
 
-            timeSinceLastSeenPlayer += Time.deltaTime;
-            timeWaited += Time.deltaTime;
+            UpdateTimers();
         }
 
-        private void Patrol()
+        private void UpdateTimers()
+        {
+            timeSinceLastSeenPlayer += Time.deltaTime;
+            timeWaited += Time.deltaTime;
+            timeSinceAggrevated += Time.deltaTime;
+        }
+
+        private bool IsAggrevated()
+        {
+            float distance = Vector3.Distance(this.transform.position, player.transform.position);
+            return distance <= chaseDistance || timeSinceAggrevated < agroCooldownTime;
+        }
+
+        private void AttackBehavior(GameObject player)
+        {
+            timeSinceLastSeenPlayer = 0;
+            fighter.Attack(player);
+
+            if (hasShout)
+            {
+                AggrevateNearbyEnemies();
+            }
+        }
+
+        public void AggrevateNearbyEnemies()
+        {
+            hasShout = false;
+            RaycastHit[] hits = Physics.SphereCastAll(this.transform.position, shoutDistance, Vector3.up, 0);
+            foreach (RaycastHit hit in hits)
+            {
+                AIController enemyComponent = hit.transform.GetComponent<AIController>();
+                if (enemyComponent == null) continue;
+                enemyComponent.Aggrevate();
+            }
+        }
+
+        private void SuspicionBehavior()
+        {
+            GetComponent<ActionScheduler>().StopCurrentAction();
+        }
+
+        private void PatrolBehavior()
         {
             if (wanderer) return;
 
@@ -82,6 +132,11 @@ namespace RPG.Control
                 nextPosition = GetCurrentWaypoint();
             }
             GetComponent<Mover>().StartMovingTo(nextPosition);
+        }
+        
+        public void Aggrevate()
+        {
+            timeSinceAggrevated = 0;
         }
 
         private bool AtWaypoint()

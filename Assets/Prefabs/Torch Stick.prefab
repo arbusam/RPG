@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2803449468937775602}
   - component: {fileID: 2803449468930801726}
   - component: {fileID: 2803449468923805022}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Torch Stick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 2803449468941199836}
   - component: {fileID: 2803449468940069660}
   - component: {fileID: 2803449468924638846}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: prop_pillar_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 2803449468937775610}
   - component: {fileID: 2803449468941199838}
   - component: {fileID: 2803449468940069662}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: prop_torch_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 2803449468937810308}
   - component: {fileID: 2803449468922496614}
   - component: {fileID: 2803449468924281694}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: fx_sparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5188,7 +5188,7 @@ GameObject:
   - component: {fileID: 2803449468937745166}
   - component: {fileID: 2803449468922620672}
   - component: {fileID: 2803449468924277110}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: fx_fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9899,7 +9899,7 @@ GameObject:
   - component: {fileID: 2803449468937740848}
   - component: {fileID: 2803449468922579640}
   - component: {fileID: 2803449468924264778}
-  m_Layer: 1
+  m_Layer: 0
   m_Name: fx_smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
