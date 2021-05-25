@@ -8,7 +8,8 @@ namespace RPG.Control
         Movement,
         Attack,
         UI,
-        Collect
+        Pickup,
+        FullPickup
     }
 
     [System.Serializable]

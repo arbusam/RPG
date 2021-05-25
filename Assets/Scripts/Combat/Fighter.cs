@@ -1,18 +1,19 @@
 using UnityEngine;
 using RPG.Movement;
 using RPG.Core;
-using RPG.Saving;
+using GameDevTV.Saving;
 using RPG.Attributes;
 using RPG.Stats;
 using System.Collections.Generic;
 using GameDevTV.Utils;
+using GameDevTV.Inventories;
 using System;
 
 namespace RPG.Combat
 {
     [RequireComponent(typeof(ActionScheduler))]
     [RequireComponent(typeof(Mover))]
-    public class Fighter : MonoBehaviour, IAction, ISaveable, IModifierProvider
+    public class Fighter : MonoBehaviour, IAction, ISaveable
     {
 
         [SerializeField] Transform rightHandTransform = null;
@@ -22,9 +23,29 @@ namespace RPG.Combat
         WeaponConfig currentWeaponConfig;
         LazyValue<Weapon> currentWeapon;
 
+        Equipment equipment;
+
         private void Awake() {
             currentWeaponConfig = defaultWeapon;
             currentWeapon = new LazyValue<Weapon>(SetupDefaultWeapon);
+            equipment = GetComponent<Equipment>();
+            if (equipment)
+            {
+                equipment.equipmentUpdated += UpdateWeapon;
+            }
+        }
+
+        private void UpdateWeapon()
+        {
+            var weapon = equipment.GetItemInSlot(EquipLocation.Weapon) as WeaponConfig;
+            if (weapon == null)
+            {
+                EquipWeapon(defaultWeapon);
+            }
+            else
+            {
+                EquipWeapon(weapon);
+            }
         }
 
         private Weapon SetupDefaultWeapon()
@@ -160,7 +181,11 @@ namespace RPG.Combat
 
             if (target == null) return;
             Health healthComponent = target.GetComponent<Health>();
-            float damage = GetComponent<BaseStats>().GetStat(Stat.Damage);
+            float damage = GetComponent<BaseStats>().GetStat(Stat.Damage) - target.GetComponent<BaseStats>().GetStat(Stat.Protection);
+            if (damage < 0)
+            {
+                damage = 0;
+            }
             if (currentWeaponConfig.HasProjectile())
             {
                 currentWeaponConfig.LaunchProjectile(rightHandTransform, leftHandTransform, healthComponent, gameObject, damage);
@@ -187,19 +212,6 @@ namespace RPG.Combat
             string weaponName = (string)state;
             WeaponConfig weapon = UnityEngine.Resources.Load<WeaponConfig>(weaponName);
             EquipWeapon(weapon);
-        }
-
-        public IEnumerable<float> GetAdditiveModifiers(Stat stat)
-        {
-            if (stat == Stat.Damage)
-            {
-                yield return currentWeaponConfig.WeaponDamage;
-            }
-        }
-
-        public IEnumerable<float> GetPercentageModifiers(Stat stat)
-        {
-            yield return 0;
         }
     }
 

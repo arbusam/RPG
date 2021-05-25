@@ -37,9 +37,13 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Destroyer.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\Equipment.cs" />
+     <Compile Include="Assets\Scripts\Inventories\StatsEquipment.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\UI\Inventories\InventoryDragItem.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\ReplaceWithRagdoll.cs" />
      <Compile Include="Assets\Scripts\Combat\WeaponLabel.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\ScreenFader\ScreenFaderClip.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Utils\UI\Dragging\IDragDestination.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Weapon\MeleeWeapon.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Weapon\Projectile.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" />
@@ -54,12 +58,13 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\SceneManagement\Runtime\PersistentDataManager.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Effects\CopyShadowMap.cs" />
      <Compile Include="Assets\Camera\CameraSwitcher.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\PickupSpawner.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Scripts\SoundTrack.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\Spinner.cs" />
      <Compile Include="Assets\Scripts\Core\IAction.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\SetLocation\SetLocationMixerBehaviour.cs" />
-     <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Effects\WaterRipple.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\LerpControlledBob.cs" />
+     <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Effects\WaterRipple.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Graphics\Dissolve.cs" />
      <Compile Include="Assets\Scripts\Core\PersistantObjectSpawner.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Player\RespawnPlayer.cs" />
@@ -73,6 +78,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Camera\EditorCamera.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Chomper\ChomperSMBIdle.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\FPSTarget.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\UI\Inventories\InventoryDropTarget.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\MaterialSwitcher\MaterialSwitcherClip.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\DamageSystem\Damageable.DamageMessage.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Spitter\SpitterSMBCooldown.cs" />
@@ -80,16 +86,21 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\InspectorHelpMessage.cs" />
      <Compile Include="Assets\Scripts\Combat\WeaponPickup.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\TargetDistributor.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\UI\Inventories\ItemTooltipSpawner.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\TargetScanner.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\UI\Inventories\ActionSlotUI.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\SceneManagement\Runtime\SceneTransitionDestination.cs" />
      <Compile Include="Assets\Scripts\Combat\WeaponConfig.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TimeDilation\TimeDilationMixerBehaviour.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SimpleTranslator.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\UI\KeyUI.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\ActionStore.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\InventoryItem.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Effects\GunnerLightning.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Player\PlayerInput.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Player\CheckpointGroup.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TransformTween\TransformTweenTrack.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\UI\ShowHideUI.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Scripts\twinkle.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\RigidbodyDelayedForce.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\GameCommandType.cs" />
@@ -99,6 +110,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\StandardMaterialEmission\StandardMaterialEmissionBehaviour.cs" />
      <Compile Include="Assets\Scripts\Movement\Mover.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Graphics\FootStepEffect.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\Inventory.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Senders\SendOnCollisionExit.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\ScreenFader\ScreenFaderMixerBehaviour.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Chomper\ChomperSMBPursuit.cs" />
@@ -120,6 +132,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\InteractOnTrigger.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TransformTween\TransformTweenMixerBehaviour.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Scripts\ControlSwitch.cs" />
+     <Compile Include="Assets\Scripts\Inventories\StatsEquipableItem.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TextSwitcher\TextSwitcherClip.cs" />
      <Compile Include="Assets\Scripts\Control\IRaycastable.cs" />
      <Compile Include="Assets\Scripts\Stats\CharacterClass.cs" />
@@ -138,15 +151,17 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\CutsceneScriptControl\CutsceneScriptControlMixerBehaviour.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Chomper\ChomperBehavior.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\UI\HealthUI.cs" />
-     <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Localization\TranslatedPhrases.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\SetLocation\SetLocationTrack.cs" />
+     <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Localization\TranslatedPhrases.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Localization\Translator.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Utils\PeristentObjectSpawner.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\ToggleGameObjectActive.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\SetLocation\SetLocationBehaviour.cs" />
      <Compile Include="Assets\Scripts\Stats\LevelDisplay.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\SceneManagement\Runtime\TransitionPoint.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Grenadier\GrenadierSMBPursuit.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Chomper\ChomperSMBHit.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\UI\Inventories\IItemHolder.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\PrettyListAttribute.cs" />
      <Compile Include="Assets\Scripts\Stats\XPDisplay.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\ContactDamager.cs" />
@@ -155,6 +170,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SimpleTransformer.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\UI\MenuActivityController.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\InventoryController.cs" />
+     <Compile Include="Assets\Scripts\Control\ClickablePickup.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\GameplayCounter.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Player\Checkpoint.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Senders\SendOnBecameInvisible.cs" />
@@ -164,38 +180,42 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\PlaySound.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\TimelineTriggerZone.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TimeDilation\TimeDilationBehaviour.cs" />
-     <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\LightControl\LightControlMixerBehaviour.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TextSwitcher\TextSwitcherTrack.cs" />
+     <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\LightControl\LightControlMixerBehaviour.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Senders\SendOnCollisionEnter.cs" />
      <Compile Include="Assets\Scripts\UI\DamageText.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\RandomStateSMB.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\EquipableItem.cs" />
      <Compile Include="Assets\Scripts\Combat\Fighter.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Audio\AudioPlayerOnEnable.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\StartPlayableDirector.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Scripts\ForceToAcessibleVolume.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\CutsceneScriptControl\CutsceneScriptControlTrack.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\EquipLocation.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\AudioSnapshot\AudioSnapshotTrack.cs" />
      <Compile Include="Assets\Scripts\Core\FollowCamera.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\NavMeshAgentControl\NavMeshAgentControlTrack.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Senders\SendOnTriggerExit.cs" />
-     <Compile Include="Assets\Scripts\Stats\IModifierProvider.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Localization\OriginalPhrases.cs" />
+     <Compile Include="Assets\Scripts\Stats\IModifierProvider.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\MessageSystem.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\UI\DialogueCanvasController.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\ScreenFader\ScreenFaderTrack.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\SceneManagement\Runtime\SceneControllerWrapper.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\ParticleSystemEmit.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\UI\Inventories\InventoryUI.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Player\StateMachineBehaviour\EllenStaffEffect.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\NavMeshAgentControl\NavMeshAgentControlBehaviour.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\TransformExtensions.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TransformTween\TransformTweenBehaviour.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\TransformFollow.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\UI\Inventories\ItemTooltip.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Spitter\SpitterSMBIdle.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Audio\MixerSliderLink.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Player\StateMachineBehaviour\EllenSetTargetableSMB.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\SceneManagement\Runtime\GameObjectTeleporter.cs" />
-     <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\GameCommandHandler.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\ObjectPooler.cs" />
+     <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\GameCommandHandler.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\DamageSystem\Damageable.cs" />
      <Compile Include="Assets\Scripts\Scene\SavingWrapper.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\TimeMachine\TimeMachineTrack.cs" />
@@ -207,6 +227,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SimpleRotator.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\LightControl\LightControlClip.cs" />
      <Compile Include="Assets\Scripts\Saving\SerializableVector3.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Utils\UI\Dragging\DragItem.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\SceneManagement\Runtime\SceneController.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\AudioSnapshot\AudioSnapshotClip.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Utils\LazyValue.cs" />
@@ -214,8 +235,11 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Effects\SimulateParticleSystem.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\SceneManagement\Runtime\CharacterStateSetter.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TextSwitcher\TextSwitcherMixerBehaviour.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\UI\Inventories\InventoryItemIcon.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\NavMeshAgentControl\NavMeshAgentControlMixerBehaviour.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\ItemDropper.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Audio\RandomAudioPlayer.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\Pickup.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Scripts\MouseLock.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Scripts\SoundTrackVolume.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Collectable.cs" />
@@ -224,7 +248,9 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Camera\CameraShake.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\DamageSystem\DeathVolume.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SetAnimatorTrigger.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Utils\UI\Dragging\IDragContainer.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Chomper\ChomperSMBReturn.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\ActionItem.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\EnemyController.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Effects\EffectEvents.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Grenadier\GrenadierBehaviour.cs" />
@@ -237,6 +263,7 @@
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\FOVKick.cs" />
      <Compile Include="Assets\Scripts\Stats\Experience.cs" />
      <Compile Include="Assets\Scripts\CinematicControlRemover.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\UI\Inventories\EquipmentSlotUI.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Teleporter.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TimeDilation\TimeDilationTrack.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Grenadier\GrenadierSMBTurning.cs" />
@@ -252,9 +279,9 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\LightControl\LightControlTrack.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\SceneManagement\Runtime\SceneNameAttribute.cs" />
      <Compile Include="Assets\Scripts\Scene\Portal.cs" />
-     <Compile Include="Assets\Scripts\Combat\Projectile.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\InteractionCollision.cs" />
      <Compile Include="Assets\Scripts\UI\DamageTextSpawner.cs" />
+     <Compile Include="Assets\Scripts\Combat\Projectile.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\Respawner.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Senders\SendOnCollisionStay.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Grenadier\GrenadierSMBPunch.cs" />
@@ -264,20 +291,23 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\InteractionTrigger.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\ParticleDeactivator.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Chomper\ChomperSMBFall.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Utils\UI\Dragging\IDragSource.cs" />
      <Compile Include="Assets\Scripts\Attributes\HealthDisplay.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Senders\SendOnBecameVisible.cs" />
      <Compile Include="Assets\Scripts\Control\AIController.cs" />
-     <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\ScreenFader\ScreenFaderBehaviour.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\UI\Inventories\InventorySlotUI.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TransformTween\TransformTweenClip.cs" />
+     <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\ScreenFader\ScreenFaderBehaviour.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\UI\StartUI.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Grenadier\GrenadierSMBIdle.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\SceneLinkedSMB.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Utils\UI\Tooltips\TooltipSpawner.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Spitter\SpitterBehaviour.cs" />
      <Compile Include="Assets\Scripts\ReplaceWithPrefab.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Platforms\Runtime\Platform.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Characters\FirstPersonCharacter\Scripts\HeadBob.cs" />
-     <Compile Include="Assets\Asset Packs\3DGamekit\Packages\SceneManagement\Runtime\SavedData.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Graphics\ModulatedLight.cs" />
+     <Compile Include="Assets\Asset Packs\3DGamekit\Packages\SceneManagement\Runtime\SavedData.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Scripts\FreeCamera.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\OnTeleportEvent.cs" />
      <Compile Include="Assets\Scripts\Stats\BaseStats.cs" />
@@ -300,6 +330,8 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SetGameObjectActive.cs" />
      <Compile Include="Assets\Scripts\Scene\Fader.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\FPSCounter.cs" />
+     <Compile Include="Assets\Scripts\Inventories\RandomDropper.cs" />
+     <Compile Include="Assets\Scripts\Inventories\DropLibrary.cs" />
      <None Include="Assets\Asset Packs\3DGamekit\Art\Shaders\Firefly.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\3DGamekit\Packages\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
@@ -934,14 +966,11 @@
     <Reference Include="netstandard">
         <HintPath>/Applications/2020.3.3f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/netstandard.dll</HintPath>
     </Reference>
-    <Reference Include="Cinemachine">
-        <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-        <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+        <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
         <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -949,14 +978,26 @@
     <Reference Include="Unity.VisualStudio.Editor">
         <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-        <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+    <Reference Include="Unity.ProBuilder.AddOns.Editor">
+        <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
         <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
         <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+        <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder">
+        <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.Editor">
+        <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+        <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
@@ -967,38 +1008,41 @@
     <Reference Include="UnityEngine.UI">
         <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.ProBuilder">
-        <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Editor">
-        <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Polybrush.Editor">
         <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.Polybrush.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProBuilder.Editor">
-        <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
-        <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-        <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Polybrush">
         <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.Polybrush.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.ProBuilder.AddOns.Editor">
-        <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+    <Reference Include="Cinemachine">
+        <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-        <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    <Reference Include="com.unity.cinemachine.editor">
+        <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
         <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+        <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+        <HintPath>/Users/arhanbusam/Dropbox/Arhan&apos;s Documents/Unity/RPG/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
+      <Project>{62158685-1b88-4905-4055-79b5bc1bdb17}</Project>
+      <Name>Boxophobic.Utils.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Skybox3DRuntime.csproj">
+      <Project>{28b0de33-bfb5-8f05-6f13-96d731bc282b}</Project>
+      <Name>Skybox3DRuntime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
+      <Project>{fbca0541-5cd0-7d7f-9124-6e023e9a259c}</Project>
+      <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
       <Project>{4ae6cc54-8142-e280-b280-95fd77eeee12}</Project>
       <Name>Boxophobic.Utils.Scripts</Name>
@@ -1007,21 +1051,13 @@
       <Project>{8a838221-0308-9d34-bb9e-f6726039bd29}</Project>
       <Name>PackageManagerCheck</Name>
     </ProjectReference>
-    <ProjectReference Include="NavMeshComponentsEditor.csproj">
-      <Project>{5c736536-0595-bf06-448a-6b0044dee3ae}</Project>
-      <Name>NavMeshComponentsEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Boxophobic.Utils.Editor.csproj">
-      <Project>{62158685-1b88-4905-4055-79b5bc1bdb17}</Project>
-      <Name>Boxophobic.Utils.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="NavMeshComponents.csproj">
       <Project>{c117fe0a-adb1-c8f3-7d4d-8412edd7ec6e}</Project>
       <Name>NavMeshComponents</Name>
     </ProjectReference>
-    <ProjectReference Include="Skybox3DRuntime.csproj">
-      <Project>{28b0de33-bfb5-8f05-6f13-96d731bc282b}</Project>
-      <Name>Skybox3DRuntime</Name>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{5c736536-0595-bf06-448a-6b0044dee3ae}</Project>
+      <Name>NavMeshComponentsEditor</Name>
     </ProjectReference>
     <ProjectReference Include="SimpleSFXRuntime.csproj">
       <Project>{a46a52fc-d2cd-c9bb-2731-838ba16987cf}</Project>
@@ -1030,10 +1066,6 @@
     <ProjectReference Include="WorldBuildingRuntime.csproj">
       <Project>{e3f26a01-fe3b-0129-7520-9c034d8fc07c}</Project>
       <Name>WorldBuildingRuntime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
-      <Project>{fbca0541-5cd0-7d7f-9124-6e023e9a259c}</Project>
-      <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -82,9 +82,17 @@ namespace RPG.Stats
             return totalModifier;
         }
 
-        private int GetPercentageModifier(Stat stat)
+        private float GetPercentageModifier(Stat stat)
         {
-            return 0;
+            float total = 0;
+            foreach (IModifierProvider provider in GetComponents<IModifierProvider>())
+            {
+                foreach (float modifier in provider.GetPercentageModifiers(stat))
+                {
+                    total += modifier;
+                }
+            }
+            return total;
         }
 
         public int GetLevel()

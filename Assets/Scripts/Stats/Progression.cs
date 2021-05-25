@@ -15,7 +15,16 @@ namespace RPG.Stats
         {
             BuildLookup();
 
-            float[] levels = lookupTable[characterClass][stat];
+            float[] levels;
+
+            try
+            {
+                levels = lookupTable[characterClass][stat];
+            }
+            catch (System.Collections.Generic.KeyNotFoundException)
+            {
+                return 0;
+            }
 
             if (levels.Length < level) return 0;
             return levels[level-1];

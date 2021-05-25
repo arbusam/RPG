@@ -84,6 +84,14 @@ PrefabInstance:
       propertyPath: weapon
       value: 
       objectReference: {fileID: 11400000, guid: 9acd4347a1f114652a060f9bd713efac, type: 2}
+    - target: {fileID: 6689353069658613587, guid: 3c36725827a46491987d43b0f943ab94, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.134
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689353069658613587, guid: 3c36725827a46491987d43b0f943ab94, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.782
+      objectReference: {fileID: 0}
     - target: {fileID: 8336947420396513637, guid: 3c36725827a46491987d43b0f943ab94, type: 3}
       propertyPath: m_Name
       value: Bow Pickup

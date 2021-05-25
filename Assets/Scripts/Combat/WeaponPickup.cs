@@ -58,7 +58,7 @@ namespace RPG.Combat
 
         public CursorMapping GetCursor(PlayerControls callingControls)
         {
-            return callingControls.GetCursorMapping(CursorType.Collect);
+            return callingControls.GetCursorMapping(CursorType.Pickup);
         }
     }
 

@@ -1,11 +1,14 @@
 using RPG.Control;
 using RPG.Attributes;
 using UnityEngine;
+using GameDevTV.Inventories;
+using RPG.Stats;
+using System.Collections.Generic;
 
 namespace RPG.Combat
 {
     [CreateAssetMenu(fileName = "Weapon", menuName = "Weapons/Make New Weapon", order = 0)]
-    public class WeaponConfig : ScriptableObject {
+    public class WeaponConfig : EquipableItem, IModifierProvider {
         [SerializeField] float weaponRange = 2f;
         [SerializeField] float timeBetweenAttacks = 1f;
         [SerializeField] float weaponDamage = 1f;
@@ -101,6 +104,19 @@ namespace RPG.Combat
             if (isRightHanded) handTransform = rightHand;
             else handTransform = leftHand;
             return handTransform;
+        }
+
+        public IEnumerable<float> GetAdditiveModifiers(Stat stat)
+        {
+            if (stat == Stat.Damage)
+            {
+                yield return weaponDamage;
+            }
+        }
+
+        public IEnumerable<float> GetPercentageModifiers(Stat stat)
+        {
+            yield return 0;
         }
     }
 }
