@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &5455846265137232108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821433933151414869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b702d06997f848a989afb8e6bd5048d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scatterDistance: 1
+  dropLibrary: {fileID: 11400000, guid: e7de6d8954e894bdb9a2911e423f5fa3, type: 2}
+  numberOfDrops: 2
 --- !u!114 &6009794704432472728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32,26 +47,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb0c27ce08ab4b3d940e0afb88e96bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5455846265137232108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821433933151414869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b702d06997f848a989afb8e6bd5048d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scatterDistance: 1
-  dropLibrary:
-  - {fileID: 11400000, guid: 9acd4347a1f114652a060f9bd713efac, type: 2}
-  - {fileID: 11400000, guid: 55a86898c2f584ae89c8e48a04e7e380, type: 2}
-  - {fileID: 11400000, guid: 34842fdc4b70443ba957f4d75dc3e37e, type: 2}
-  - {fileID: 11400000, guid: ad675fb05808b4dbf9e2cd58c58f61df, type: 2}
-  - {fileID: 11400000, guid: 6846c4dc078074b728a3a6d191749451, type: 2}
-  numberOfDrops: 2
 --- !u!1001 &3150566689211301257
 PrefabInstance:
   m_ObjectHideFlags: 0

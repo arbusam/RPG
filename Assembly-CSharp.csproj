@@ -164,6 +164,7 @@
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\UI\Inventories\IItemHolder.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\PrettyListAttribute.cs" />
      <Compile Include="Assets\Scripts\Stats\XPDisplay.cs" />
+     <Compile Include="Assets\Scripts\Inventories\DropLibrary.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\ContactDamager.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\TimeMachine\TimeMachineClip.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Grenadier\GrenadierGrenade.cs" />
@@ -260,6 +261,7 @@
      <Compile Include="Assets\Scripts\Saving\SavingSystem.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\SceneReloader\SceneReloaderBehaviour.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\MaterialSwitcher\MaterialSwitcherTrack.cs" />
+     <Compile Include="Assets\Scripts\Inventories\RandomDropper.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\FOVKick.cs" />
      <Compile Include="Assets\Scripts\Stats\Experience.cs" />
      <Compile Include="Assets\Scripts\CinematicControlRemover.cs" />
@@ -330,8 +332,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SetGameObjectActive.cs" />
      <Compile Include="Assets\Scripts\Scene\Fader.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\FPSCounter.cs" />
-     <Compile Include="Assets\Scripts\Inventories\RandomDropper.cs" />
-     <Compile Include="Assets\Scripts\Inventories\DropLibrary.cs" />
+     <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
      <None Include="Assets\Asset Packs\3DGamekit\Art\Shaders\Firefly.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\3DGamekit\Packages\TextMesh Pro\Resources\Shaders\TMPro.cginc" />

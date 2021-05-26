@@ -1,23 +1,24 @@
 using UnityEngine;
 using GameDevTV.Inventories;
 using UnityEngine.AI;
+using RPG.Stats;
 
 namespace RPG.Inventories
 {
     public class RandomDropper: ItemDropper
     {
         [SerializeField] float scatterDistance = 1f;
-        [SerializeField] InventoryItem[] dropLibrary;
+        [SerializeField] DropLibrary dropLibrary;
         [SerializeField] int numberOfDrops = 2;
 
         const int ATTEMPTS = 30;
 
         public void RandomDrop()
         {
-            for (int i = 0; i < numberOfDrops; i++)
+            var drops = dropLibrary.GetRandomDrops(GetComponent<BaseStats>().GetLevel());
+            foreach (var drop in drops)
             {
-                var item = dropLibrary[Random.Range(0, dropLibrary.Length)];
-                DropItem(item, 1);
+                DropItem(drop.item, 1);
             }
         }
 
