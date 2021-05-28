@@ -144,6 +144,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Player\PlayerController.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\InteractOnCollision.cs" />
      <Compile Include="Assets\Camera\CameraSwitcher1.cs" />
+     <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\FixedUpdateFollow.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Spitter\SpitterSMBShoot.cs" />
      <Compile Include="Assets\Scripts\Attributes\Health.cs" />
@@ -253,6 +254,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Chomper\ChomperSMBReturn.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\ActionItem.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\Dialogue\DialogueNode.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Effects\EffectEvents.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Grenadier\GrenadierBehaviour.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\StandardMaterialEmission\StandardMaterialEmissionMixerBehaviour.cs" />
@@ -304,6 +306,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Grenadier\GrenadierSMBIdle.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\SceneLinkedSMB.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Utils\UI\Tooltips\TooltipSpawner.cs" />
+     <Compile Include="Assets\Scripts\OppositeOtherVisibility.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Spitter\SpitterBehaviour.cs" />
      <Compile Include="Assets\Scripts\ReplaceWithPrefab.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Platforms\Runtime\Platform.cs" />
@@ -332,7 +335,6 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SetGameObjectActive.cs" />
      <Compile Include="Assets\Scripts\Scene\Fader.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\FPSCounter.cs" />
-     <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
      <None Include="Assets\Asset Packs\3DGamekit\Art\Shaders\Firefly.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\3DGamekit\Packages\TextMesh Pro\Resources\Shaders\TMPro.cginc" />

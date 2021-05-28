@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa4fa260284840f2891ed65de31d185, type: 3}
+  m_Name: New Dialogue
+  m_EditorClassIdentifier: 
+  nodes:
+  - uniqueID: a
+    text: Hello
+    children:
+    - b
+    - c
+    - d
+    rectPosition:
+      serializedVersion: 2
+      x: 132
+      y: 198
+      width: 200
+      height: 100
+  - uniqueID: b
+    text: What is happening?
+    children: []
+    rectPosition:
+      serializedVersion: 2
+      x: 546
+      y: 82
+      width: 200
+      height: 100
+  - uniqueID: c
+    text: Can I have something to do
+    children: []
+    rectPosition:
+      serializedVersion: 2
+      x: 543
+      y: 223
+      width: 200
+      height: 100
+  - uniqueID: d
+    text: Never Mind
+    children: []
+    rectPosition:
+      serializedVersion: 2
+      x: 545
+      y: 370
+      width: 200
+      height: 100

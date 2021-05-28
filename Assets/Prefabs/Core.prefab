@@ -287,6 +287,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 56.266
       objectReference: {fileID: 0}
+    - target: {fileID: 2765550464396466919, guid: 1dfe90e8bbacd4addb9a667455b55eda, type: 3}
+      propertyPath: other
+      value: 
+      objectReference: {fileID: 368613785418818164}
+    - target: {fileID: 2765550464396466919, guid: 1dfe90e8bbacd4addb9a667455b55eda, type: 3}
+      propertyPath: toMirror
+      value: 
+      objectReference: {fileID: 368613785418818164}
     - target: {fileID: 4762370758245108832, guid: 1dfe90e8bbacd4addb9a667455b55eda, type: 3}
       propertyPath: m_SizeDelta.x
       value: 43.07
@@ -1098,6 +1106,11 @@ PrefabInstance:
 --- !u!224 &602145182200556647 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5452744440939609615, guid: 870e0699ce1114832aadd720762ece18, type: 3}
+  m_PrefabInstance: {fileID: 4897442457001005672}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &368613785418818164 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5110074570766118940, guid: 870e0699ce1114832aadd720762ece18, type: 3}
   m_PrefabInstance: {fileID: 4897442457001005672}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5476895008014994096
