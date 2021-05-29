@@ -7,7 +7,7 @@ using UnityEngine;
 namespace RPG.Dialogue
 {
     [CreateAssetMenu(fileName = "New Dialogue", menuName = "RPG/Dialogue/Dialogue", order = 0)]
-    public class Dialogue : ScriptableObject {
+    public class Dialogue : ScriptableObject, ISerializationCallbackReceiver {
         [Header("Config")]
         public float width = 4000;
         public float height = 2000;
@@ -64,6 +64,7 @@ namespace RPG.Dialogue
             newNode.name = Guid.NewGuid().ToString();
             if (parent != null) parent.children.Add(newNode.name);
             nodes.Add(newNode);
+            AssetDatabase.AddObjectToAsset(newNode, this);
             OnValidate();
         }
 
@@ -76,6 +77,14 @@ namespace RPG.Dialogue
                 node.children.Remove(nodeToDelete.name);
             }
             Undo.DestroyObjectImmediate(nodeToDelete);
+        }
+
+        public void OnBeforeSerialize()
+        {
+        }
+
+        public void OnAfterDeserialize()
+        {
         }
     }
 }
