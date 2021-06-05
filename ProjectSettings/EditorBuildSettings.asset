@@ -1,14 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!1045 &1
-EditorBuildSettings:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Sandbox.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/Sandbox 2.unity
-    guid: 7161272909b5140caaddfc522e931807
-  m_configObjects: {}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1e1d2cf30eb8040a65f46498abddf77a2f4c1bd56efcbb312a7a1aeb35891370
+size 351

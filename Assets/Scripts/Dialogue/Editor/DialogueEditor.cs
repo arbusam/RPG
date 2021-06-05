@@ -10,9 +10,22 @@ namespace RPG.Dialogue.Editor
     public class DialogueEditor : EditorWindow 
     {
         Dialogue selectedDialogue = null;
+        [NonSerialized]
         GUIStyle nodeStyle = null;
+        [NonSerialized]
         DialogueNode draggingNode = null;
+        [NonSerialized]
         Vector2 draggingOffset;
+        [NonSerialized]
+        DialogueNode creatingNode = null;
+        [NonSerialized]
+        DialogueNode deletingNode = null;
+        [NonSerialized]
+        DialogueNode linkingParentNode = null;
+        Vector2 scrollPosition;
+        [NonSerialized]
+        bool draggingCanvas = false;
+        [NonSerialized] Vector2 draggingCanvasOffset;
 
         [MenuItem("Window/Dialogue Editor")]
         public static void ShowEditorWindow()
@@ -59,6 +72,11 @@ namespace RPG.Dialogue.Editor
             else
             {
                 ProcessEvents();
+
+                scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition);
+
+                GUILayoutUtility.GetRect(selectedDialogue.width, selectedDialogue.height);
+
                 foreach (DialogueNode node in selectedDialogue.GetAllNodes())
                 {
                     DrawConnections(node);
@@ -66,6 +84,21 @@ namespace RPG.Dialogue.Editor
                 foreach (DialogueNode node in selectedDialogue.GetAllNodes())
                 {
                     DrawNode(node);
+                }
+
+                EditorGUILayout.EndScrollView();
+
+                if (creatingNode != null)
+                {
+                    Undo.RecordObject(selectedDialogue, "Added Dialogue Node");
+                    selectedDialogue.CreateNode(creatingNode);
+                    creatingNode = null;
+                }
+                if (deletingNode != null)
+                {
+                    Undo.RecordObject(selectedDialogue, "Deleted Dialogue Node");
+                    selectedDialogue.DeleteNode(deletingNode);
+                    deletingNode = null;
                 }
             }
         }
@@ -116,7 +149,7 @@ namespace RPG.Dialogue.Editor
             DialogueNode foundNode = null;
             foreach (DialogueNode node in selectedDialogue.GetAllNodes())
             {
-                if (node.rectPosition.Contains(point))
+                if (node.rectPosition.Contains(point + scrollPosition))
                 {
                     foundNode = node;
                 }
@@ -129,7 +162,6 @@ namespace RPG.Dialogue.Editor
             GUILayout.BeginArea(node.rectPosition, nodeStyle);
             EditorGUI.BeginChangeCheck();
 
-            EditorGUILayout.LabelField("Node:");
             string newText = EditorGUILayout.TextField(node.text);
 
             if (EditorGUI.EndChangeCheck())
@@ -138,6 +170,53 @@ namespace RPG.Dialogue.Editor
 
                 node.text = newText;
             }
+
+            GUILayout.BeginHorizontal();
+
+            if (GUILayout.Button("+"))
+            {
+                creatingNode = node;
+            }
+
+            if (linkingParentNode == null)
+            {
+                if (GUILayout.Button("link"))
+                {
+                    linkingParentNode = node;
+                }
+            }
+            else if (linkingParentNode == node)
+            {
+                if (GUILayout.Button("cancel"))
+                {
+                    linkingParentNode = null;
+                }
+            }
+            else if (linkingParentNode.children.Contains(node.uniqueID))
+            {
+                if (GUILayout.Button("unlink"))
+                {
+                    Undo.RecordObject(selectedDialogue, "Remove Dialogue Link");
+                    linkingParentNode.children.Remove(node.uniqueID);
+                    linkingParentNode = null;
+                }
+            }
+            else
+            {
+                if (GUILayout.Button("child"))
+                {
+                    Undo.RecordObject(selectedDialogue, "Add Dialogue Link");
+                    linkingParentNode.children.Add(node.uniqueID);
+                    linkingParentNode = null;
+                }
+            }
+
+            if (GUILayout.Button("x"))
+            {
+                deletingNode = node;
+            }
+
+            GUILayout.EndHorizontal();
 
             GUILayout.EndArea();
         }

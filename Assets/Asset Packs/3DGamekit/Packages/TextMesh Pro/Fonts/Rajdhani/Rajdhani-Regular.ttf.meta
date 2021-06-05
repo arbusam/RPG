@@ -1,22 +1,3 @@
-fileFormatVersion: 2
-guid: 09e331ca2f11a354696f42260d750f7a
-timeCreated: 1503395015
-licenseType: Store
-TrueTypeFontImporter:
-  externalObjects: {}
-  serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
-  characterSpacing: 0
-  characterPadding: 1
-  includeFontData: 1
-  fontName: Rajdhani
-  fontNames:
-  - Rajdhani
-  fallbackFontReferences: []
-  customCharacters: 
-  fontRenderingMode: 0
-  ascentCalculationMode: 1
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:c72d0e51e44c709964434a647d77dc4c598bce8af33a58dd01553d3ffd122ef6
+size 498
