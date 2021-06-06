@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7271bc664041447b0f1530b389084f0c1633169ed605d32f7fa644357413f970
-size 737
+using System.Collections;
+using System.Collections.Generic;
+using RPG.Control;
+using UnityEngine;
+
+namespace RPG.Dialogue
+{
+    public class AIConversant : MonoBehaviour, IRaycastable
+    {
+        [SerializeField] Dialogue dialogue = null;
+
+        public CursorType GetCursorType()
+        {
+            return CursorType.Dialogue;
+        }
+
+        public bool HandleRaycast(PlayerController callingController)
+        {
+            if (dialogue == null)
+            {
+                return false;
+            }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                callingController.GetComponent<PlayerConversant>().StartDialogue(this, dialogue);
+            }
+            return true;
+        }
+    }
+}
