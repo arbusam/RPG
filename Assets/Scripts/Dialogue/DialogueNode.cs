@@ -10,7 +10,7 @@ namespace RPG.Dialogue
     {
         [SerializeField]
         bool isPlayerSpeaking = false;
-        [SerializeField]
+        [SerializeField] [TextArea]
         string text;
         [SerializeField]
         List<string> children = new List<string>();
