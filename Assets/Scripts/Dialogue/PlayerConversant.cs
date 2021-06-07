@@ -85,7 +85,7 @@ namespace RPG.Dialogue
                 isChoosing = true;
                 TriggerExitAction();
                 onConversationUpdated();
-                return true;
+                return false;
             }
             return currentDialogue.GetAllChildren(currentNode).Count() > 0;
         }
