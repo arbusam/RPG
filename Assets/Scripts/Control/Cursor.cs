@@ -9,7 +9,8 @@ namespace RPG.Control
         Attack,
         UI,
         Pickup,
-        FullPickup
+        FullPickup,
+        Dialogue
     }
 
     [System.Serializable]

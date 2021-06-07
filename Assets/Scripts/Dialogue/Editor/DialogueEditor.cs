@@ -116,7 +116,7 @@ namespace RPG.Dialogue.Editor
 
         private void DrawConnections(DialogueNode node)
         {
-            Vector3 startPosition = new Vector2(node.rectPosition.xMax, node.rectPosition.center.y);
+            Vector3 startPosition = new Vector2(node.GetRect().xMax, node.GetRect().center.y);
 
             foreach (DialogueNode childNode in selectedDialogue.GetAllChildren(node))
             {

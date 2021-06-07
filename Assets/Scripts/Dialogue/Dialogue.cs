@@ -48,11 +48,34 @@ namespace RPG.Dialogue
 
         public IEnumerable<DialogueNode> GetAllChildren(DialogueNode parentNode)
         {
-            foreach (string childID in parentNode.children)
+            foreach (string childID in parentNode.GetChildren())
             {
                 if (nodeLookup.ContainsKey(childID))
                 {
                     yield return nodeLookup[childID];
+                }
+            }
+        }
+
+        public IEnumerable<DialogueNode> GetPlayerChildren(DialogueNode currentNode)
+        {
+            foreach (DialogueNode node in GetAllChildren(currentNode))
+            {
+                if (node.IsPlayerSpeaking())
+                {
+                    yield return node;
+                }
+            }
+        }
+
+
+        public IEnumerable<DialogueNode> GetAIChildren(DialogueNode currentNode)
+        {
+            foreach (DialogueNode node in GetAllChildren(currentNode))
+            {
+                if (!node.IsPlayerSpeaking())
+                {
+                    yield return node;
                 }
             }
         }
@@ -62,7 +85,7 @@ namespace RPG.Dialogue
             DialogueNode newNode = CreateInstance<DialogueNode>();
             Undo.RegisterCreatedObjectUndo(newNode, "Created Dialogue Node");
             newNode.name = Guid.NewGuid().ToString();
-            if (parent != null) parent.children.Add(newNode.name);
+            if (parent != null) parent.AddChild(newNode.name);
             nodes.Add(newNode);
             AssetDatabase.AddObjectToAsset(newNode, this);
             OnValidate();
@@ -74,7 +97,7 @@ namespace RPG.Dialogue
             OnValidate();
             foreach (DialogueNode node in GetAllNodes())
             {
-                node.children.Remove(nodeToDelete.name);
+                node.RemoveChild(nodeToDelete.name);
             }
             Undo.DestroyObjectImmediate(nodeToDelete);
         }

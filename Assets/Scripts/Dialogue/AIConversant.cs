@@ -9,12 +9,12 @@ namespace RPG.Dialogue
     {
         [SerializeField] Dialogue dialogue = null;
 
-        public CursorType GetCursorType()
+        public CursorMapping GetCursor(PlayerControls callingControls)
         {
-            return CursorType.Dialogue;
+            return callingControls.GetCursorMapping(CursorType.Dialogue);
         }
 
-        public bool HandleRaycast(PlayerController callingController)
+        public bool HandleRaycast(PlayerControls callingController)
         {
             if (dialogue == null)
             {
