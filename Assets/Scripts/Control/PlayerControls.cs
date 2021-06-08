@@ -16,6 +16,7 @@ namespace RPG.Control
 
         [SerializeField] CursorMapping[] cursorMappings = null;
         [SerializeField] float raycastRadius = 0.5f;
+        public bool UIActive = false;
 
         bool isDragging = false;
 
@@ -83,7 +84,7 @@ namespace RPG.Control
                 SetCursor(CursorType.UI);
                 return true;
             }
-            return false;
+            return UIActive;
         }
 
         private bool InteractWIthMovement()

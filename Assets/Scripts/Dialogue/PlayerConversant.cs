@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using RPG.Control;
 
 namespace RPG.Dialogue
 {
@@ -14,6 +15,11 @@ namespace RPG.Dialogue
         bool isChoosing = false;
 
         public event Action onConversationUpdated;
+
+        private void Update()
+        {
+            GetComponent<PlayerControls>().UIActive = currentDialogue != null;
+        }
 
         public void StartDialogue(AIConversant newConversant, Dialogue newDialogue)
         {

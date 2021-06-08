@@ -339,6 +339,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SetGameObjectActive.cs" />
      <Compile Include="Assets\Scripts\Scene\Fader.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\FPSCounter.cs" />
+     <Compile Include="Assets\Scripts\SaveComponentEnabled.cs" />
      <None Include="Assets\Asset Packs\3DGamekit\Art\Shaders\Firefly.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\3DGamekit\Packages\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
@@ -1042,6 +1043,10 @@
       <Project>{62158685-1b88-4905-4055-79b5bc1bdb17}</Project>
       <Name>Boxophobic.Utils.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Skybox3DRuntime.csproj">
+      <Project>{28b0de33-bfb5-8f05-6f13-96d731bc282b}</Project>
+      <Name>Skybox3DRuntime</Name>
+    </ProjectReference>
     <ProjectReference Include="Boxophobic.SkyboxCubemapExtended.Editor.csproj">
       <Project>{fbca0541-5cd0-7d7f-9124-6e023e9a259c}</Project>
       <Name>Boxophobic.SkyboxCubemapExtended.Editor</Name>
@@ -1049,10 +1054,6 @@
     <ProjectReference Include="Boxophobic.Utils.Scripts.csproj">
       <Project>{4ae6cc54-8142-e280-b280-95fd77eeee12}</Project>
       <Name>Boxophobic.Utils.Scripts</Name>
-    </ProjectReference>
-    <ProjectReference Include="Skybox3DRuntime.csproj">
-      <Project>{28b0de33-bfb5-8f05-6f13-96d731bc282b}</Project>
-      <Name>Skybox3DRuntime</Name>
     </ProjectReference>
     <ProjectReference Include="PackageManagerCheck.csproj">
       <Project>{8a838221-0308-9d34-bb9e-f6726039bd29}</Project>
