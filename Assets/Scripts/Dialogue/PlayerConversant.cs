@@ -45,6 +45,11 @@ namespace RPG.Dialogue
             return currentDialogue != null;
         }
 
+        public string GetConversantName()
+        {
+            return currentConversant.conversantName;
+        }
+
         public bool IsChoosing()
         {
             return isChoosing;

@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using RPG.Control;
 using UnityEngine;
+using RPG.Attributes;
 
 namespace RPG.Dialogue
 {
     public class AIConversant : MonoBehaviour, IRaycastable
     {
+        public string conversantName = "Name";
         [SerializeField] Dialogue dialogue = null;
 
         public CursorMapping GetCursor(PlayerControls callingControls)
@@ -20,6 +22,7 @@ namespace RPG.Dialogue
             {
                 return false;
             }
+            if (GetComponent<Health>().IsDead()) return false;
 
             if (Input.GetMouseButtonDown(0))
             {

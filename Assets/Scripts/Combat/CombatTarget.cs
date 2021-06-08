@@ -9,6 +9,7 @@ namespace RPG.Combat
     {
         public bool HandleRaycast(PlayerControls callingControls)
         {
+            if (!enabled) return false;
             if (!callingControls.GetComponent<Fighter>().CanAttack(this.gameObject)) return false;
 
             if (Input.GetMouseButton(0))

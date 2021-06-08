@@ -136,10 +136,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AIText: {fileID: 4092126917523027855}
   nextButton: {fileID: 22510627653988159}
-  AIResponse: {fileID: 6560319436869558929}
   choiceRoot: {fileID: 8407976333593192030}
   choicePrefab: {fileID: 8604976105858015660, guid: 93fd063a2c60247e2b81a0fb5bbc2219, type: 3}
   quitButton: {fileID: 3664285813803976291}
+  conversantName: {fileID: 4980984914790987563}
 --- !u!1 &4649752335157006214
 GameObject:
   m_ObjectHideFlags: 0
