@@ -341,6 +341,7 @@
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\FPSCounter.cs" />
      <Compile Include="Assets\Scripts\SaveComponentEnabled.cs" />
      <Compile Include="Assets\Scripts\Combat\CombatGroup.cs" />
+     <Compile Include="Assets\Scripts\UI\Quests\QuestTooltipSpawner.cs" />
      <None Include="Assets\Asset Packs\3DGamekit\Art\Shaders\Firefly.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\3DGamekit\Packages\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
