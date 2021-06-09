@@ -342,6 +342,9 @@
      <Compile Include="Assets\Scripts\SaveComponentEnabled.cs" />
      <Compile Include="Assets\Scripts\Combat\CombatGroup.cs" />
      <Compile Include="Assets\Scripts\UI\Quests\QuestTooltipSpawner.cs" />
+     <Compile Include="Assets\Scripts\Quests\Quest.cs" />
+     <Compile Include="Assets\Scripts\UI\Quests\QuestListUI.cs" />
+     <Compile Include="Assets\Scripts\UI\Quests\QuestItemUI.cs" />
      <None Include="Assets\Asset Packs\3DGamekit\Art\Shaders\Firefly.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\3DGamekit\Packages\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
