@@ -39,6 +39,7 @@
      <Compile Include="Assets\Scripts\Destroyer.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\Equipment.cs" />
      <Compile Include="Assets\Scripts\Inventories\StatsEquipment.cs" />
+     <Compile Include="Assets\Scripts\UI\Quests\QuestTooltipUI.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\UI\Inventories\InventoryDragItem.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\ReplaceWithRagdoll.cs" />
      <Compile Include="Assets\Scripts\Combat\WeaponLabel.cs" />
@@ -117,6 +118,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Chomper\ChomperSMBPursuit.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Camera\ScreenshotWithAlpha.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SwitchMaterial.cs" />
+     <Compile Include="Assets\Scripts\Quests\Quest.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\ScenarioController.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\StandardMaterialEmission\StandardMaterialEmissionTrack.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\TriggerUnityEvent.cs" />
@@ -141,11 +143,13 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\MaterialSwitcher\MaterialSwitcherBehaviour.cs" />
      <Compile Include="Assets\Scripts\Combat\EnemyHealthDisplay.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\TimeMachine\TimeMachineBehaviour.cs" />
+     <Compile Include="Assets\Scripts\UI\Quests\QuestListUI.cs" />
      <Compile Include="Assets\Scripts\Dialogue\PlayerConversant.cs" />
      <Compile Include="Assets\Scripts\Saving\SaveableEntity.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\CameraRefocus.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Player\PlayerController.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\InteractOnCollision.cs" />
+     <Compile Include="Assets\Scripts\Quests\QuestStatus.cs" />
      <Compile Include="Assets\Camera\CameraSwitcher1.cs" />
      <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\FixedUpdateFollow.cs" />
@@ -154,6 +158,7 @@
      <Compile Include="Assets\Scripts\Combat\Weapon.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\CutsceneScriptControl\CutsceneScriptControlMixerBehaviour.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Chomper\ChomperBehavior.cs" />
+     <Compile Include="Assets\Scripts\UI\Quests\QuestTooltipSpawner.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\UI\HealthUI.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\SetLocation\SetLocationTrack.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Localization\TranslatedPhrases.cs" />
@@ -178,6 +183,7 @@
      <Compile Include="Assets\Scripts\Control\ClickablePickup.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\GameplayCounter.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Player\Checkpoint.cs" />
+     <Compile Include="Assets\Scripts\Combat\CombatGroup.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Senders\SendOnBecameInvisible.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\LayerMaskExtensions.cs" />
      <Compile Include="Assets\Scripts\Stats\Progression.cs" />
@@ -198,6 +204,8 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\CutsceneScriptControl\CutsceneScriptControlTrack.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\EquipLocation.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\AudioSnapshot\AudioSnapshotTrack.cs" />
+     <Compile Include="Assets\Scripts\UI\Quests\QuestItemUI.cs" />
+     <Compile Include="Assets\Scripts\Quests\QuestList.cs" />
      <Compile Include="Assets\Scripts\Core\FollowCamera.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\NavMeshAgentControl\NavMeshAgentControlTrack.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Senders\SendOnTriggerExit.cs" />
@@ -313,6 +321,7 @@
      <Compile Include="Assets\Scripts\OppositeOtherVisibility.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Spitter\SpitterBehaviour.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Platforms\Runtime\Platform.cs" />
+     <Compile Include="Assets\Scripts\SaveComponentEnabled.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Characters\FirstPersonCharacter\Scripts\HeadBob.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Graphics\ModulatedLight.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\SceneManagement\Runtime\SavedData.cs" />
@@ -338,15 +347,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SetGameObjectActive.cs" />
      <Compile Include="Assets\Scripts\Scene\Fader.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\FPSCounter.cs" />
-     <Compile Include="Assets\Scripts\SaveComponentEnabled.cs" />
-     <Compile Include="Assets\Scripts\Combat\CombatGroup.cs" />
-     <Compile Include="Assets\Scripts\UI\Quests\QuestTooltipSpawner.cs" />
-     <Compile Include="Assets\Scripts\Quests\Quest.cs" />
-     <Compile Include="Assets\Scripts\UI\Quests\QuestListUI.cs" />
-     <Compile Include="Assets\Scripts\UI\Quests\QuestItemUI.cs" />
-     <Compile Include="Assets\Scripts\UI\Quests\QuestTooltipUI.cs" />
-     <Compile Include="Assets\Scripts\Quests\QuestList.cs" />
-     <Compile Include="Assets\Scripts\Quests\QuestStatus.cs" />
+     <Compile Include="Assets\Scripts\Quests\QuestGiver.cs" />
      <None Include="Assets\Asset Packs\3DGamekit\Art\Shaders\Firefly.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\3DGamekit\Packages\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
