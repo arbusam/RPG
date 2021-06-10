@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ebc30bd07e5b6412982e97cf41d5500b, type: 3}
-  m_Name: Item collector
+  m_Name: Begginer Item collector
   m_EditorClassIdentifier: 
   objectives:
   - Obtain a Healthy Hat
   - Obtain a Basic Sword
   - Obtain a Basic Bow
-  - Obtain a Basic Chectplate
+  - Obtain a Basic Chestplate

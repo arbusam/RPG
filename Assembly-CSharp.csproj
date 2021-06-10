@@ -144,7 +144,6 @@
      <Compile Include="Assets\Scripts\Dialogue\PlayerConversant.cs" />
      <Compile Include="Assets\Scripts\Saving\SaveableEntity.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\CameraRefocus.cs" />
-     <Compile Include="Assets\Scripts\ReplaceWithPrefab.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Player\PlayerController.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\InteractOnCollision.cs" />
      <Compile Include="Assets\Camera\CameraSwitcher1.cs" />
@@ -345,6 +344,9 @@
      <Compile Include="Assets\Scripts\Quests\Quest.cs" />
      <Compile Include="Assets\Scripts\UI\Quests\QuestListUI.cs" />
      <Compile Include="Assets\Scripts\UI\Quests\QuestItemUI.cs" />
+     <Compile Include="Assets\Scripts\UI\Quests\QuestTooltipUI.cs" />
+     <Compile Include="Assets\Scripts\Quests\QuestList.cs" />
+     <Compile Include="Assets\Scripts\Quests\QuestStatus.cs" />
      <None Include="Assets\Asset Packs\3DGamekit\Art\Shaders\Firefly.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\3DGamekit\Packages\TextMesh Pro\Resources\Shaders\TMPro.cginc" />

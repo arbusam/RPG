@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Basic Chestplate
   m_EditorClassIdentifier: 
   itemID: 69323c06-7d38-4474-888a-ac6c94df3015
-  displayName: BasicChestplate
+  displayName: Basic Chestplate
   description: 
   icon: {fileID: 21300000, guid: 2f1eaeeaad36ee5469eff7ff158f37ba, type: 3}
   pickup: {fileID: 6058643964849302115, guid: 34c01f5e357ce4f588878d09f34a1f26, type: 3}

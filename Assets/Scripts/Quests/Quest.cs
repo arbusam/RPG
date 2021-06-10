@@ -26,5 +26,13 @@ namespace RPG.Quests
                 return objectives.Length;
             }
         }
+
+        public string[] Objectives
+        {
+            get
+            {
+                return objectives;
+            }
+        }
     }
 }
