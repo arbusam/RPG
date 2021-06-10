@@ -28,7 +28,6 @@ namespace RPG.UI.Quests
                 {
                     prefab = objectivePrefab;
                 }
-                print(prefab.name);
                 GameObject objectiveInstance = Instantiate(prefab, objectiveContainer);
                 TextMeshProUGUI objectiveText = objectiveInstance.GetComponentInChildren<TextMeshProUGUI>();
                 objectiveText.text = objective;

@@ -8,7 +8,12 @@ namespace RPG.Quests
     public class QuestStatus
     {
         [SerializeField] Quest quest;
-        [SerializeField] List<string> completedObjectives;
+        [SerializeField] List<string> completedObjectives = new List<string>();
+
+        public QuestStatus(Quest quest)
+        {
+            this.quest = quest;
+        }
 
         public Quest Quest
         {
