@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e1ef4f0cc5144657911b4bcbad2e28f, type: 3}
+  m_Name: Basic Club
+  m_EditorClassIdentifier: 
+  itemID: 0a7111a4-3e5b-4a2d-b1d0-0300c3988c83
+  displayName: 
+  description: 
+  icon: {fileID: 0}
+  pickup: {fileID: 0}
+  stackable: 0
+  allowedEquipLocation: 5
+  weaponRange: 2
+  timeBetweenAttacks: 1.5
+  weaponDamage: 15
+  isRightHanded: 1
+  projectile: {fileID: 0}
+  weaponPrefab: {fileID: 2052434158754414796, guid: d975b1dd429924833a331baa491d4d4f, type: 3}
+  animatorOverride: {fileID: 0}
+  cursorMapping:
+    type: 0
+    texture: {fileID: 0}
+    hotspot: {x: 0, y: 0}
