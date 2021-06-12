@@ -17,7 +17,7 @@ namespace RPG.UI.Quests
         {
             this.status = status;
             title.text = status.Quest.Title;
-            progress.text = "0/" + status.Quest.ObjectiveCount;
+            progress.text = status.GetCompletedCount() + "/" + status.Quest.ObjectiveCount;
         }
 
         public QuestStatus Status

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +22,11 @@ namespace RPG.Quests
             {
                 return quest;
             }
+        }
+
+        public int GetCompletedCount()
+        {
+            return completedObjectives.Count;
         }
 
         public List<string> CompletedObjectives

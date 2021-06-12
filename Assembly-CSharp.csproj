@@ -115,6 +115,7 @@
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\Inventory.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Senders\SendOnCollisionExit.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\ScreenFader\ScreenFaderMixerBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Quests\QuestGiver.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Chomper\ChomperSMBPursuit.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Camera\ScreenshotWithAlpha.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SwitchMaterial.cs" />
@@ -207,6 +208,7 @@
      <Compile Include="Assets\Scripts\UI\Quests\QuestItemUI.cs" />
      <Compile Include="Assets\Scripts\Quests\QuestList.cs" />
      <Compile Include="Assets\Scripts\Core\FollowCamera.cs" />
+     <Compile Include="Assets\Scripts\Quests\QuestCompletion.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\NavMeshAgentControl\NavMeshAgentControlTrack.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Senders\SendOnTriggerExit.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Localization\OriginalPhrases.cs" />
@@ -344,11 +346,10 @@
      <Compile Include="Assets\Asset Packs\Viking Village\Scripts\DeviceTypeUI.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Senders\SendOnTriggerEnter.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\SceneManagement\Runtime\IDataPersister.cs" />
+     <Compile Include="Assets\Scripts\Combat\DeadEnemies.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SetGameObjectActive.cs" />
      <Compile Include="Assets\Scripts\Scene\Fader.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\FPSCounter.cs" />
-     <Compile Include="Assets\Scripts\Quests\QuestGiver.cs" />
-     <Compile Include="Assets\Scripts\Combat\DeadEnemies.cs" />
      <None Include="Assets\Asset Packs\3DGamekit\Art\Shaders\Firefly.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\3DGamekit\Packages\TextMesh Pro\Resources\Shaders\TMPro.cginc" />

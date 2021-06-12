@@ -10,23 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ebc30bd07e5b6412982e97cf41d5500b, type: 3}
-  m_Name: Kill some enemies (Level 3)
+  m_Name: Speak to every person in this level (Level 3)
   m_EditorClassIdentifier: 
   objectives:
-  - Kill 1 Enemy
-  - Kill 2 Enemies
-  - Kill 3 Enemies
-  - Kill 4 Enemies
-  - Kill 5 Enemies
-  - Kill 6 Enemies
-  - Kill 7Enemies
-  - Kill 8 Enemies
-  - Kill 9 Enemies
-  - Kill 10 Enemies
-  - Kill 11 Enemies
-  - Kill 12 Enemies
-  - Kill 13 Enemies
-  - Kill 14 Enemies
-  - Kill 15 Enemies
-  - Kill 5 Level 2 Enemies
-  - Kill 2 Level 3 Enemies
+  - Speak to Bob
+  - Speak to Guard
