@@ -13,7 +13,14 @@ MonoBehaviour:
   m_Name: Begginer Item collector
   m_EditorClassIdentifier: 
   objectives:
-  - Obtain a Healthy Hat
-  - Obtain a Basic Sword
-  - Obtain a Basic Bow
-  - Obtain a Basic Chestplate
+  - reference: Healthy Hat
+    description: Obtain a Healthy Hat
+  - reference: Basic Sword
+    description: Obtain a Basic Sword
+  - reference: Basic Bow
+    description: Obtain a Basic Bow
+  - reference: Basic Chestplate
+    description: Obtain a Basic Chestplate
+  rewards:
+  - number: 2
+    item: {fileID: 11400000, guid: 34842fdc4b70443ba957f4d75dc3e37e, type: 2}

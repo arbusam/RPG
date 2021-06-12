@@ -120,7 +120,7 @@ MonoBehaviour:
     y: 187
     width: 200
     height: 100
-  onEnterAction: 
+  onEnterAction: Spoken
   onExitAction: 
 --- !u!114 &-7658235486828174313
 MonoBehaviour:

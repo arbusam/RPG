@@ -45,16 +45,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quest: {fileID: 11400000, guid: a3fdb11c83e5c4483a88b900ded3fa7c, type: 2}
   objectives:
-  - Kill 1 Enemy
-  - Kill 2 Enemies
-  - Kill 3 Enemies
-  - Kill 4 Enemies
-  - Kill 5 Enemies
-  - Kill 6 Enemies
-  - Kill 7Enemies
-  - Kill 8 Enemies
-  - Kill 9 Enemies
-  - Kill 10 Enemies
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
 --- !u!1 &5459228359265969739
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,8 +172,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quest: {fileID: 11400000, guid: 6e8f90af2af2f468ea88bcdd2e78d427, type: 2}
   objectives:
-  - Kill 1 Enemy
-  - Kill 2 Enemies
-  - Kill 3 Enemies
-  - Kill 4 Enemies
-  - Kill 5 Enemies
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5

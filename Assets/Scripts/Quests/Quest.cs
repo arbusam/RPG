@@ -4,12 +4,28 @@ using UnityEngine;
 
 namespace RPG.Quests
 {
+    using GameDevTV.Inventories;
     using UnityEngine;
     
     [CreateAssetMenu(fileName = "Quest", menuName = "RPG/Quest", order = 0)]
     public class Quest : ScriptableObject
     {
-        [SerializeField] string[] objectives;
+        [SerializeField] List<Objective> objectives;
+        [SerializeField] List<Reward> rewards = new List<Reward>();
+
+        [System.Serializable]
+        public class Reward
+        {
+            [Min(1)] public int number;
+            public InventoryItem item;
+        }
+
+        [System.Serializable]
+        public class Objective  
+        {
+            public string reference;
+            public string description;
+        }
 
         public string Title
         {
@@ -23,15 +39,23 @@ namespace RPG.Quests
         {
             get
             {
-                return objectives.Length;
+                return objectives.Count;
             }
         }
 
-        public string[] Objectives
+        public List<Objective> Objectives
         {
             get
             {
                 return objectives;
+            }
+        }
+
+        public List<Reward> Rewards
+        {
+            get
+            {
+                return rewards;
             }
         }
 

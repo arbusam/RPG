@@ -17,11 +17,11 @@ namespace RPG.Quests
 
             for (int i = 0; i < objectives.Length; i++)
             {
-                foreach (string objective in quest.Objectives)
+                foreach (Quest.Objective objective in quest.Objectives)
                 {
-                    if (objective == objectives[i])
+                    if (objective.reference == objectives[i])
                     {
-                        if (questList.CompleteObjective(quest, objective))
+                        if (questList.CompleteObjective(quest, objective.reference))
                         {
                             return;
                         }

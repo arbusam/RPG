@@ -13,13 +13,24 @@ MonoBehaviour:
   m_Name: Kill some enemies (Level 2)
   m_EditorClassIdentifier: 
   objectives:
-  - Kill 1 Enemy
-  - Kill 2 Enemies
-  - Kill 3 Enemies
-  - Kill 4 Enemies
-  - Kill 5 Enemies
-  - Kill 6 Enemies
-  - Kill 7Enemies
-  - Kill 8 Enemies
-  - Kill 9 Enemies
-  - Kill 10 Enemies
+  - reference: 1
+    description: Kill 1 Enemy
+  - reference: 2
+    description: Kill 2 Enemies
+  - reference: 3
+    description: Kill 3 Enemies
+  - reference: 4
+    description: Kill 4 Enemies
+  - reference: 5
+    description: Kill 5 Enemies
+  - reference: 6
+    description: Kill 6 Enemies
+  - reference: 7
+    description: Kill 7 Enemies
+  - reference: 8
+    description: Kill 8 Enemies
+  - reference: 9
+    description: Kill 9 Enemies
+  - reference: 10
+    description: Kill 10 Enemies
+  rewards: []

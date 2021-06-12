@@ -13,8 +13,16 @@ MonoBehaviour:
   m_Name: Kill some enemies (Level 1)
   m_EditorClassIdentifier: 
   objectives:
-  - Kill 1 Enemy
-  - Kill 2 Enemies
-  - Kill 3 Enemies
-  - Kill 4 Enemies
-  - Kill 5 Enemies
+  - reference: 1
+    description: Kill 1 Enemy
+  - reference: 2
+    description: Kill 2 Enemies
+  - reference: 3
+    description: Kill 3 Enemies
+  - reference: 4
+    description: Kill 4 Enemies
+  - reference: 5
+    description: Kill 5 Enemies
+  rewards:
+  - number: 1
+    item: {fileID: 11400000, guid: c36f685261a674d718ed780317017726, type: 2}

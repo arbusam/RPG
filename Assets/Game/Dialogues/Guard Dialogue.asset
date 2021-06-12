@@ -1,3 +1,190 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5fb664dd4c2d32794c9c7e7882f067fd259218d903fc4dcb34370f89be405179
-size 5167
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8680318840828993886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: ae723cc5-b90f-455a-90d3-6ac5e091cf83
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: YOU. I have been told to kill you on sight.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 604
+    y: 87
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: Attack
+--- !u!114 &-6905516091140179117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 433e2781-5235-4f58-af1a-586cf8fda154
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I don't want to say
+  children:
+  - ce7766bf-ce74-4dc1-9256-d3a7405eb4be
+  rect:
+    serializedVersion: 2
+    x: 342
+    y: 324
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &-1677441233312987311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 2b04fb42-8b47-43e0-bbc1-2596c72d6dc3
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: I have been told to give you this gift.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 601
+    y: 210
+    width: 200
+    height: 100
+  onEnterAction: Gift
+  onExitAction: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa4fa260284840f2891ed65de31d185, type: 3}
+  m_Name: Guard Dialogue
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 5924912784731943548}
+  - {fileID: 3234226066700692972}
+  - {fileID: 4488089156119197261}
+  - {fileID: -6905516091140179117}
+  - {fileID: 6260656291438548376}
+  - {fileID: -8680318840828993886}
+  - {fileID: -1677441233312987311}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &3234226066700692972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: d4adc3ca-6f36-418c-b7b6-f3330e6058ed
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I am an adventurer here to take down soldiers.
+  children:
+  - ae723cc5-b90f-455a-90d3-6ac5e091cf83
+  rect:
+    serializedVersion: 2
+    x: 354
+    y: 87
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &4488089156119197261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 6abdc15a-18bd-4d22-8013-69522bec7dd2
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I am a soldier working to kill the adventurer.
+  children:
+  - 2b04fb42-8b47-43e0-bbc1-2596c72d6dc3
+  rect:
+    serializedVersion: 2
+    x: 351
+    y: 210
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+--- !u!114 &5924912784731943548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 39e5949d-5702-4915-a074-279ed6b6d2f9
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Hello, I have been told to give a gift to a certain person. Who are you?
+  children:
+  - d4adc3ca-6f36-418c-b7b6-f3330e6058ed
+  - 6abdc15a-18bd-4d22-8013-69522bec7dd2
+  - 433e2781-5235-4f58-af1a-586cf8fda154
+  rect:
+    serializedVersion: 2
+    x: 105
+    y: 210
+    width: 200
+    height: 100
+  onEnterAction: Spoken
+  onExitAction: 
+--- !u!114 &6260656291438548376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: ce7766bf-ce74-4dc1-9256-d3a7405eb4be
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Ok then, you can continue on your way.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 592
+    y: 324
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 

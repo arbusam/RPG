@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Speak to every person in this level (Level 3)
   m_EditorClassIdentifier: 
   objectives:
-  - Speak to Bob
-  - Speak to Guard
+  - reference: Bob
+    description: Speak to Bob
+  - reference: Guard
+    description: Speak to Guard
+  rewards: []

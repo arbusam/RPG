@@ -12,6 +12,7 @@ namespace RPG.UI.Quests
         [SerializeField] Transform objectiveContainer;
         [SerializeField] GameObject objectivePrefab;
         [SerializeField] GameObject uncheckedObjectivePrefab;
+        [SerializeField] TextMeshProUGUI rewardText;
 
         public void Setup(QuestStatus status)
         {
@@ -21,17 +22,46 @@ namespace RPG.UI.Quests
             {
                 Destroy(item.gameObject);
             }
-            foreach (string objective in quest.Objectives)
+            foreach (Quest.Objective objective in quest.Objectives)
             {
                 GameObject prefab = uncheckedObjectivePrefab;
-                if (status.CompletedObjectives.Contains(objective))
+                if (status.CompletedObjectives.Contains(objective.reference))
                 {
                     prefab = objectivePrefab;
                 }
                 GameObject objectiveInstance = Instantiate(prefab, objectiveContainer);
                 TextMeshProUGUI objectiveText = objectiveInstance.GetComponentInChildren<TextMeshProUGUI>();
-                objectiveText.text = objective;
+                objectiveText.text = objective.description;
             }
+            rewardText.text = GetRewardText(quest);
+        }
+
+        private string GetRewardText(Quest quest)
+        {
+            string rewardText = "";
+            foreach (var reward in quest.Rewards)
+            {
+                if (rewardText != "")
+                {
+                    rewardText += ", ";
+                }
+                if (reward.number > 1)
+                {
+                    rewardText += reward.number + " ";
+                    rewardText += reward.item.GetPluralDisplayName();
+                }
+                else
+                {
+                    rewardText += reward.item.GetDisplayName();
+                }
+            }
+
+            if (rewardText == "")
+            {
+                rewardText = "No reward";
+            }
+            rewardText += ".";
+            return rewardText;
         }
     }
 }

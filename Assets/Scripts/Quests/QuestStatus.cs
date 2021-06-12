@@ -61,5 +61,10 @@ namespace RPG.Quests
             QuestStatusRecord statusRecord = new QuestStatusRecord(quest.name, completedObjectives);
             return statusRecord;
         }
+
+        public bool IsComplete()
+        {
+            return true;
+        }
     }
 }

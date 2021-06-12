@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: f365a9be-ffb1-4acc-92c4-a46e3ce4ecc8
   displayName: Fireball
+  pluralDisplayName: Fireballs
   description: 
   icon: {fileID: 21300000, guid: f66c057114b8725409847a8a8e83a75b, type: 3}
   pickup: {fileID: 5435595429232619074, guid: 257bd34d36fa0474fb3511214e534f36, type: 3}

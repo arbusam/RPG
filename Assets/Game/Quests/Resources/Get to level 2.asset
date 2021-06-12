@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Get to level 2
   m_EditorClassIdentifier: 
   objectives:
-  - Get to player level 2
-  - Obtain a level 2 item
+  - reference: Player level
+    description: Get to player level 2
+  - reference: Item
+    description: Obtain a level 2 item
+  rewards: []

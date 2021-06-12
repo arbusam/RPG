@@ -19,6 +19,8 @@ namespace GameDevTV.Inventories
         [SerializeField] string itemID = null;
         [Tooltip("Item name to be displayed in UI.")]
         [SerializeField] string displayName = null;
+        [Tooltip("Item name to be displayed in UI if plural form is needed.")]
+        [SerializeField] string pluralDisplayName = null;
         [Tooltip("Item description to be displayed in UI.")]
         [SerializeField][TextArea] string description = null;
         [Tooltip("The UI icon to represent this item in the inventory.")]
@@ -96,6 +98,11 @@ namespace GameDevTV.Inventories
         public string GetDisplayName()
         {
             return displayName;
+        }
+
+        public string GetPluralDisplayName()
+        {
+            return pluralDisplayName;
         }
 
         public string GetDescription()
