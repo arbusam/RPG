@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: 8a14a63d-db91-44fa-beb6-27db7a14c4f8
   displayName: Basic Bow
   description: 
-  icon: {fileID: 21300000, guid: 5d7061fc7da05ce44add317708ec7215, type: 3}
+  icon: {fileID: 21300000, guid: af838e5920baaaa4cbb24dab99c4458d, type: 3}
   pickup: {fileID: 4619523240921783380, guid: 8143ee58153a74beeacaeea73974dd0c, type: 3}
   stackable: 0
   allowedEquipLocation: 5

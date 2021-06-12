@@ -45,6 +45,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9748615747c054ba79ea3ca86873ca96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &839358022091774528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8395152179132942613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8413bbf0d66a8473880e6040c4dccddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3552309582398970045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,26 +122,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventorySize: 16
---- !u!114 &839358022091774528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8395152179132942613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8413bbf0d66a8473880e6040c4dccddc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  statuses:
-  - quest: {fileID: 11400000, guid: 9fcb7c3960d90454d846f5b56b8c72d0, type: 2}
-    completedObjectives:
-    - Obtain a Healthy Hat
-    - Obtain a Basic Chestplate
-  - quest: {fileID: 11400000, guid: 99802dae0c5c64ed890c97f1d754fa74, type: 2}
-    completedObjectives:
-    - Get to player level 2
 --- !u!1001 &4755253780867853432
 PrefabInstance:
   m_ObjectHideFlags: 0

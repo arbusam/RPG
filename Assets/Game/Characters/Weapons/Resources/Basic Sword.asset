@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: 71e9656a-d5cc-40eb-a0d3-5faa5ba56217
   displayName: Basic Sword
   description: 
-  icon: {fileID: 21300000, guid: d19901b0ee3c38743a7d383bd484b0b5, type: 3}
+  icon: {fileID: 21300000, guid: dbd0e81ba08974441932c1b53abce311, type: 3}
   pickup: {fileID: 862466072777833391, guid: c8de1c4f4f8f54145ab911e74e81d138, type: 3}
   stackable: 0
   allowedEquipLocation: 5

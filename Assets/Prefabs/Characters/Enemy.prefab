@@ -241,10 +241,6 @@ PrefabInstance:
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 538124692, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
-      propertyPath: m_Speed
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1175455073, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
       propertyPath: weapon
       value: 
@@ -265,6 +261,10 @@ PrefabInstance:
       propertyPath: rightHandTransform
       value: 
       objectReference: {fileID: 3150566689210911367}
+    - target: {fileID: 1175455074, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
+      propertyPath: maxSpeed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3854971827980264813, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
       propertyPath: m_Name
       value: Enemy
