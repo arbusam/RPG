@@ -11,6 +11,25 @@ namespace RPG.Quests
         [SerializeField] Quest quest;
         [SerializeField] List<string> completedObjectives = new List<string>();
 
+        [Serializable]
+        public class QuestStatusRecord
+        {
+            public string questName;
+            public List<string> completedObjectives;
+
+            public QuestStatusRecord(string questName, List<string> completedObjectives)
+            {
+                this.questName = questName;
+                this.completedObjectives = completedObjectives;
+            }
+        }
+
+        public QuestStatus(QuestStatusRecord statusRecord)
+        {
+            quest = Quest.GetByName(statusRecord.questName);
+            completedObjectives = statusRecord.completedObjectives;
+        }
+
         public QuestStatus(Quest quest)
         {
             this.quest = quest;
@@ -35,6 +54,12 @@ namespace RPG.Quests
             {
                 return completedObjectives;
             }
+        }
+
+        public object CaptureState()
+        {
+            QuestStatusRecord statusRecord = new QuestStatusRecord(quest.name, completedObjectives);
+            return statusRecord;
         }
     }
 }
