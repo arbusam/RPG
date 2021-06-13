@@ -17,6 +17,8 @@ namespace GameDevTV.Inventories
         [Tooltip("Does an instance of this item get consumed every time it's used.")]
         [SerializeField] bool consumable = false;
 
+        public float timeSinceUse = Mathf.Infinity;
+
         // PUBLIC
 
         /// <summary>

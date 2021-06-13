@@ -25,6 +25,12 @@ namespace GameDevTV.UI.Inventories
             store.storeUpdated += UpdateIcon;
         }
 
+        private void Update()
+        {
+            if (store.GetAction(index) == null) return;
+            store.GetAction(index).timeSinceUse += Time.deltaTime;
+        }
+
         // PUBLIC
 
         public void AddItems(InventoryItem item, int number)
@@ -50,6 +56,11 @@ namespace GameDevTV.UI.Inventories
         public void RemoveItems(int number)
         {
             store.RemoveItems(index, number);
+        }
+
+        public void Use()
+        {
+            store.Use(index, store.gameObject);
         }
 
         // PRIVATE

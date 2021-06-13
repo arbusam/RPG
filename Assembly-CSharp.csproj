@@ -74,6 +74,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\MaterialSwitcher\MaterialSwitcherMixerBehaviour.cs" />
      <Compile Include="Assets\Scripts\Control\PatrolPath.cs" />
      <Compile Include="Assets\Scripts\EffectRemover.cs" />
+     <Compile Include="Assets\Asset Packs\FantasyIconsPackFree\Demo\IconViewer.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Camera\LayerCullDistances.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Localization\TranslatedText.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Collector.cs" />
@@ -134,6 +135,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\AudioSnapshot\AudioSnapshotBehaviour.cs" />
      <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\LightControl\LightControlBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Core\Condition.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\InteractOnTrigger.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TransformTween\TransformTweenMixerBehaviour.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Scripts\ControlSwitch.cs" />
@@ -263,6 +265,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Camera\CameraShake.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\DamageSystem\DeathVolume.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SetAnimatorTrigger.cs" />
+     <Compile Include="Assets\Scripts\Core\IPredicateEvaluator.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Utils\UI\Dragging\IDragContainer.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Chomper\ChomperSMBReturn.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\ActionItem.cs" />
@@ -350,9 +353,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SetGameObjectActive.cs" />
      <Compile Include="Assets\Scripts\Scene\Fader.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\FPSCounter.cs" />
-     <Compile Include="Assets\Asset Packs\FantasyIconsPackFree\Demo\IconViewer.cs" />
-     <Compile Include="Assets\Scripts\Core\IPredicateEvaluator.cs" />
-     <Compile Include="Assets\Scripts\Core\Condition.cs" />
+     <Compile Include="Assets\Scripts\Inventories\StatsActionItem.cs" />
      <None Include="Assets\Asset Packs\3DGamekit\Art\Shaders\Firefly.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\3DGamekit\Packages\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
