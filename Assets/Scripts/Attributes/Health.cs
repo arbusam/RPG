@@ -4,6 +4,7 @@ using RPG.Stats;
 using RPG.Core;
 using GameDevTV.Utils;
 using UnityEngine.Events;
+using System;
 
 namespace RPG.Attributes
 {

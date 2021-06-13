@@ -96,7 +96,7 @@ namespace RPG.Control
             {
                 if (Input.GetMouseButton(0))
                 {
-                    GetComponent<Mover>().StartMovingTo(hit.point);
+                    GetComponent<Mover>().StartMovingTo(hit.point, 1f);
                 }
                 SetCursor(CursorType.Movement);
                 return true;

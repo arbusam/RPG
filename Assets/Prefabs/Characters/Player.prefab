@@ -32,6 +32,7 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 96d4bfdb0d6d8c042bf8fccf6524d239, type: 3}
     hotspot: {x: 0, y: 0}
   raycastRadius: 0.5
+  UIActive: 0
 --- !u!114 &729124915923795321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,6 +43,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9748615747c054ba79ea3ca86873ca96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &839358022091774528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8395152179132942613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8413bbf0d66a8473880e6040c4dccddc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &3552309582398970045

@@ -131,7 +131,7 @@ namespace RPG.Control
                 }
                 nextPosition = GetCurrentWaypoint();
             }
-            GetComponent<Mover>().StartMovingTo(nextPosition);
+            GetComponent<Mover>().StartMovingTo(nextPosition, 1f);
         }
         
         public void Aggrevate()

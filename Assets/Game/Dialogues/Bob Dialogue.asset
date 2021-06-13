@@ -1,3 +1,953 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:60e342a1f118b52d7e0270c132ee9547d39556d4cf9d959fbd69d9b908aac71b
-size 17821
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9018666698206055093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: fa51e4dd-3f4c-4979-9ead-c3f50901fb13
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Just a bit in front of my house here is the village center. You can relax
+    there; no one who wants to harm you can get in there.
+  children:
+  - 9db38719-6127-49a9-b12c-e88fb1846fac
+  rect:
+    serializedVersion: 2
+    x: 1158
+    y: -6
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-8832431704873718992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 0cb80c9d-3ee1-439e-8620-8486dca9da00
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Can I have a quest?
+  children:
+  - 7a41580a-767a-4d06-999d-68b9d6882a46
+  - 03e9b892-9ea6-4f0a-b838-991b5cddaa74
+  - fa655aa0-85d4-48c2-963c-4a5d4545e736
+  rect:
+    serializedVersion: 2
+    x: 620
+    y: 262
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - not: 1
+        predicate: HasQuest
+        parameters:
+        - Kill some enemies (Level 1)
+      - not: 1
+        predicate: HasQuest
+        parameters:
+        - Kill some enemies (Level 2)
+--- !u!114 &-8774773981414221697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: fc2dc81b-b056-4bb1-94b5-97d26ba22529
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I've already been to this town
+  children:
+  - 75fc1330-5e80-42bf-975c-b83990d3b573
+  - d5efb1ae-bcac-482f-9828-59b193a629a3
+  rect:
+    serializedVersion: 2
+    x: 637
+    y: 459
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-8757708721020309251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 2ddacfc0-669c-46d3-8ca6-676614b3330d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: No
+  children:
+  - 50695c95-b9f6-4463-a936-3403a837583c
+  rect:
+    serializedVersion: 2
+    x: 1163
+    y: 752
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-7919421620932353138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 2de000cd-235e-412e-aec8-b53ea5035ada
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Hello and welcome to this town. My name is Bob and you might see me around.
+    I like to travel between towns.
+  children:
+  - 5218e074-5561-4e1f-bdae-8537d4f0a85e
+  rect:
+    serializedVersion: 2
+    x: 51
+    y: 187
+    width: 200
+    height: 100
+  onEnterAction: Spoken
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-7658235486828174313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 2f30526d-a242-4e26-afa0-cbb8146c2d20
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Can you tell me where everything is?
+  children:
+  - bf312357-f576-4a76-baf8-79037a602b8c
+  rect:
+    serializedVersion: 2
+    x: 648
+    y: 116
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-7313374711035911881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: fa655aa0-85d4-48c2-963c-4a5d4545e736
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: I only have a harder one left, do you still want it?
+  children:
+  - 16fd1f2f-93b3-4290-a912-c415488e3fc4
+  - 6ba3c03e-8930-46ea-898d-e6966ab44d7b
+  rect:
+    serializedVersion: 2
+    x: 882
+    y: 1175
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - not: 1
+        predicate: HasQuest
+        parameters:
+        - Kill some enemies (Level 2)
+    - or:
+      - not: 0
+        predicate: HasQuest
+        parameters:
+        - Kill some enemies (Level 1)
+--- !u!114 &-7153191514015569227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: bf312357-f576-4a76-baf8-79037a602b8c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Sure
+  children:
+  - fa51e4dd-3f4c-4979-9ead-c3f50901fb13
+  rect:
+    serializedVersion: 2
+    x: 908
+    y: -6
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-7023185686293341592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 6ba3c03e-8930-46ea-898d-e6966ab44d7b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: No
+  children:
+  - cf79cb00-eed9-4e1c-80a8-1ab9d6581c52
+  rect:
+    serializedVersion: 2
+    x: 1129
+    y: 1245
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-5557101671560656230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: f11a1ee0-9fe4-4ac6-bdc6-68845cc1299c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Ok then, one Level 3 Challenge has been added to your quests tab.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1435
+    y: 389
+    width: 200
+    height: 100
+  onEnterAction: Level3Quest
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-5259607816971980995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: d2d18168-e7a6-4d25-a081-37a2eaafc67c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1133
+    y: -6
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-4713212709323664990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 2543cb3b-2297-4447-873c-7415421b230b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Yes
+  children:
+  - a889bc1c-2d51-40a1-91ad-10a525179419
+  rect:
+    serializedVersion: 2
+    x: 1150
+    y: 877
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-4094910396516335024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 730f4835-3c4b-4d28-95c9-230e6b6e6646
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: No
+  children:
+  - cf79cb00-eed9-4e1c-80a8-1ab9d6581c52
+  rect:
+    serializedVersion: 2
+    x: 1149
+    y: 983
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-3989696178489444645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 16fd1f2f-93b3-4290-a912-c415488e3fc4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Yes
+  children:
+  - 768bcb8d-0fbc-4248-83f4-fa7f7dd8717a
+  rect:
+    serializedVersion: 2
+    x: 1135
+    y: 1130
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-3942611628591554963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: a7dfb495-e152-4493-9391-713eb756d173
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Can I have a easier type of quest instead?
+  children:
+  - 7a41580a-767a-4d06-999d-68b9d6882a46
+  - 03e9b892-9ea6-4f0a-b838-991b5cddaa74
+  - fa655aa0-85d4-48c2-963c-4a5d4545e736
+  rect:
+    serializedVersion: 2
+    x: 1170
+    y: 621
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - not: 1
+        predicate: HasQuest
+        parameters:
+        - Kill some enemies (Level 1)
+      - not: 1
+        predicate: HasQuest
+        parameters:
+        - Kill some enemies (Level 2)
+--- !u!114 &-3678314045243824258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 50695c95-b9f6-4463-a936-3403a837583c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Well in that case, goodbye and if you ever need anything else I will always
+    be avaliable.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1486
+    y: 658
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-1394809580575244914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: a4d06307-4d1a-4626-99e8-5e42c0e13fb8
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Harder
+  children:
+  - 768bcb8d-0fbc-4248-83f4-fa7f7dd8717a
+  rect:
+    serializedVersion: 2
+    x: 1201
+    y: 266
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-1127076941176127688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 5218e074-5561-4e1f-bdae-8537d4f0a85e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: So, do you have anything to talk to me about?
+  children:
+  - 2f30526d-a242-4e26-afa0-cbb8146c2d20
+  - 0cb80c9d-3ee1-439e-8620-8486dca9da00
+  - fc2dc81b-b056-4bb1-94b5-97d26ba22529
+  - a56d2a4d-bdca-4a83-9da7-f311dd609bc9
+  rect:
+    serializedVersion: 2
+    x: 313
+    y: 187
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa4fa260284840f2891ed65de31d185, type: 3}
+  m_Name: Bob Dialogue
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -7919421620932353138}
+  - {fileID: -7658235486828174313}
+  - {fileID: -7153191514015569227}
+  - {fileID: -8774773981414221697}
+  - {fileID: -3678314045243824258}
+  - {fileID: 306087429619076117}
+  - {fileID: 1286876722372578942}
+  - {fileID: -8757708721020309251}
+  - {fileID: -3942611628591554963}
+  - {fileID: -8832431704873718992}
+  - {fileID: 4569986603377521705}
+  - {fileID: 1603232868093351143}
+  - {fileID: -1394809580575244914}
+  - {fileID: 8579913749249974404}
+  - {fileID: 7032932635363834675}
+  - {fileID: -5557101671560656230}
+  - {fileID: -1127076941176127688}
+  - {fileID: 817611316442235576}
+  - {fileID: 1956614564971422472}
+  - {fileID: 5308550209490005762}
+  - {fileID: 5116552146065326875}
+  - {fileID: -9018666698206055093}
+  - {fileID: 3566186416357492608}
+  - {fileID: 805342694321899153}
+  - {fileID: -4713212709323664990}
+  - {fileID: -4094910396516335024}
+  - {fileID: -7313374711035911881}
+  - {fileID: -3989696178489444645}
+  - {fileID: -7023185686293341592}
+  - {fileID: 7220567168455969443}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &306087429619076117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 75fc1330-5e80-42bf-975c-b83990d3b573
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Exellent. Since you are experienced, do you want a Level 3 Challenge? These
+    challenges are harder than the Level 1 Challenges and the Level 2 Challenges
+    and are designed for more experienced players. But if you complete one you will
+    get a better reward.
+  children:
+  - 5d0f6946-7faa-481a-b557-5fd06dc6a966
+  - 2ddacfc0-669c-46d3-8ca6-676614b3330d
+  - a7dfb495-e152-4493-9391-713eb756d173
+  rect:
+    serializedVersion: 2
+    x: 889
+    y: 395
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - not: 1
+        predicate: HasQuest
+        parameters:
+        - Speak to every person in this level (Level 3)
+--- !u!114 &805342694321899153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 03e9b892-9ea6-4f0a-b838-991b5cddaa74
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: I only have an easier one left, do you still want it?
+  children:
+  - 2543cb3b-2297-4447-873c-7415421b230b
+  - 730f4835-3c4b-4d28-95c9-230e6b6e6646
+  rect:
+    serializedVersion: 2
+    x: 902
+    y: 927
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - not: 1
+        predicate: HasQuest
+        parameters:
+        - Kill some enemies (Level 1)
+    - or:
+      - not: 0
+        predicate: HasQuest
+        parameters:
+        - Kill some enemies (Level 2)
+--- !u!114 &817611316442235576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 46642d06-5364-4baa-ade5-e622ed0c7efb
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I changed my mind, I don't want one
+  children:
+  - cf79cb00-eed9-4e1c-80a8-1ab9d6581c52
+  rect:
+    serializedVersion: 2
+    x: 1192
+    y: 374
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &1286876722372578942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 5d0f6946-7faa-481a-b557-5fd06dc6a966
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Yes
+  children:
+  - f11a1ee0-9fe4-4ac6-bdc6-68845cc1299c
+  rect:
+    serializedVersion: 2
+    x: 1166
+    y: 485
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &1417605822925624644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: e852b442-76c3-4f35-a342-2b7600a6e5b6
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1003
+    y: -31
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &1603232868093351143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 13c297f2-790a-4f34-a518-055d3d97b8c9
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Easier
+  children:
+  - a889bc1c-2d51-40a1-91ad-10a525179419
+  rect:
+    serializedVersion: 2
+    x: 1178
+    y: 174
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &1956614564971422472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: a56d2a4d-bdca-4a83-9da7-f311dd609bc9
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: No
+  children:
+  - af3a8735-787b-4363-90a1-8aab4fbdb1f4
+  rect:
+    serializedVersion: 2
+    x: 619
+    y: 592
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &3566186416357492608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 9db38719-6127-49a9-b12c-e88fb1846fac
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: On the left of the village center is a forest. Be careful there, it is extremely
+    hard to see and there are enemies everywhere. If you do wish to get rid of the
+    enemies that are in there my best tip would be to lure them out of the forest
+    first and then deal with them.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1407
+    y: -6
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &4569986603377521705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 7a41580a-767a-4d06-999d-68b9d6882a46
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Would you like a easier one (level 1) or a harder one (level 2)
+  children:
+  - 13c297f2-790a-4f34-a518-055d3d97b8c9
+  - a4d06307-4d1a-4626-99e8-5e42c0e13fb8
+  - 46642d06-5364-4baa-ade5-e622ed0c7efb
+  rect:
+    serializedVersion: 2
+    x: 916
+    y: 160
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - not: 1
+        predicate: HasQuest
+        parameters:
+        - Kill some enemies (Level 1)
+      - not: 1
+        predicate: HasQuest
+        parameters:
+        - Kill some enemies (Level 1)
+--- !u!114 &5116552146065326875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: af3a8735-787b-4363-90a1-8aab4fbdb1f4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Ok then
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 874
+    y: 672
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &5308550209490005762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: cf79cb00-eed9-4e1c-80a8-1ab9d6581c52
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Ok. Do you have anything else to talk to me about?
+  children:
+  - 2f30526d-a242-4e26-afa0-cbb8146c2d20
+  - 0cb80c9d-3ee1-439e-8620-8486dca9da00
+  - fc2dc81b-b056-4bb1-94b5-97d26ba22529
+  - a56d2a4d-bdca-4a83-9da7-f311dd609bc9
+  rect:
+    serializedVersion: 2
+    x: 265
+    y: 419
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &7032932635363834675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 768bcb8d-0fbc-4248-83f4-fa7f7dd8717a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Ok then, one Level 2 Challenge has been added to your quests tab.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1488
+    y: 264
+    width: 200
+    height: 100
+  onEnterAction: Level2Quest
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &7220567168455969443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: d5efb1ae-bcac-482f-9828-59b193a629a3
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: That's great! You've already taken my Level 3 Challenge so I can't give you
+    another.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 882
+    y: 509
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - not: 0
+        predicate: HasQuest
+        parameters:
+        - Speak to every person in this level (Level 3)
+--- !u!114 &8579913749249974404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: a889bc1c-2d51-40a1-91ad-10a525179419
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Here you go, one Level 1 Challenge has been added to your quests tab.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1469
+    y: 87
+    width: 200
+    height: 100
+  onEnterAction: Level1Quest
+  onExitAction: 
+  condition:
+    and: []

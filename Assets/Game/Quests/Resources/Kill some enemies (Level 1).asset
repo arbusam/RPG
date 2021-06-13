@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebc30bd07e5b6412982e97cf41d5500b, type: 3}
+  m_Name: Kill some enemies (Level 1)
+  m_EditorClassIdentifier: 
+  objectives:
+  - reference: 1
+    description: Kill 1 Enemy
+  - reference: 2
+    description: Kill 2 Enemies
+  - reference: 3
+    description: Kill 3 Enemies
+  - reference: 4
+    description: Kill 4 Enemies
+  - reference: 5
+    description: Kill 5 Enemies
+  rewards:
+  - number: 1
+    item: {fileID: 11400000, guid: c36f685261a674d718ed780317017726, type: 2}
