@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using GameDevTV.Inventories;
 using GameDevTV.Saving;
+using RPG.Core;
 using UnityEngine;
+
 namespace RPG.Quests
 {
-    public class QuestList : MonoBehaviour, ISaveable
+    public class QuestList : MonoBehaviour, ISaveable, IPredicateEvaluator
     {
         List<QuestStatus> statuses = new List<QuestStatus>();
 
@@ -105,6 +107,58 @@ namespace RPG.Quests
                 QuestStatus.QuestStatusRecord statusRecord = objectState as QuestStatus.QuestStatusRecord;
                 if (statusRecord == null) return;
                 statuses.Add(new QuestStatus(statusRecord));
+            }
+        }
+
+        public bool? Evaluate(string predicate, string[] parameters)
+        {
+            if (predicate == "HasQuest")
+            {
+                foreach (string questName in parameters)
+                {
+                    if (HasQuest(Quest.GetByName(questName)))
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            else if (predicate == "!HasQuest")
+            {
+                foreach (string questName in parameters)
+                {
+                    if (HasQuest(Quest.GetByName(questName)))
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            else if (predicate == "HasAllQuests")
+            {
+                foreach (string questName in parameters)
+                {
+                    if (!HasQuest(Quest.GetByName(questName)))
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            else if (predicate == "!HasAllQuests")
+            {
+                foreach (string questName in parameters)
+                {
+                    if (!HasQuest(Quest.GetByName(questName)))
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            else
+            {
+                return null;
             }
         }
     }

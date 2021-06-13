@@ -25,6 +25,9 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &-8832431704873718992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41,14 +44,21 @@ MonoBehaviour:
   text: Can I have a quest?
   children:
   - 7a41580a-767a-4d06-999d-68b9d6882a46
+  - 03e9b892-9ea6-4f0a-b838-991b5cddaa74
+  - fa655aa0-85d4-48c2-963c-4a5d4545e736
   rect:
     serializedVersion: 2
-    x: 645
-    y: 267
+    x: 618
+    y: 263
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: '!HasAllQuests'
+    parameters:
+    - Kill some enemies (Level 1)
+    - Kill some enemies (Level 2)
 --- !u!114 &-8774773981414221697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,6 +75,7 @@ MonoBehaviour:
   text: I've already been to this town
   children:
   - 75fc1330-5e80-42bf-975c-b83990d3b573
+  - d5efb1ae-bcac-482f-9828-59b193a629a3
   rect:
     serializedVersion: 2
     x: 637
@@ -73,6 +84,9 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &-8757708721020309251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,6 +111,9 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &-7919421620932353138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +139,9 @@ MonoBehaviour:
     height: 100
   onEnterAction: Spoken
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &-7658235486828174313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,6 +166,38 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-7313374711035911881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: fa655aa0-85d4-48c2-963c-4a5d4545e736
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: I only have a harder one left, do you still want it?
+  children:
+  - 16fd1f2f-93b3-4290-a912-c415488e3fc4
+  - 6ba3c03e-8930-46ea-898d-e6966ab44d7b
+  rect:
+    serializedVersion: 2
+    x: 882
+    y: 1175
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: HasQuest
+    parameters:
+    - Kill some enemies (Level 1)
 --- !u!114 &-7153191514015569227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,6 +222,36 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-7023185686293341592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 6ba3c03e-8930-46ea-898d-e6966ab44d7b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: No
+  children:
+  - cf79cb00-eed9-4e1c-80a8-1ab9d6581c52
+  rect:
+    serializedVersion: 2
+    x: 1129
+    y: 1245
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &-5557101671560656230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,6 +275,9 @@ MonoBehaviour:
     height: 100
   onEnterAction: Level3Quest
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &-5259607816971980995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +301,90 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-4713212709323664990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 2543cb3b-2297-4447-873c-7415421b230b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Yes
+  children:
+  - a889bc1c-2d51-40a1-91ad-10a525179419
+  rect:
+    serializedVersion: 2
+    x: 1150
+    y: 877
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-4094910396516335024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 730f4835-3c4b-4d28-95c9-230e6b6e6646
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: No
+  children:
+  - cf79cb00-eed9-4e1c-80a8-1ab9d6581c52
+  rect:
+    serializedVersion: 2
+    x: 1149
+    y: 983
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &-3989696178489444645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 16fd1f2f-93b3-4290-a912-c415488e3fc4
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Yes
+  children:
+  - 768bcb8d-0fbc-4248-83f4-fa7f7dd8717a
+  rect:
+    serializedVersion: 2
+    x: 1135
+    y: 1130
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &-3942611628591554963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +401,8 @@ MonoBehaviour:
   text: Can I have a easier type of quest instead?
   children:
   - 7a41580a-767a-4d06-999d-68b9d6882a46
+  - 03e9b892-9ea6-4f0a-b838-991b5cddaa74
+  - fa655aa0-85d4-48c2-963c-4a5d4545e736
   rect:
     serializedVersion: 2
     x: 1170
@@ -240,6 +411,11 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: '!HasAllQuests'
+    parameters:
+    - Kill some enemies (Level 1)
+    - Kill some enemies (Level 2)
 --- !u!114 &-3678314045243824258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,6 +440,9 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &-1394809580575244914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,6 +467,9 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &-1127076941176127688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,12 +491,15 @@ MonoBehaviour:
   - a56d2a4d-bdca-4a83-9da7-f311dd609bc9
   rect:
     serializedVersion: 2
-    x: 312
+    x: 313
     y: 187
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,6 +536,13 @@ MonoBehaviour:
   - {fileID: 5116552146065326875}
   - {fileID: -9018666698206055093}
   - {fileID: 3566186416357492608}
+  - {fileID: 805342694321899153}
+  - {fileID: -4713212709323664990}
+  - {fileID: -4094910396516335024}
+  - {fileID: -7313374711035911881}
+  - {fileID: -3989696178489444645}
+  - {fileID: -7023185686293341592}
+  - {fileID: 7220567168455969443}
   newNodeOffset: {x: 250, y: 0}
 --- !u!114 &306087429619076117
 MonoBehaviour:
@@ -375,12 +567,45 @@ MonoBehaviour:
   - a7dfb495-e152-4493-9391-713eb756d173
   rect:
     serializedVersion: 2
-    x: 888
-    y: 460
+    x: 887
+    y: 395
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: '!HasQuest'
+    parameters:
+    - Speak to every person in this level (Level 3)
+--- !u!114 &805342694321899153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 03e9b892-9ea6-4f0a-b838-991b5cddaa74
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: I only have an easier one left, do you still want it?
+  children:
+  - 2543cb3b-2297-4447-873c-7415421b230b
+  - 730f4835-3c4b-4d28-95c9-230e6b6e6646
+  rect:
+    serializedVersion: 2
+    x: 902
+    y: 927
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: HasQuest
+    parameters:
+    - Kill some enemies (Level 2)
 --- !u!114 &817611316442235576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,6 +630,9 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &1286876722372578942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,6 +657,9 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &1417605822925624644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,6 +683,9 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &1603232868093351143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -476,6 +710,9 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &1956614564971422472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -500,6 +737,9 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &3566186416357492608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,6 +766,9 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &4569986603377521705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -546,12 +789,17 @@ MonoBehaviour:
   - 46642d06-5364-4baa-ade5-e622ed0c7efb
   rect:
     serializedVersion: 2
-    x: 923
-    y: 249
+    x: 916
+    y: 160
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: '!HasQuest'
+    parameters:
+    - Kill some enemies (Level 1)
+    - Kill some enemies (Level 2)
 --- !u!114 &5116552146065326875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -575,6 +823,9 @@ MonoBehaviour:
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &5308550209490005762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -596,12 +847,15 @@ MonoBehaviour:
   - a56d2a4d-bdca-4a83-9da7-f311dd609bc9
   rect:
     serializedVersion: 2
-    x: 303
-    y: 342
+    x: 265
+    y: 419
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
 --- !u!114 &7032932635363834675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,6 +879,37 @@ MonoBehaviour:
     height: 100
   onEnterAction: Level2Quest
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []
+--- !u!114 &7220567168455969443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: d5efb1ae-bcac-482f-9828-59b193a629a3
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: That's great! You've already taken my Level 3 Challenge so I can't give you
+    another.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 882
+    y: 509
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    predicate: HasQuest
+    parameters:
+    - Speak to every person in this level (Level 3)
 --- !u!114 &8579913749249974404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -648,3 +933,6 @@ MonoBehaviour:
     height: 100
   onEnterAction: Level1Quest
   onExitAction: 
+  condition:
+    predicate: 
+    parameters: []

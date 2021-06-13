@@ -64,6 +64,13 @@ namespace RPG.Quests
 
         public bool IsComplete()
         {
+            foreach (var objective in quest.Objectives)
+            {
+                if (!completedObjectives.Contains(objective.reference))
+                {
+                    return false;
+                }
+            }
             return true;
         }
     }
