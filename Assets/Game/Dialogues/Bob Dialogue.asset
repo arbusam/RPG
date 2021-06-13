@@ -26,8 +26,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-8832431704873718992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48,17 +47,23 @@ MonoBehaviour:
   - fa655aa0-85d4-48c2-963c-4a5d4545e736
   rect:
     serializedVersion: 2
-    x: 618
-    y: 263
+    x: 620
+    y: 262
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: '!HasAllQuests'
-    parameters:
-    - Kill some enemies (Level 1)
-    - Kill some enemies (Level 2)
+    and:
+    - or:
+      - not: 1
+        predicate: HasQuest
+        parameters:
+        - Kill some enemies (Level 1)
+      - not: 1
+        predicate: HasQuest
+        parameters:
+        - Kill some enemies (Level 2)
 --- !u!114 &-8774773981414221697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,8 +90,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-8757708721020309251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,8 +116,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-7919421620932353138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,8 +143,7 @@ MonoBehaviour:
   onEnterAction: Spoken
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-7658235486828174313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,8 +169,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-7313374711035911881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,9 +196,17 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: HasQuest
-    parameters:
-    - Kill some enemies (Level 1)
+    and:
+    - or:
+      - not: 1
+        predicate: HasQuest
+        parameters:
+        - Kill some enemies (Level 2)
+    - or:
+      - not: 0
+        predicate: HasQuest
+        parameters:
+        - Kill some enemies (Level 1)
 --- !u!114 &-7153191514015569227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,8 +232,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-7023185686293341592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,8 +258,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-5557101671560656230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,8 +283,7 @@ MonoBehaviour:
   onEnterAction: Level3Quest
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-5259607816971980995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,8 +308,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-4713212709323664990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,8 +334,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-4094910396516335024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,8 +360,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-3989696178489444645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,8 +386,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-3942611628591554963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -412,10 +414,16 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: '!HasAllQuests'
-    parameters:
-    - Kill some enemies (Level 1)
-    - Kill some enemies (Level 2)
+    and:
+    - or:
+      - not: 1
+        predicate: HasQuest
+        parameters:
+        - Kill some enemies (Level 1)
+      - not: 1
+        predicate: HasQuest
+        parameters:
+        - Kill some enemies (Level 2)
 --- !u!114 &-3678314045243824258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,8 +449,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-1394809580575244914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,8 +475,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &-1127076941176127688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,8 +504,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,16 +572,19 @@ MonoBehaviour:
   - a7dfb495-e152-4493-9391-713eb756d173
   rect:
     serializedVersion: 2
-    x: 887
+    x: 889
     y: 395
     width: 200
     height: 100
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: '!HasQuest'
-    parameters:
-    - Speak to every person in this level (Level 3)
+    and:
+    - or:
+      - not: 1
+        predicate: HasQuest
+        parameters:
+        - Speak to every person in this level (Level 3)
 --- !u!114 &805342694321899153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -603,9 +611,17 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: HasQuest
-    parameters:
-    - Kill some enemies (Level 2)
+    and:
+    - or:
+      - not: 1
+        predicate: HasQuest
+        parameters:
+        - Kill some enemies (Level 1)
+    - or:
+      - not: 0
+        predicate: HasQuest
+        parameters:
+        - Kill some enemies (Level 2)
 --- !u!114 &817611316442235576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,8 +647,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &1286876722372578942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -658,8 +673,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &1417605822925624644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -684,8 +698,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &1603232868093351143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -711,8 +724,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &1956614564971422472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,8 +750,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &3566186416357492608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -767,8 +778,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &4569986603377521705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -796,10 +806,16 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: '!HasQuest'
-    parameters:
-    - Kill some enemies (Level 1)
-    - Kill some enemies (Level 2)
+    and:
+    - or:
+      - not: 1
+        predicate: HasQuest
+        parameters:
+        - Kill some enemies (Level 1)
+      - not: 1
+        predicate: HasQuest
+        parameters:
+        - Kill some enemies (Level 1)
 --- !u!114 &5116552146065326875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -824,8 +840,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &5308550209490005762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -854,8 +869,7 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &7032932635363834675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -880,8 +894,7 @@ MonoBehaviour:
   onEnterAction: Level2Quest
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []
 --- !u!114 &7220567168455969443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -907,9 +920,12 @@ MonoBehaviour:
   onEnterAction: 
   onExitAction: 
   condition:
-    predicate: HasQuest
-    parameters:
-    - Speak to every person in this level (Level 3)
+    and:
+    - or:
+      - not: 0
+        predicate: HasQuest
+        parameters:
+        - Speak to every person in this level (Level 3)
 --- !u!114 &8579913749249974404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -934,5 +950,4 @@ MonoBehaviour:
   onEnterAction: Level1Quest
   onExitAction: 
   condition:
-    predicate: 
-    parameters: []
+    and: []

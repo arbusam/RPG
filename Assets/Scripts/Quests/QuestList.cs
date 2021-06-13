@@ -112,54 +112,15 @@ namespace RPG.Quests
 
         public bool? Evaluate(string predicate, string[] parameters)
         {
-            if (predicate == "HasQuest")
+            switch (predicate)
             {
-                foreach (string questName in parameters)
-                {
-                    if (HasQuest(Quest.GetByName(questName)))
-                    {
-                        return true;
-                    }
-                }
-                return false;
+                case "HasQuest": 
+                return HasQuest(Quest.GetByName(parameters[0]));
+                case "CompletedQuest":
+                return GetStatus(Quest.GetByName(parameters[0])).IsComplete();
             }
-            else if (predicate == "!HasQuest")
-            {
-                foreach (string questName in parameters)
-                {
-                    if (HasQuest(Quest.GetByName(questName)))
-                    {
-                        return false;
-                    }
-                }
-                return true;
-            }
-            else if (predicate == "HasAllQuests")
-            {
-                foreach (string questName in parameters)
-                {
-                    if (!HasQuest(Quest.GetByName(questName)))
-                    {
-                        return false;
-                    }
-                }
-                return true;
-            }
-            else if (predicate == "!HasAllQuests")
-            {
-                foreach (string questName in parameters)
-                {
-                    if (!HasQuest(Quest.GetByName(questName)))
-                    {
-                        return true;
-                    }
-                }
-                return false;
-            }
-            else
-            {
-                return null;
-            }
+
+            return null;
         }
     }
 }
