@@ -35,7 +35,6 @@ namespace RPG.UI
             {
                 return;
             }
-            print("Working so far");
             conversantName.text = playerConversant.GetConversantName();
             AIText.text = playerConversant.GetText();
             choiceRoot.gameObject.SetActive(playerConversant.IsChoosing());
