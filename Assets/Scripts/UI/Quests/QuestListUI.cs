@@ -7,7 +7,8 @@ namespace RPG.UI.Quests
 {
     public class QuestListUI : MonoBehaviour
     {
-        [SerializeField] QuestItemUI questPrefab;
+        [SerializeField] QuestItemUI completeQuestPrefab;
+        [SerializeField] QuestItemUI incompleteQuestPrefab;
         [SerializeField] Transform incompleteQuestList;
         [SerializeField] Transform completedQuestList;
 
@@ -24,7 +25,16 @@ namespace RPG.UI.Quests
             QuestList questList = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestList>();
             foreach (QuestStatus status in questList.Statuses)
             {
-                QuestItemUI uiInstance = Instantiate<QuestItemUI>(questPrefab, incompleteQuestList.transform);
+                QuestItemUI uiInstance;
+                if (status.IsComplete())
+                {
+                    uiInstance = Instantiate<QuestItemUI>(completeQuestPrefab, completedQuestList.transform);
+                }
+                else
+                {
+                    uiInstance = Instantiate<QuestItemUI>(incompleteQuestPrefab, incompleteQuestList.transform);
+                }
+                
                 uiInstance.Setup(status);
             }
         }

@@ -33,7 +33,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5399484367350127346, guid: b5e6beb44053c47b1b5a603c6ffcfde2, type: 3}
       propertyPath: m_Name
-      value: Quest
+      value: Complete Quest
+      objectReference: {fileID: 0}
+    - target: {fileID: 5762873163961145609, guid: b5e6beb44053c47b1b5a603c6ffcfde2, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5762873163961145609, guid: b5e6beb44053c47b1b5a603c6ffcfde2, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5762873163961145609, guid: b5e6beb44053c47b1b5a603c6ffcfde2, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278255360
       objectReference: {fileID: 0}
     - target: {fileID: 6092288716049665444, guid: b5e6beb44053c47b1b5a603c6ffcfde2, type: 3}
       propertyPath: m_AnchorMax.y
@@ -58,6 +70,18 @@ PrefabInstance:
     - target: {fileID: 6092288716049665444, guid: b5e6beb44053c47b1b5a603c6ffcfde2, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907154533709998720, guid: b5e6beb44053c47b1b5a603c6ffcfde2, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907154533709998720, guid: b5e6beb44053c47b1b5a603c6ffcfde2, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907154533709998720, guid: b5e6beb44053c47b1b5a603c6ffcfde2, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278255360
       objectReference: {fileID: 0}
     - target: {fileID: 8169232353701375810, guid: b5e6beb44053c47b1b5a603c6ffcfde2, type: 3}
       propertyPath: m_Pivot.x
