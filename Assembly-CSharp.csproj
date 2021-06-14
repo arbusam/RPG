@@ -354,6 +354,11 @@
      <Compile Include="Assets\Scripts\Scene\Fader.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\FPSCounter.cs" />
      <Compile Include="Assets\Scripts\Inventories\StatsActionItem.cs" />
+     <Compile Include="Assets\Scripts\Shops\Shopper.cs" />
+     <Compile Include="Assets\Scripts\Shops\Shop.cs" />
+     <Compile Include="Assets\Scripts\UI\Shops\RowUI.cs" />
+     <Compile Include="Assets\Scripts\UI\Shops\ShopUI.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\ItemCategory.cs" />
      <None Include="Assets\Asset Packs\3DGamekit\Art\Shaders\Firefly.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\3DGamekit\Packages\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
