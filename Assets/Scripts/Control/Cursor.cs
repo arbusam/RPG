@@ -10,7 +10,8 @@ namespace RPG.Control
         UI,
         Pickup,
         FullPickup,
-        Dialogue
+        Dialogue,
+        Shop
     }
 
     [System.Serializable]

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,16 +7,22 @@ namespace RPG.Shops
 {
     public class Shopper : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
+        Shop activeShop = null;
+
+        public event Action activeShopChanged;
+
+        public void SetActiveShop(Shop shop)
         {
-            
+            activeShop = shop;
+            if (activeShopChanged != null)
+            {
+                activeShopChanged();
+            }
         }
 
-        // Update is called once per frame
-        void Update()
+        public Shop GetActiveShop()
         {
-            
+            return activeShop;
         }
     }
 }

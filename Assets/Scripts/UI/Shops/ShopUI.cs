@@ -1,21 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
+using RPG.Shops;
+using TMPro;
 using UnityEngine;
 
 namespace RPG.UI.Shops
 {    
     public class ShopUI : MonoBehaviour
     {
-        // Start is called before the first frame update
+        [SerializeField] TextMeshProUGUI shopName;
+
+        Shopper shopper = null;
+        Shop currentShop = null;
+
         void Start()
         {
-            
+            shopper = GameObject.FindGameObjectWithTag("Player").GetComponent<Shopper>();
+            if (shopper == null) return;
+
+            shopper.activeShopChanged += ShopChanged;
+
+            ShopChanged();
         }
 
-        // Update is called once per frame
-        void Update()
+        private void ShopChanged()
         {
-            
+            currentShop = shopper.GetActiveShop();
+            if (currentShop != null)
+            {
+                shopName.text = currentShop.ShopName;
+            }
+            this.gameObject.SetActive(currentShop != null);
+        }
+
+        public void Close()
+        {
+            shopper.SetActiveShop(null);
         }
     }
 }
