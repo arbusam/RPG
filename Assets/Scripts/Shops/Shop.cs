@@ -24,6 +24,7 @@ namespace RPG.Shops
         {
             yield return new ShopItem(InventoryItem.GetFromID("71e9656a-d5cc-40eb-a0d3-5faa5ba56217"), 10, 10.00f, 0);
             yield return new ShopItem(InventoryItem.GetFromID("f365a9be-ffb1-4acc-92c4-a46e3ce4ecc8"), 5, 100.00f, 0);
+            yield return new ShopItem(InventoryItem.GetFromID("69323c06-7d38-4474-888a-ac6c94df3015"), 5, 50.00f, 0);
         }
         public void SelectFilter(ItemCategory category) {}
         public ItemCategory GetFilter() { return ItemCategory.None; }
