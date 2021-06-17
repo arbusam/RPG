@@ -19,6 +19,7 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: dbd0e81ba08974441932c1b53abce311, type: 3}
   pickup: {fileID: 862466072777833391, guid: c8de1c4f4f8f54145ab911e74e81d138, type: 3}
   stackable: 0
+  price: 9.99
   allowedEquipLocation: 5
   weaponRange: 2.5
   timeBetweenAttacks: 0.5
