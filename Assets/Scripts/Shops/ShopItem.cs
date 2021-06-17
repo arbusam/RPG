@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using GameDevTV.Inventories;
 using UnityEngine;
 
@@ -36,7 +37,7 @@ namespace RPG.Shops
 
         public string GetPrice()
         {
-            return price.ToString();
+            return $"{price.ToString("C", CultureInfo.CurrentCulture)}";
         }
     }
 }
