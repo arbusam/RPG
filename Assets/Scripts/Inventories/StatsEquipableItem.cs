@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using GameDevTV.Inventories;
 using UnityEngine;
@@ -12,7 +13,7 @@ namespace RPG.Stats
         [SerializeField]
         Modifier[] percentageModifiers;
 
-        [System.Serializable]
+        [Serializable]
         struct Modifier
         {
             public Stat stat;

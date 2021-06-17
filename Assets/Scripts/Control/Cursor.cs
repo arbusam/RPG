@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace RPG.Control
@@ -14,7 +15,7 @@ namespace RPG.Control
         Shop
     }
 
-    [System.Serializable]
+    [Serializable]
     public struct CursorMapping
     {
         public CursorType type;

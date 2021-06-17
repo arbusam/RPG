@@ -10,6 +10,15 @@ namespace RPG.Shops
     public class Shop : MonoBehaviour, IRaycastable
     {
         [SerializeField] string shopName;
+
+        [SerializeField] StockItemConfig[] stockConfig;
+
+        [Serializable]
+        class StockItemConfig
+        {
+            
+        }
+
         public string ShopName
         {
             get

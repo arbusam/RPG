@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace RPG.Quests
 {
+    using System;
     using GameDevTV.Inventories;
     using UnityEngine;
     
@@ -13,14 +14,14 @@ namespace RPG.Quests
         [SerializeField] List<Objective> objectives;
         [SerializeField] List<Reward> rewards = new List<Reward>();
 
-        [System.Serializable]
+        [Serializable]
         public class Reward
         {
             [Min(1)] public int number;
             public InventoryItem item;
         }
 
-        [System.Serializable]
+        [Serializable]
         public class Objective  
         {
             public string reference;

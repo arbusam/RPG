@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace RPG.Quests
 {
-    [System.Serializable]
+    [Serializable]
     public class QuestStatus
     {
         [SerializeField] Quest quest;
