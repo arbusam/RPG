@@ -39,5 +39,10 @@ namespace RPG.Shops
         {
             return $"{price.ToString("C", CultureInfo.CurrentCulture)}";
         }
+
+        public InventoryItem GetInventoryItem()
+        {
+            return item;
+        }
     }
 }

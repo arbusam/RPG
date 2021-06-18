@@ -45,7 +45,7 @@ namespace RPG.UI.Shops
             foreach (ShopItem shopItem in currentShop.GetFilteredItems())
             {
                 RowUI row = Instantiate<RowUI>(rowPrefab, listRoot);
-                row.Setup(shopItem);
+                row.Setup(currentShop, shopItem);
             }
         }
 

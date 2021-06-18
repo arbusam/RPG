@@ -15,12 +15,45 @@ namespace RPG.UI.Shops
         [SerializeField] TextMeshProUGUI availability;
         [SerializeField] TextMeshProUGUI price;
 
-        public void Setup(ShopItem shopItem)
+        Shop currentShop = null;
+        ShopItem currentItem;
+
+        public void Setup(Shop shop, ShopItem shopItem)
         {
             icon.sprite = shopItem.GetSprite();
             nameField.text = shopItem.GetName();
             availability.text = shopItem.GetAvailablility();
             price.text = shopItem.GetPrice();
+            currentShop = shop;
+            currentItem = shopItem;
+        }
+
+        public void Add()
+        {
+            if (currentShop == null) return;
+            
+            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+            {
+                currentShop.AddToTransaction(currentItem.GetInventoryItem(), 10);
+            }
+            else
+            {
+                currentShop.AddToTransaction(currentItem.GetInventoryItem(), 1);
+            }
+        }
+
+        public void Remove()
+        {
+            if (currentShop == null) return;
+            
+            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+            {
+                currentShop.AddToTransaction(currentItem.GetInventoryItem(), -10);
+            }
+            else
+            {
+                currentShop.AddToTransaction(currentItem.GetInventoryItem(), -1);
+            }
         }
     }
 }

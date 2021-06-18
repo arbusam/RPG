@@ -46,7 +46,10 @@ namespace RPG.Shops
         public bool CanTransact() { return true; }
         public void ConfirmTransaction() {}
         public float TransactionTotal() { return 0; }
-        public void AddToTransaction(InventoryItem item, int quantity) {}
+        public void AddToTransaction(InventoryItem item, int quantity)
+        {
+            print("Added " + item.name + " x " + quantity);
+        }
 
         public CursorMapping GetCursor(PlayerControls callingControls)
         {
