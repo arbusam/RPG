@@ -40,6 +40,11 @@ namespace RPG.Shops
             return $"{price.ToString("C", CultureInfo.CurrentCulture)}";
         }
 
+        public int GetQuantity()
+        {
+            return quantityInTransaction;
+        }
+
         public InventoryItem GetInventoryItem()
         {
             return item;
