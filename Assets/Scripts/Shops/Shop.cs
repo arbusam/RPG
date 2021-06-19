@@ -36,6 +36,14 @@ namespace RPG.Shops
         
         public event Action onChange;
 
+        private void Awake()
+        {
+            foreach (StockItemConfig config in stockConfig)
+            {
+                stock[config.item] = config.initialStock;
+            }
+        }
+
         public void SetShopper(Shopper shopper)
         {
             currentShopper = shopper;
@@ -53,7 +61,8 @@ namespace RPG.Shops
                 float price = config.item.GetPrice() * (1 - config.buyingDiscountPercentage/100);
                 int quantityInTransaction = 0;
                 transaction.TryGetValue(config.item, out quantityInTransaction);
-                yield return new ShopItem(config.item, config.initialStock, price, quantityInTransaction);
+                int currentStock = stock[config.item];
+                yield return new ShopItem(config.item, currentStock, price, quantityInTransaction);
             }
         }
 
@@ -82,8 +91,13 @@ namespace RPG.Shops
                     {
                         AddToTransaction(item, -1);
                         shopperPurse.UpdateBalance(-price);
+                        stock[item] --;
                     }
                 }
+            }
+            if (onChange != null)
+            {
+                onChange();
             }
         }
 
@@ -105,6 +119,11 @@ namespace RPG.Shops
             }
 
             transaction[item] += quantity;
+
+            if (transaction[item] > stock[item])
+            {
+                transaction[item] = stock[item];
+            }
 
             if (transaction[item] <= 0)
             {
