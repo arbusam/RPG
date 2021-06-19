@@ -67,6 +67,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\Spinner.cs" />
      <Compile Include="Assets\Scripts\Core\IAction.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\SetLocation\SetLocationMixerBehaviour.cs" />
+     <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Utility\SkyboxLookAt.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\LerpControlledBob.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Effects\WaterRipple.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Graphics\Dissolve.cs" />
@@ -146,6 +147,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TextSwitcher\TextSwitcherClip.cs" />
      <Compile Include="Assets\Scripts\Control\IRaycastable.cs" />
      <Compile Include="Assets\Scripts\Stats\CharacterClass.cs" />
+     <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Utility\QualitySettingCheck.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\MaterialSwitcher\MaterialSwitcherBehaviour.cs" />
      <Compile Include="Assets\Scripts\Combat\EnemyHealthDisplay.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\TimeMachine\TimeMachineBehaviour.cs" />
@@ -178,6 +180,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Grenadier\GrenadierSMBPursuit.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Chomper\ChomperSMBHit.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\UI\Inventories\IItemHolder.cs" />
+     <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Utility\StartScreenSpriteOffsetter.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\PrettyListAttribute.cs" />
      <Compile Include="Assets\Scripts\Stats\XPDisplay.cs" />
      <Compile Include="Assets\Scripts\Inventories\DropLibrary.cs" />
@@ -198,6 +201,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Effects\CaptureDepthTexture.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\PlaySound.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\TimelineTriggerZone.cs" />
+     <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Utility\OpenURL.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TimeDilation\TimeDilationBehaviour.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TextSwitcher\TextSwitcherTrack.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\LightControl\LightControlMixerBehaviour.cs" />
@@ -238,6 +242,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Player\StateMachineBehaviour\EllenSetTargetableSMB.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\SceneManagement\Runtime\GameObjectTeleporter.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\ObjectPooler.cs" />
+     <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Utility\QualitySettingPostprocessProfileSwitch.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\GameCommandHandler.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\DamageSystem\Damageable.cs" />
      <Compile Include="Assets\Scripts\Scene\SavingWrapper.cs" />
@@ -265,6 +270,7 @@
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\Pickup.cs" />
      <Compile Include="Assets\Scripts\UI\Shops\RowUI.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Scripts\MouseLock.cs" />
+     <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Utility\SnapToGround.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Scripts\SoundTrackVolume.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Collectable.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Characters\FirstPersonCharacter\Scripts\RigidbodyFirstPersonController.cs" />
@@ -315,6 +321,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\ReplaceWithRagdollSMB.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\UI\SetCursorMode.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Scripts\AmbientAudio.cs" />
+     <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Utility\UIAutoscroll.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\InteractionTrigger.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\ParticleDeactivator.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Chomper\ChomperSMBFall.cs" />
@@ -360,13 +367,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SetGameObjectActive.cs" />
      <Compile Include="Assets\Scripts\Scene\Fader.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\FPSCounter.cs" />
-     <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Utility\UIAutoscroll.cs" />
-     <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Utility\SkyboxLookAt.cs" />
-     <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Utility\StartScreenSpriteOffsetter.cs" />
-     <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Utility\QualitySettingPostprocessProfileSwitch.cs" />
-     <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Utility\OpenURL.cs" />
-     <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Utility\QualitySettingCheck.cs" />
-     <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Utility\SnapToGround.cs" />
+     <Compile Include="Assets\Scripts\Inventories\Purse.cs" />
      <None Include="Assets\Asset Packs\3DGamekit\Art\Shaders\Firefly.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\3DGamekit\Packages\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
