@@ -23,6 +23,7 @@ namespace RPG.Shops
         }
 
         Dictionary<InventoryItem, int> transaction = new Dictionary<InventoryItem, int>();
+        Dictionary<InventoryItem, int> stock = new Dictionary<InventoryItem, int>();
         Shopper currentShopper = null;
 
         public string ShopName
