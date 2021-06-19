@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using RPG.Shops;
 using TMPro;
 using UnityEngine;
@@ -23,8 +24,8 @@ namespace RPG.UI.Shops
         {
             icon.sprite = shopItem.GetSprite();
             nameField.text = shopItem.GetName();
-            availability.text = shopItem.GetAvailablility();
-            price.text = shopItem.GetPrice();
+            availability.text = shopItem.GetAvailablility().ToString();
+            price.text = $"{shopItem.GetPrice().ToString("C", CultureInfo.CurrentCulture)}";;
             quantity.text = shopItem.GetQuantity().ToString();
             currentShop = shop;
             currentItem = shopItem;

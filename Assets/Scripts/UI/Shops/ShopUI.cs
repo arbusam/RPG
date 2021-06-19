@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using RPG.Shops;
 using TMPro;
 using UnityEngine;
@@ -12,6 +13,7 @@ namespace RPG.UI.Shops
         [SerializeField] TextMeshProUGUI shopName;
         [SerializeField] Transform listRoot;
         [SerializeField] RowUI rowPrefab;
+        [SerializeField] TextMeshProUGUI totalField;
 
         Shopper shopper = null;
         Shop currentShop = null;
@@ -50,6 +52,8 @@ namespace RPG.UI.Shops
                 RowUI row = Instantiate<RowUI>(rowPrefab, listRoot);
                 row.Setup(currentShop, shopItem);
             }
+
+            totalField.text = $"Total: {currentShop.TransactionTotal().ToString("C", CultureInfo.CurrentCulture)}";
         }
 
         public void Close()

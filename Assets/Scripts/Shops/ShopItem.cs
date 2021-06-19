@@ -1,5 +1,4 @@
 using System;
-using System.Globalization;
 using GameDevTV.Inventories;
 using UnityEngine;
 
@@ -30,14 +29,14 @@ namespace RPG.Shops
             return item.GetDisplayName();
         }
 
-        public string GetAvailablility()
+        public int GetAvailablility()
         {
-            return availability.ToString();
+            return availability;
         }
 
-        public string GetPrice()
+        public float GetPrice()
         {
-            return $"{price.ToString("C", CultureInfo.CurrentCulture)}";
+            return price;
         }
 
         public int GetQuantity()
