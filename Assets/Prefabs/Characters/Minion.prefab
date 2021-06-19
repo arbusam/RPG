@@ -16,6 +16,10 @@ PrefabInstance:
       value: Minion
       objectReference: {fileID: 0}
     - target: {fileID: 4434018054524318689, guid: f2980b980cfaf49c2be87d5890f58ea1, type: 3}
+      propertyPath: startingLevel
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434018054524318689, guid: f2980b980cfaf49c2be87d5890f58ea1, type: 3}
       propertyPath: characterClass
       value: 4
       objectReference: {fileID: 0}

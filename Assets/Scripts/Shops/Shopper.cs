@@ -13,16 +13,31 @@ namespace RPG.Shops
 
         public void SetActiveShop(Shop shop)
         {
+            if (activeShop != null)
+            {
+                activeShop.SetShopper(null);
+            }
             activeShop = shop;
+            if (activeShop != null)
+            {
+                activeShop.SetShopper(this);
+            }
             if (activeShopChanged != null)
             {
                 activeShopChanged();
             }
         }
 
-        public Shop GetActiveShop()
+        public Shop ActiveShop
         {
-            return activeShop;
+            get
+            {
+                return activeShop;
+            }
+            set
+            {
+                activeShop = value;
+            }
         }
     }
 }

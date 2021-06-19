@@ -29,7 +29,7 @@ namespace RPG.UI.Shops
         private void ShopChanged()
         {
             if (currentShop != null) currentShop.onChange -= RefreshUI;
-            currentShop = shopper.GetActiveShop();
+            currentShop = shopper.ActiveShop;
             this.gameObject.SetActive(currentShop != null);
             if (currentShop == null) return;
             shopName.text = currentShop.ShopName;
@@ -55,6 +55,11 @@ namespace RPG.UI.Shops
         public void Close()
         {
             shopper.SetActiveShop(null);
+        }
+
+        public void ConfirmTransaction()
+        {
+            currentShop.ConfirmTransaction();
         }
     }
 }
