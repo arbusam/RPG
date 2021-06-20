@@ -65,9 +65,31 @@ namespace RPG.Shops
 
                 int quantityInTransaction = 0;
                 transaction.TryGetValue(config.item, out quantityInTransaction);
-                int currentStock = stock[config.item];
-                yield return new ShopItem(config.item, currentStock, price, quantityInTransaction);
+                int availability = GetAvailability(config.item);
+                yield return new ShopItem(config.item, availability, price, quantityInTransaction);
             }
+        }
+
+        private int GetAvailability(InventoryItem item)
+        {
+            if (isBuyingMode) return stock[item];
+
+            return CountItemsInInventory(item);
+        }
+
+        private int CountItemsInInventory(InventoryItem item)
+        {
+            Inventory shopperInventory = currentShopper.GetComponent<Inventory>();
+            if (shopperInventory == null) return 0;
+
+            int items = 0;
+
+            for (int i = 0; i < shopperInventory.GetSize(); i++)
+            {
+                InventoryItem itemInSlot = shopperInventory.GetItemInSlot(i);
+                if (itemInSlot == item) items += shopperInventory.GetNumberInSlot(i);
+            }
+            return items;
         }
 
         private float GetPrice(StockItemConfig config)
@@ -163,11 +185,14 @@ namespace RPG.Shops
                 transaction[item] = 0;
             }
 
-            transaction[item] += quantity;
-
-            if (transaction[item] > stock[item])
+            int availability = GetAvailability(item);
+            if (transaction[item] + quantity > availability)
             {
-                transaction[item] = stock[item];
+                transaction[item] = availability;
+            }
+            else
+            {
+                transaction[item] += quantity;
             }
 
             if (transaction[item] <= 0)
