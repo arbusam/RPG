@@ -5,6 +5,7 @@ using System.Globalization;
 using RPG.Shops;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace RPG.UI.Shops
 {    
@@ -14,16 +15,23 @@ namespace RPG.UI.Shops
         [SerializeField] Transform listRoot;
         [SerializeField] RowUI rowPrefab;
         [SerializeField] TextMeshProUGUI totalField;
+        [SerializeField] Button confirmButton;
+        [SerializeField] TextMeshProUGUI inventoryFullText;
 
         Shopper shopper = null;
         Shop currentShop = null;
 
+        Color originalTotalTextColor;
+
         void Start()
         {
+            originalTotalTextColor = totalField.color;
+
             shopper = GameObject.FindGameObjectWithTag("Player").GetComponent<Shopper>();
             if (shopper == null) return;
 
             shopper.activeShopChanged += ShopChanged;
+            confirmButton.onClick.AddListener(ConfirmTransaction);
 
             ShopChanged();
         }
@@ -54,6 +62,9 @@ namespace RPG.UI.Shops
             }
 
             totalField.text = $"Total: {currentShop.TransactionTotal().ToString("C", CultureInfo.CurrentCulture)}";
+            totalField.color = currentShop.HasSufficientFunds() ? originalTotalTextColor : Color.red;
+            inventoryFullText.gameObject.SetActive(!currentShop.HasInventorySpace());
+            confirmButton.interactable = currentShop.CanTransact();
         }
 
         public void Close()

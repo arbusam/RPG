@@ -70,7 +70,29 @@ namespace RPG.Shops
         public ItemCategory GetFilter() { return ItemCategory.None; }
         public void SelectMode(bool isBuying) {}
         public bool IsBuyingMode() { return true; }
-        public bool CanTransact() { return true; }
+        public bool CanTransact()
+        {
+            if (IsTransactionEmpty()) return false;
+            if (!HasSufficientFunds()) return false;
+            if (!HasInventorySpace()) return false;
+            return true;
+        }
+
+        public bool HasInventorySpace()
+        {
+            Inventory shopperInventory = currentShopper.GetComponent<Inventory>();
+            List<InventoryItem> flatItems = new List<InventoryItem>();
+            foreach (ShopItem shopItem in GetAllItems())
+            {
+                InventoryItem item = shopItem.GetInventoryItem();
+                int quantity = shopItem.GetQuantity();
+                for (int i = 0; i < quantity; i++)
+                {
+                    flatItems.Add(item);
+                }
+            }
+            return shopperInventory.HasSpaceFor(flatItems);
+        }
 
         public void ConfirmTransaction()
         {
@@ -134,6 +156,19 @@ namespace RPG.Shops
             {
                 onChange();
             }
+        }
+
+        public bool HasSufficientFunds()
+        {
+            Purse shopperPurse = currentShopper.GetComponent<Purse>();
+            if (shopperPurse == null) return false;
+
+            return shopperPurse.GetBalance() >= TransactionTotal();
+        }
+
+        private bool IsTransactionEmpty()
+        {
+            return transaction.Count == 0;
         }
 
         public CursorMapping GetCursor(PlayerControls callingControls)
