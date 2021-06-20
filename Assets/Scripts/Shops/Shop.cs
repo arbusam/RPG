@@ -29,6 +29,8 @@ namespace RPG.Shops
         Shopper currentShopper = null;
         bool isBuyingMode = true;
 
+        ItemCategory currentItemFilter;
+
         public string ShopName
         {
             get
@@ -99,8 +101,15 @@ namespace RPG.Shops
             : config.item.GetPrice() * (sellingPercentage / 100);
         }
 
-        public void SelectFilter(ItemCategory category) {}
-        public ItemCategory GetFilter() { return ItemCategory.None; }
+        public void SelectFilter(ItemCategory category)
+        {
+            currentItemFilter = category;
+        }
+
+        public ItemCategory GetFilter()
+        { 
+            return currentItemFilter;
+        }
         public void SelectMode(bool isBuying)
         {
             isBuyingMode = isBuying;
