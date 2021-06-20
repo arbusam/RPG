@@ -125,6 +125,8 @@ namespace RPG.Shops
 
         public bool HasInventorySpace()
         {
+            if (!isBuyingMode) return true;
+
             Inventory shopperInventory = currentShopper.GetComponent<Inventory>();
             List<InventoryItem> flatItems = new List<InventoryItem>();
             foreach (ShopItem shopItem in GetAllItems())
@@ -152,13 +154,13 @@ namespace RPG.Shops
                 float price = shopItem.GetPrice();
                 for (int i = 0; i < quantity; i++)
                 {
-                    if (shopperPurse.GetBalance() < price) break;
-                    bool success = shopperInventory.AddToFirstEmptySlot(item, 1);
-                    if (success)
+                    if (isBuyingMode)
                     {
-                        AddToTransaction(item, -1);
-                        shopperPurse.UpdateBalance(-price);
-                        stock[item] --;
+                        BuyItem(shopperInventory, shopperPurse, item, price);
+                    }
+                    else
+                    {
+                        SellItem(shopperInventory, shopperPurse, item, price);
                     }
                 }
             }
@@ -166,6 +168,39 @@ namespace RPG.Shops
             {
                 onChange();
             }
+        }
+
+        private void BuyItem(Inventory shopperInventory, Purse shopperPurse, InventoryItem item, float price)
+        {
+            if (shopperPurse.GetBalance() < price) return;
+            bool success = shopperInventory.AddToFirstEmptySlot(item, 1);
+            if (success)
+            {
+                AddToTransaction(item, -1);
+                shopperPurse.UpdateBalance(-price);
+                stock[item]--;
+            }
+        }
+
+        private void SellItem(Inventory shopperInventory, Purse shopperPurse, InventoryItem item, float price)
+        {
+            int slot = FindFirstItemSlot(shopperInventory, item);
+            if (slot == -1) return;
+
+            AddToTransaction(item, -1);
+            shopperInventory.RemoveFromSlot(slot, 1);
+            shopperPurse.UpdateBalance(price);
+            stock[item]++;
+        }
+
+        private int FindFirstItemSlot(Inventory shopperInventory, InventoryItem item)
+        {
+            for (int i = 0; i < shopperInventory.GetSize(); i++)
+            {
+                InventoryItem itemInSlot = shopperInventory.GetItemInSlot(i);
+                if (itemInSlot == item) return i;
+            }
+            return -1;
         }
 
         public float TransactionTotal()
@@ -208,6 +243,8 @@ namespace RPG.Shops
 
         public bool HasSufficientFunds()
         {
+            if (!isBuyingMode) return true;
+
             Purse shopperPurse = currentShopper.GetComponent<Purse>();
             if (shopperPurse == null) return false;
 
