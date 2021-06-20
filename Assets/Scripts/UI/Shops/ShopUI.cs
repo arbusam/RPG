@@ -16,7 +16,9 @@ namespace RPG.UI.Shops
         [SerializeField] RowUI rowPrefab;
         [SerializeField] TextMeshProUGUI totalField;
         [SerializeField] Button confirmButton;
+        [SerializeField] TextMeshProUGUI confirmButtonText;
         [SerializeField] TextMeshProUGUI inventoryFullText;
+        [SerializeField] Button switchButton;
 
         Shopper shopper = null;
         Shop currentShop = null;
@@ -32,6 +34,7 @@ namespace RPG.UI.Shops
 
             shopper.activeShopChanged += ShopChanged;
             confirmButton.onClick.AddListener(ConfirmTransaction);
+            switchButton.onClick.AddListener(SwitchMode);
 
             ShopChanged();
         }
@@ -65,6 +68,17 @@ namespace RPG.UI.Shops
             totalField.color = currentShop.HasSufficientFunds() ? originalTotalTextColor : Color.red;
             inventoryFullText.gameObject.SetActive(!currentShop.HasInventorySpace());
             confirmButton.interactable = currentShop.CanTransact();
+            TextMeshProUGUI switchText = switchButton.GetComponentInChildren<TextMeshProUGUI>();
+            if (currentShop.IsBuyingMode())
+            {
+                switchText.text = "Switch To Selling";
+                confirmButtonText.text = "Buy";
+            }
+            else
+            {
+                switchText.text = "Switch To Buying";
+                confirmButtonText.text = "Sell";
+            }
         }
 
         public void Close()
@@ -75,6 +89,11 @@ namespace RPG.UI.Shops
         public void ConfirmTransaction()
         {
             currentShop.ConfirmTransaction();
+        }
+
+        public void SwitchMode()
+        {
+            currentShop.SelectMode(!currentShop.IsBuyingMode());
         }
     }
 }
