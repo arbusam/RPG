@@ -18,12 +18,12 @@ namespace RPG.Stats
         }
 
         private void Update() {
-            if (Input.GetKeyDown(KeyCode.UpArrow) && Debug.isDebugBuild)
+            if (Input.GetKey(KeyCode.UpArrow) && Debug.isDebugBuild)
             {
                 experiencePoints += 1;
                 onExperienceGained();
             }
-            if (Input.GetKeyDown(KeyCode.DownArrow) && Debug.isDebugBuild)
+            if (Input.GetKey(KeyCode.DownArrow) && Debug.isDebugBuild)
             {
                 experiencePoints -= 1;
                 onExperienceGained();
