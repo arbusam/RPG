@@ -73,7 +73,13 @@ namespace RPG.UI.Shops
             totalField.text = $"Total: {currentShop.TransactionTotal().ToString("C", CultureInfo.CurrentCulture)}";
             totalField.color = currentShop.HasSufficientFunds() ? originalTotalTextColor : Color.red;
             inventoryFullText.gameObject.SetActive(!currentShop.HasInventorySpace());
-            confirmButton.interactable = currentShop.CanTransact();
+            confirmButton.interactable = currentShop.CanTransact(); 
+
+            foreach (FilterButtonUI button in GetComponentsInChildren<FilterButtonUI>())
+            {
+                button.RefreshUI();
+            }
+
             TextMeshProUGUI switchText = switchButton.GetComponentInChildren<TextMeshProUGUI>();
             if (currentShop.IsBuyingMode())
             {

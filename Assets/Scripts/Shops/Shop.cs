@@ -56,7 +56,14 @@ namespace RPG.Shops
 
         public IEnumerable<ShopItem> GetFilteredItems()
         {
-            return GetAllItems();
+            foreach (ShopItem item in GetAllItems())
+            {
+                InventoryItem inventoryItem = item.GetInventoryItem();
+                if (currentItemFilter == ItemCategory.None || inventoryItem.GetCategory() == currentItemFilter)
+                {
+                    yield return item;
+                }
+            }
         }
 
         public IEnumerable<ShopItem> GetAllItems()
@@ -104,6 +111,10 @@ namespace RPG.Shops
         public void SelectFilter(ItemCategory category)
         {
             currentItemFilter = category;
+            if (onChange != null)
+            {
+                onChange();
+            }
         }
 
         public ItemCategory GetFilter()

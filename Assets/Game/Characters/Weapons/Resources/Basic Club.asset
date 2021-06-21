@@ -20,6 +20,7 @@ MonoBehaviour:
   pickup: {fileID: 542458401592915366, guid: 1836a4a765ce047d0ab66d56ccd49bd6, type: 3}
   stackable: 0
   price: 5
+  category: 2
   allowedEquipLocation: 5
   weaponRange: 2
   timeBetweenAttacks: 1.5
