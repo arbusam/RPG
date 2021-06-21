@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using GameDevTV.Inventories;
 using RPG.Control;
 using RPG.Inventories;
+using RPG.Stats;
 using UnityEngine;
 
 namespace RPG.Shops
@@ -22,6 +23,7 @@ namespace RPG.Shops
             public InventoryItem item;
             public int initialStock;
             public float buyingDiscountPercentage;
+            [Min(1)] public int unlockLevel = 1;
         }
 
         Dictionary<InventoryItem, int> transaction = new Dictionary<InventoryItem, int>();
@@ -68,14 +70,17 @@ namespace RPG.Shops
 
         public IEnumerable<ShopItem> GetAllItems()
         {
-            foreach (StockItemConfig config in stockConfig)
+            Dictionary<InventoryItem, float> prices = GetPrices();
+            Dictionary<InventoryItem, int> availablilities = GetAvailabilities();
+            foreach (InventoryItem item in availablilities.Keys)
             {
-                float price = GetPrice(config);
+                if (availablilities[item] <= 0) continue;
 
+                float price = prices[item];
                 int quantityInTransaction = 0;
-                transaction.TryGetValue(config.item, out quantityInTransaction);
-                int availability = GetAvailability(config.item);
-                yield return new ShopItem(config.item, availability, price, quantityInTransaction);
+                transaction.TryGetValue(item, out quantityInTransaction);
+                int availability = availablilities[item];
+                yield return new ShopItem(item, availability, price, quantityInTransaction);
             }
         }
 
@@ -106,6 +111,41 @@ namespace RPG.Shops
             return isBuyingMode
             ? config.item.GetPrice() * (1 - config.buyingDiscountPercentage / 100)
             : config.item.GetPrice() * (sellingPercentage / 100);
+        }
+
+        private Dictionary<InventoryItem, float> GetPrices()
+        {
+            Dictionary<InventoryItem, float> prices = new Dictionary<InventoryItem, float>();
+
+            foreach (var config in stockConfig)
+            {
+                if (!prices.ContainsKey(config.item))
+                {
+                    prices[config.item] = config.item.GetPrice();
+                }
+                prices[config.item] *=
+                isBuyingMode
+                ? config.item.GetPrice() * (1 - config.buyingDiscountPercentage / 100)
+                : config.item.GetPrice() * (sellingPercentage / 100);
+            }
+
+            return prices;
+        }
+
+        private Dictionary<InventoryItem, int> GetAvailabilities()
+        {
+            Dictionary<InventoryItem, int> availabilities = new Dictionary<InventoryItem, int>();
+
+            foreach (var config in stockConfig)
+            {
+                if (!availabilities.ContainsKey(config.item))
+                {
+                    availabilities[config.item] = 0;
+                }
+                availabilities[config.item] += config.initialStock;
+            }
+
+            return availabilities;
         }
 
         public void SelectFilter(ItemCategory category)
@@ -274,6 +314,14 @@ namespace RPG.Shops
         private bool IsTransactionEmpty()
         {
             return transaction.Count == 0;
+        }
+
+        private int GetShopperLevel()
+        {
+            BaseStats stats = currentShopper.GetComponent<BaseStats>();
+            if (stats == null) return 0;
+
+            return stats.GetLevel();
         }
 
         public CursorMapping GetCursor(PlayerControls callingControls)
