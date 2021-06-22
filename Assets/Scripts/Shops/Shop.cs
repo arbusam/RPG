@@ -148,6 +148,16 @@ namespace RPG.Shops
             return availabilities;
         }
 
+        private IEnumerable<StockItemConfig> GetAvailableConfigs()
+        {
+            int shopperLevel = GetShopperLevel();
+            foreach (var config in stockConfig)
+            {
+                if (config.unlockLevel > shopperLevel) continue;
+                yield return config;
+            }
+        }
+
         public void SelectFilter(ItemCategory category)
         {
             currentItemFilter = category;
