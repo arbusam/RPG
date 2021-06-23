@@ -87,9 +87,11 @@ namespace RPG.Combat
 
         private void DestoryOldWeapon(Transform rightHand, Transform leftHand)
         {
+            if (rightHand == null) return;
             Transform oldWeapon = rightHand.Find(weaponName);
             if (oldWeapon == null)
             {
+                if (leftHand == null) return;
                 oldWeapon = leftHand.Find(weaponName);
             }
             if (oldWeapon == null) return;
