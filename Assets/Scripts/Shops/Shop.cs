@@ -117,7 +117,7 @@ namespace RPG.Shops
         {
             Dictionary<InventoryItem, float> prices = new Dictionary<InventoryItem, float>();
 
-            foreach (var config in stockConfig)
+            foreach (var config in GetAvailableConfigs())
             {
                 if (!prices.ContainsKey(config.item))
                 {
@@ -125,8 +125,8 @@ namespace RPG.Shops
                 }
                 prices[config.item] *=
                 isBuyingMode
-                ? config.item.GetPrice() * (1 - config.buyingDiscountPercentage / 100)
-                : config.item.GetPrice() * (sellingPercentage / 100);
+                ? (1 - config.buyingDiscountPercentage / 100)
+                : (sellingPercentage / 100);
             }
 
             return prices;
@@ -136,7 +136,7 @@ namespace RPG.Shops
         {
             Dictionary<InventoryItem, int> availabilities = new Dictionary<InventoryItem, int>();
 
-            foreach (var config in stockConfig)
+            foreach (var config in GetAvailableConfigs())
             {
                 if (!availabilities.ContainsKey(config.item))
                 {
