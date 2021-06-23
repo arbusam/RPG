@@ -53,7 +53,6 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\InteractOnButton.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Senders\SendOnTriggerStay.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Graphics\GlobalShaderSettings.cs" />
-     <Compile Include="Assets\Scripts\Inventories\StatsActionItem.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\InventoryItem.cs" />
      <Compile Include="Assets\Scripts\Stats\Stats.cs" />
      <Compile Include="Assets\Scripts\Attributes\HealthBar.cs" />
@@ -101,6 +100,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SimpleTranslator.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\UI\KeyUI.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\ActionStore.cs" />
+     <Compile Include="Assets\Scripts\UI\Shops\FilterButtonUI.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\InventoryItem.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Effects\GunnerLightning.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Player\PlayerInput.cs" />
@@ -120,6 +120,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Senders\SendOnCollisionExit.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\ScreenFader\ScreenFaderMixerBehaviour.cs" />
      <Compile Include="Assets\Scripts\Quests\QuestGiver.cs" />
+     <Compile Include="Assets\Scripts\UI\PurseUI.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Chomper\ChomperSMBPursuit.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Camera\ScreenshotWithAlpha.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SwitchMaterial.cs" />
@@ -333,6 +334,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TransformTween\TransformTweenClip.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\ScreenFader\ScreenFaderBehaviour.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\UI\StartUI.cs" />
+     <Compile Include="Assets\Scripts\Inventories\Purse.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Grenadier\GrenadierSMBIdle.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\SceneLinkedSMB.cs" />
      <Compile Include="Assets\Scripts\UI\DialogueUI.cs" />
@@ -367,9 +369,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SetGameObjectActive.cs" />
      <Compile Include="Assets\Scripts\Scene\Fader.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\FPSCounter.cs" />
-     <Compile Include="Assets\Scripts\Inventories\Purse.cs" />
-     <Compile Include="Assets\Scripts\UI\PurseUI.cs" />
-     <Compile Include="Assets\Scripts\UI\Shops\FilterButtonUI.cs" />
+     <Compile Include="Assets\Scripts\Abilities\Ability.cs" />
      <None Include="Assets\Asset Packs\3DGamekit\Art\Shaders\Firefly.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\3DGamekit\Packages\TextMesh Pro\Resources\Shaders\TMPro.cginc" />

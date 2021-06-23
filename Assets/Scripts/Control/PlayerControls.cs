@@ -6,6 +6,7 @@ using RPG.Combat;
 using RPG.Attributes;
 using System;
 using UnityEngine.EventSystems;
+using GameDevTV.Inventories;
 
 namespace RPG.Control
 {
@@ -16,9 +17,17 @@ namespace RPG.Control
 
         [SerializeField] CursorMapping[] cursorMappings = null;
         [SerializeField] float raycastRadius = 0.5f;
+        [SerializeField] int actionSlots = 5;
         public bool UIActive = false;
 
         bool isDragging = false;
+
+        ActionStore actionStore;
+
+        private void Awake()
+        {
+            actionStore = GetComponent<ActionStore>();
+        }
 
         void Update()
         {
@@ -29,10 +38,22 @@ namespace RPG.Control
                 return;
             }
 
+            UseAbilities();
+
             if (InteractWithComponent()) return;
-            // if (InteractWithCombat()) return;
             if (InteractWIthMovement()) return;
             SetCursor(CursorType.None);
+        }
+
+        private void UseAbilities()
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                if (Input.GetKeyDown(KeyCode.Alpha1 + i) || Input.GetKeyDown(KeyCode.Keypad1 + i))
+                {
+                    actionStore.Use(i, gameObject);
+                }
+            }
         }
 
         private bool InteractWithComponent()
