@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b27ddda6f36c545dc919cffc96419b49, type: 3}
-  m_Name: Mega Splash
+  m_Name: Ability Mega Splash
   m_EditorClassIdentifier: 
   itemID: cea1ead7-26e2-47ae-abd0-84b5a56bada7
   displayName: Mega Splash
@@ -22,4 +22,4 @@ MonoBehaviour:
   price: 20
   category: 5
   consumable: 0
-  targetingStrategy: {fileID: 11400000, guid: dfbdbfb95a62c4ad48476b9b68269901, type: 2}
+  targetingStrategy: {fileID: 11400000, guid: a60f1f52863cb4d7485f7486dac74f61, type: 2}
