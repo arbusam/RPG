@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using RPG.Control;
 using UnityEngine;
 
@@ -10,13 +12,13 @@ namespace RPG.Abilities.Targeting
         [SerializeField] Texture2D cursorTexture;
         [SerializeField] Vector2 cursorHotspot;
 
-        public override void StartTargeting(GameObject user)
+        public override void StartTargeting(GameObject user, Action<IEnumerable<GameObject>> finished)
         {
             PlayerControls playerControls = user.GetComponent<PlayerControls>();
-            playerControls.StartCoroutine(Targeting(user, playerControls));
+            playerControls.StartCoroutine(Targeting(user, playerControls, finished));
         }
 
-        private IEnumerator Targeting(GameObject user, PlayerControls playerControls)
+        private IEnumerator Targeting(GameObject user, PlayerControls playerControls, Action<IEnumerable<GameObject>> finished)
         {
             playerControls.enabled = false;
             while (true)
@@ -25,11 +27,9 @@ namespace RPG.Abilities.Targeting
 
                 if (Input.GetMouseButtonDown(0))
                 {
-                    while (Input.GetMouseButtonDown(0))
-                    {
-                        yield return null;
-                    }
+                    yield return new WaitWhile(() => Input.GetMouseButton(0));
                     playerControls.enabled = true;
+                    finished(null);
                     yield break;
                 }
                 yield return null;
