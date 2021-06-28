@@ -108,6 +108,7 @@ namespace RPG.Combat
 
             if (target == null) return;
             if (target.GetComponent<Health>().IsDead()) return;
+            if (!GetComponent<Mover>().canMove) return;
 
             if (!GetIsInRange())
             {

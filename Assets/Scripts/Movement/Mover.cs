@@ -16,6 +16,7 @@ namespace RPG.Movement
         [SerializeField] float maxSpeed = 7f;
 
         NavMeshAgent navMeshAgent;
+        public bool canMove = true;
 
         private void Awake() {
             navMeshAgent = GetComponent<NavMeshAgent>();
@@ -39,6 +40,7 @@ namespace RPG.Movement
 
         public void StartMovingTo(Vector3 destination, float speedFraction)
         {
+            if (!canMove) return;
             GetComponent<ActionScheduler>().StartAction(this);
             MoveTo(destination, speedFraction);
         }

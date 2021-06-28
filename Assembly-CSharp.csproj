@@ -375,6 +375,9 @@
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\FPSCounter.cs" />
      <Compile Include="Assets\Scripts\Abilities\FilterStrategy.cs" />
      <Compile Include="Assets\Scripts\Abilities\Filters\TagFilter.cs" />
+     <Compile Include="Assets\Scripts\Abilities\EffectStrategy.cs" />
+     <Compile Include="Assets\Scripts\Abilities\Effects\HealthEffect.cs" />
+     <Compile Include="Assets\Scripts\Abilities\Effects\FreezeEffect.cs" />
      <None Include="Assets\Asset Packs\3DGamekit\Art\Shaders\Firefly.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\3DGamekit\Packages\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
