@@ -16,7 +16,10 @@ namespace RPG.Abilities
 
         private void TargetAquired(IEnumerable<GameObject> targets)
         {
-            Debug.Log("Target Aquired");
+            foreach (GameObject target in targets)
+            {
+                Debug.Log(target.name);
+            }
         }
     }
 }

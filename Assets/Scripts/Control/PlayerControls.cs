@@ -41,7 +41,7 @@ namespace RPG.Control
             UseAbilities();
 
             if (InteractWithComponent()) return;
-            if (InteractWIthMovement()) return;
+            if (InteractWithMovement()) return;
             SetCursor(CursorType.None);
         }
 
@@ -108,7 +108,7 @@ namespace RPG.Control
             return UIActive;
         }
 
-        private bool InteractWIthMovement()
+        private bool InteractWithMovement()
         {
             Ray ray = GetMouseRay();
             RaycastHit hit;
@@ -148,7 +148,7 @@ namespace RPG.Control
             Cursor.SetCursor(mapping.texture, mapping.hotspot, CursorMode.Auto);
         }
 
-        private static Ray GetMouseRay()
+        public static Ray GetMouseRay()
         {
             return Camera.main.ScreenPointToRay(Input.mousePosition);
         }

@@ -53,6 +53,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\InteractOnButton.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Senders\SendOnTriggerStay.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Graphics\GlobalShaderSettings.cs" />
+     <Compile Include="Assets\Scripts\Abilities\Ability.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\InventoryItem.cs" />
      <Compile Include="Assets\Scripts\Stats\Stats.cs" />
      <Compile Include="Assets\Scripts\Attributes\HealthBar.cs" />
@@ -106,6 +107,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Player\PlayerInput.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Player\CheckpointGroup.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TransformTween\TransformTweenTrack.cs" />
+     <Compile Include="Assets\Scripts\Abilities\Targeting\DemoTargeting.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\UI\ShowHideUI.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Scripts\twinkle.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\RigidbodyDelayedForce.cs" />
@@ -199,6 +201,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Senders\SendOnBecameInvisible.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\LayerMaskExtensions.cs" />
      <Compile Include="Assets\Scripts\Stats\Progression.cs" />
+     <Compile Include="Assets\Scripts\Abilities\TargetingStrategy.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Effects\CaptureDepthTexture.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\PlaySound.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\TimelineTriggerZone.cs" />
@@ -308,6 +311,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Effects\MirrorReflection.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\PlayAnimation.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\CutsceneScriptControl\CutsceneScriptControlBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Abilities\Targeting\DelayedClickTargeting.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Effects\EffectStateMachineBehavior.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Spitter\SpitterSMBFleeing.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\LightControl\LightControlTrack.cs" />
@@ -369,10 +373,6 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SetGameObjectActive.cs" />
      <Compile Include="Assets\Scripts\Scene\Fader.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\FPSCounter.cs" />
-     <Compile Include="Assets\Scripts\Abilities\Ability.cs" />
-     <Compile Include="Assets\Scripts\Abilities\TargetingStrategy.cs" />
-     <Compile Include="Assets\Scripts\Abilities\Targeting\DemoTargeting.cs" />
-     <Compile Include="Assets\Scripts\Abilities\Targeting\DelayedClickTargeting.cs" />
      <None Include="Assets\Asset Packs\3DGamekit\Art\Shaders\Firefly.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\3DGamekit\Packages\TextMesh Pro\Resources\Shaders\TMPro.cginc" />

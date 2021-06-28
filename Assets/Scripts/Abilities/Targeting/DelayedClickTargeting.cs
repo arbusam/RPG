@@ -11,6 +11,8 @@ namespace RPG.Abilities.Targeting
     {
         [SerializeField] Texture2D cursorTexture;
         [SerializeField] Vector2 cursorHotspot;
+        [SerializeField] LayerMask layerMask;
+        [SerializeField] float areaAffectRadius;
 
         public override void StartTargeting(GameObject user, Action<IEnumerable<GameObject>> finished)
         {
@@ -20,6 +22,7 @@ namespace RPG.Abilities.Targeting
 
         private IEnumerator Targeting(GameObject user, PlayerControls playerControls, Action<IEnumerable<GameObject>> finished)
         {
+            yield return new WaitWhile(() => Input.GetMouseButton(0));
             playerControls.enabled = false;
             while (true)
             {
@@ -29,10 +32,24 @@ namespace RPG.Abilities.Targeting
                 {
                     yield return new WaitWhile(() => Input.GetMouseButton(0));
                     playerControls.enabled = true;
-                    finished(null);
+                    finished(GetGameObjectsInRadius());
                     yield break;
                 }
                 yield return null;
+            }
+        }
+
+        private IEnumerable<GameObject> GetGameObjectsInRadius()
+        {
+            RaycastHit raycastHit;
+            if (Physics.Raycast(PlayerControls.GetMouseRay(), out raycastHit, 1000, layerMask))
+            {
+                RaycastHit[] hits = Physics.SphereCastAll(raycastHit.point, areaAffectRadius, Vector3.up, 0);
+
+                foreach (var hit in hits)
+                {
+                    yield return hit.collider.gameObject;
+                }
             }
         }
     }
