@@ -14,6 +14,8 @@ namespace RPG.Movement
     {
         [SerializeField] Transform target;
         [SerializeField] float maxSpeed = 7f;
+        [SerializeField] ParticleSystem freezeParticles = null;
+        ParticleSystem freezeParticlesInstance = null;
 
         NavMeshAgent navMeshAgent;
         public bool canMove = true;
@@ -25,6 +27,23 @@ namespace RPG.Movement
         void Update()
         {
             navMeshAgent.enabled = !GetComponent<Health>().IsDead();
+
+            if (freezeParticles != null)
+            {
+                if (!canMove && freezeParticlesInstance == null)
+                {
+                    freezeParticlesInstance = Instantiate(freezeParticles, this.transform);
+                }
+                else if (!canMove && freezeParticlesInstance.isStopped)
+                {
+                    Destroy(freezeParticlesInstance.gameObject);
+                    freezeParticlesInstance = Instantiate(freezeParticles, this.transform);
+                }
+                else if (canMove && freezeParticlesInstance != null)
+                {
+                    Destroy(freezeParticlesInstance.gameObject);
+                }
+            }
 
             if (Debug.isDebugBuild && this.tag == "Player")
             {
