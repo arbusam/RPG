@@ -8,7 +8,7 @@ namespace RPG.Abilities.Filters
     [CreateAssetMenu(fileName = "Health Effect", menuName = "RPG/Abilities/Effects/Health")]
     public class HealthEffect : EffectStrategy
     {
-        [SerializeField] float damage;
+        [SerializeField] float healthChange;
 
         public override void StartEffect(GameObject user, IEnumerable<GameObject> targets, Action finished)
         {
@@ -17,7 +17,7 @@ namespace RPG.Abilities.Filters
                 Health health = target.GetComponent<Health>();
                 if (health == null) continue;
 
-                health.TakeDamage(user, damage);
+                health.TakeDamage(user, -healthChange);
             }
             finished();
         }

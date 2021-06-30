@@ -21,6 +21,7 @@ namespace RPG.Abilities.Filters
 
                 mover.GetComponent<ActionScheduler>().StopCurrentAction();
                 mover.canMove = false;
+                mover.StopAllCoroutines();
                 mover.StartCoroutine(UnfreezeInSeconds(freezeTime, targets));
             }
             finished();

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea733cbae9ae64fccb571716c27dd8ad, type: 3}
-  m_Name: Targeting Mega Splash
+  m_Name: Targeting Magic Splash
   m_EditorClassIdentifier: 
   cursorTexture: {fileID: 2800000, guid: 44a99ee545fd8ba46a452b12c1f9378b, type: 3}
   cursorHotspot: {x: 0, y: 0}

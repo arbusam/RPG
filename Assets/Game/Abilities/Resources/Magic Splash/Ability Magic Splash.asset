@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b27ddda6f36c545dc919cffc96419b49, type: 3}
-  m_Name: Ability Mega Splash
+  m_Name: Ability Magic Splash
   m_EditorClassIdentifier: 
   itemID: cea1ead7-26e2-47ae-abd0-84b5a56bada7
-  displayName: Mega Splash
-  pluralDisplayName: Mega Splashes
-  description: 
+  displayName: Magic Splash
+  pluralDisplayName: Magic Splashes
+  description: This will deal 10 damage to all enemies targeted. This will also freeze
+    targeted enemies for 2 seconds.
   icon: {fileID: 21300000, guid: 98ceb165e895b7f47ab880e0d1c64104, type: 3}
   pickup: {fileID: 6058643964849302115, guid: 34c01f5e357ce4f588878d09f34a1f26, type: 3}
   stackable: 0

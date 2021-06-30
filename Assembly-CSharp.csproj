@@ -79,6 +79,7 @@
      <Compile Include="Assets\Scripts\EffectRemover.cs" />
      <Compile Include="Assets\Asset Packs\FantasyIconsPackFree\Demo\IconViewer.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Camera\LayerCullDistances.cs" />
+     <Compile Include="Assets\Scripts\Abilities\Effects\HealthEffect.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Localization\TranslatedText.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Collector.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Camera\EditorCamera.cs" />
@@ -106,6 +107,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Effects\GunnerLightning.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Player\PlayerInput.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Player\CheckpointGroup.cs" />
+     <Compile Include="Assets\Scripts\Abilities\Filters\TagFilter.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TransformTween\TransformTweenTrack.cs" />
      <Compile Include="Assets\Scripts\Abilities\Targeting\DemoTargeting.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\UI\ShowHideUI.cs" />
@@ -181,6 +183,7 @@
      <Compile Include="Assets\Scripts\Stats\LevelDisplay.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\SceneManagement\Runtime\TransitionPoint.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Grenadier\GrenadierSMBPursuit.cs" />
+     <Compile Include="Assets\Scripts\Abilities\EffectStrategy.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Chomper\ChomperSMBHit.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\UI\Inventories\IItemHolder.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Utility\StartScreenSpriteOffsetter.cs" />
@@ -302,6 +305,7 @@
      <Compile Include="Assets\Scripts\CinematicControlRemover.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\UI\Inventories\EquipmentSlotUI.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Teleporter.cs" />
+     <Compile Include="Assets\Scripts\Abilities\Effects\FreezeEffect.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TimeDilation\TimeDilationTrack.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Grenadier\GrenadierSMBTurning.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\SceneManagement\Runtime\ScreenFader.cs" />
@@ -309,6 +313,7 @@
      <Compile Include="Assets\Scripts\Control\Cursor.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\AudioSnapshot\AudioSnapshotMixerBehaviour.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Effects\MirrorReflection.cs" />
+     <Compile Include="Assets\Scripts\Abilities\FilterStrategy.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\PlayAnimation.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\CutsceneScriptControl\CutsceneScriptControlBehaviour.cs" />
      <Compile Include="Assets\Scripts\Abilities\Targeting\DelayedClickTargeting.cs" />
@@ -373,11 +378,6 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SetGameObjectActive.cs" />
      <Compile Include="Assets\Scripts\Scene\Fader.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\FPSCounter.cs" />
-     <Compile Include="Assets\Scripts\Abilities\FilterStrategy.cs" />
-     <Compile Include="Assets\Scripts\Abilities\Filters\TagFilter.cs" />
-     <Compile Include="Assets\Scripts\Abilities\EffectStrategy.cs" />
-     <Compile Include="Assets\Scripts\Abilities\Effects\HealthEffect.cs" />
-     <Compile Include="Assets\Scripts\Abilities\Effects\FreezeEffect.cs" />
      <None Include="Assets\Asset Packs\3DGamekit\Art\Shaders\Firefly.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\3DGamekit\Packages\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
