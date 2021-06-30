@@ -12,9 +12,9 @@ namespace RPG.Abilities.Filters
     {
         [SerializeField] float freezeTime;
 
-        public override void StartEffect(GameObject user, IEnumerable<GameObject> targets, Action finished)
+        public override void StartEffect(AbilityData data, Action finished)
         {
-            foreach (GameObject target in targets)
+            foreach (GameObject target in data.Targets)
             {
                 Mover mover = target.GetComponent<Mover>();
                 if (mover == null) continue;
@@ -22,7 +22,7 @@ namespace RPG.Abilities.Filters
                 mover.GetComponent<ActionScheduler>().StopCurrentAction();
                 mover.canMove = false;
                 mover.StopAllCoroutines();
-                mover.StartCoroutine(UnfreezeInSeconds(freezeTime, targets));
+                mover.StartCoroutine(UnfreezeInSeconds(freezeTime, data.Targets));
             }
             finished();
         }

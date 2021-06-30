@@ -30,11 +30,11 @@ namespace RPG.Movement
 
             if (freezeParticles != null)
             {
-                if (!canMove && freezeParticlesInstance == null)
+                if (!canMove && freezeParticlesInstance == null && !GetComponent<Health>().IsDead())
                 {
                     freezeParticlesInstance = Instantiate(freezeParticles, this.transform);
                 }
-                else if (!canMove && freezeParticlesInstance.isStopped)
+                else if (!canMove && freezeParticlesInstance.isStopped && !GetComponent<Health>().IsDead())
                 {
                     Destroy(freezeParticlesInstance.gameObject);
                     freezeParticlesInstance = Instantiate(freezeParticles, this.transform);

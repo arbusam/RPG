@@ -17,13 +17,13 @@ namespace RPG.Abilities.Targeting
 
         Transform targetingInstance = null;
 
-        public override void StartTargeting(GameObject user, Action<IEnumerable<GameObject>> finished)
+        public override void StartTargeting(AbilityData data, Action finished)
         {
-            PlayerControls playerControls = user.GetComponent<PlayerControls>();
-            playerControls.StartCoroutine(Targeting(user, playerControls, finished));
+            PlayerControls playerControls = data.User.GetComponent<PlayerControls>();
+            playerControls.StartCoroutine(Targeting(data, playerControls, finished));
         }
 
-        private IEnumerator Targeting(GameObject user, PlayerControls playerControls, Action<IEnumerable<GameObject>> finished)
+        private IEnumerator Targeting(AbilityData data, PlayerControls playerControls, Action finished)
         {
             yield return new WaitWhile(() => Input.GetMouseButton(0));
             playerControls.enabled = false;
@@ -54,7 +54,8 @@ namespace RPG.Abilities.Targeting
                         yield return new WaitWhile(() => Input.GetMouseButton(0));
                         playerControls.enabled = true;
                         targetingInstance.gameObject.SetActive(false);
-                        finished(GetGameObjectsInRadius(raycastHit.point));
+                        data.Targets = GetGameObjectsInRadius(raycastHit.point);
+                        finished();
                         yield break;
                     }
                 }

@@ -10,14 +10,15 @@ namespace RPG.Abilities.Filters
     {
         [SerializeField] float healthChange;
 
-        public override void StartEffect(GameObject user, IEnumerable<GameObject> targets, Action finished)
+        public override void StartEffect(AbilityData data, Action finished)
         {
-            foreach (GameObject target in targets)
+            foreach (GameObject target in data.Targets)
             {
                 Health health = target.GetComponent<Health>();
                 if (health == null) continue;
+                if (health.IsDead()) continue;
 
-                health.TakeDamage(user, -healthChange);
+                health.TakeDamage(data.User, -healthChange);
             }
             finished();
         }
