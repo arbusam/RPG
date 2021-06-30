@@ -42,6 +42,7 @@ namespace RPG.Movement
                 else if (canMove && freezeParticlesInstance != null)
                 {
                     Destroy(freezeParticlesInstance.gameObject);
+                    freezeParticlesInstance = null;
                 }
             }
 

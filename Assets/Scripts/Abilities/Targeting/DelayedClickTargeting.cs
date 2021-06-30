@@ -54,6 +54,7 @@ namespace RPG.Abilities.Targeting
                         yield return new WaitWhile(() => Input.GetMouseButton(0));
                         playerControls.enabled = true;
                         targetingInstance.gameObject.SetActive(false);
+                        data.TargetedPoint = raycastHit.point;
                         data.Targets = GetGameObjectsInRadius(raycastHit.point);
                         finished();
                         yield break;
