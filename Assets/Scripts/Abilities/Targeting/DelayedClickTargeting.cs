@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using GameDevTV.Inventories;
 using RPG.Control;
 using UnityEngine;
 
@@ -19,6 +20,7 @@ namespace RPG.Abilities.Targeting
 
         public override void StartTargeting(AbilityData data, Action finished)
         {
+            data.User.GetComponent<ActionStore>().canUse = false;
             PlayerControls playerControls = data.User.GetComponent<PlayerControls>();
             playerControls.StartCoroutine(Targeting(data, playerControls, finished));
         }
@@ -56,6 +58,7 @@ namespace RPG.Abilities.Targeting
                         targetingInstance.gameObject.SetActive(false);
                         data.TargetedPoint = raycastHit.point;
                         data.Targets = GetGameObjectsInRadius(raycastHit.point);
+                        data.User.GetComponent<ActionStore>().canUse = false;
                         finished();
                         yield break;
                     }

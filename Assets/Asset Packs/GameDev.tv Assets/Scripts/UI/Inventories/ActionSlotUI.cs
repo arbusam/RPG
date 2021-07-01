@@ -17,6 +17,7 @@ namespace GameDevTV.UI.Inventories
         [SerializeField] InventoryItemIcon icon = null;
         [SerializeField] int index = 0;
         [SerializeField] Image cooldownOverlay = null;
+        public Button useButton = null;
 
         // CACHE
         ActionStore store;
@@ -29,11 +30,18 @@ namespace GameDevTV.UI.Inventories
             store = player.GetComponent<ActionStore>();
             cooldownStore = player.GetComponent<CooldownStore>();
             store.storeUpdated += UpdateIcon;
+            if (useButton != null)
+            {
+                useButton.onClick.AddListener(Use);
+            }
         }
 
         private void Update()
         {
-            cooldownOverlay.fillAmount = cooldownStore.GetFractionRemaining(GetItem());
+            float fractionRemaining = cooldownStore.GetFractionRemaining(GetItem());
+            cooldownOverlay.gameObject.SetActive(fractionRemaining != 0);
+            useButton.enabled = (fractionRemaining == 0 && store.canUse);
+            cooldownOverlay.fillAmount = fractionRemaining;
         }
 
         // PUBLIC

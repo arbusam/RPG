@@ -28,6 +28,8 @@ namespace GameDevTV.Inventories
         /// </summary>
         public event Action storeUpdated;
 
+        public bool canUse = true;
+
         /// <summary>
         /// Get the action at the given index.
         /// </summary>
@@ -64,6 +66,7 @@ namespace GameDevTV.Inventories
         /// <param name="number">How many items to add.</param>
         public void AddAction(InventoryItem item, int index, int number)
         {
+            if (!canUse) return;
             if (dockedItems.ContainsKey(index))
             {  
                 if (object.ReferenceEquals(item, dockedItems[index].item))
