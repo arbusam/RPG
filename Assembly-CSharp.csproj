@@ -62,6 +62,7 @@
      <Compile Include="Assets\Camera\CameraSwitcher.cs" />
      <Compile Include="Assets\Scripts\Dialogue\AIConversant.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\PickupSpawner.cs" />
+     <Compile Include="Assets\Scripts\Abilities\CooldownStore.cs" />
      <Compile Include="Assets\Scripts\Shops\Shop.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Scripts\SoundTrack.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\Spinner.cs" />
@@ -154,7 +155,6 @@
      <Compile Include="Assets\Scripts\Stats\CharacterClass.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Utility\QualitySettingCheck.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\MaterialSwitcher\MaterialSwitcherBehaviour.cs" />
-     <Compile Include="Assets\Scripts\Combat\EnemyHealthDisplay.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\TimeMachine\TimeMachineBehaviour.cs" />
      <Compile Include="Assets\Scripts\UI\Quests\QuestListUI.cs" />
      <Compile Include="Assets\Scripts\Dialogue\PlayerConversant.cs" />
@@ -267,8 +267,9 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\AudioSnapshot\AudioSnapshotClip.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Utils\LazyValue.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TextSwitcher\TextSwitcherBehaviour.cs" />
-     <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Effects\SimulateParticleSystem.cs" />
+     <Compile Include="Assets\Scripts\Abilities\Effects\SpawnPrefabEffect.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\SceneManagement\Runtime\CharacterStateSetter.cs" />
+     <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Effects\SimulateParticleSystem.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TextSwitcher\TextSwitcherMixerBehaviour.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\UI\Inventories\InventoryItemIcon.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\NavMeshAgentControl\NavMeshAgentControlMixerBehaviour.cs" />
@@ -335,6 +336,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\InteractionTrigger.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Helpers\ParticleDeactivator.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Chomper\ChomperSMBFall.cs" />
+     <Compile Include="Assets\Scripts\Abilities\AbilityData.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Utils\UI\Dragging\IDragSource.cs" />
      <Compile Include="Assets\Scripts\Attributes\HealthDisplay.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Senders\SendOnBecameVisible.cs" />
@@ -378,9 +380,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SetGameObjectActive.cs" />
      <Compile Include="Assets\Scripts\Scene\Fader.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\FPSCounter.cs" />
-     <Compile Include="Assets\Scripts\Abilities\AbilityData.cs" />
-     <Compile Include="Assets\Scripts\Abilities\Effects\SpawnPrefabEffect.cs" />
-     <Compile Include="Assets\Scripts\Abilities\CooldownStore.cs" />
+     <Compile Include="Assets\Scripts\Attributes\PlayerHealthBar.cs" />
      <None Include="Assets\Asset Packs\3DGamekit\Art\Shaders\Firefly.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\3DGamekit\Packages\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
