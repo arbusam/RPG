@@ -8,6 +8,7 @@ namespace RPG.Attributes
     public class PlayerHealthBar : MonoBehaviour
     {
         [SerializeField] Image heartPrefab;
+        [SerializeField] Image emptyHealthPrefab;
 
         private void Update()
         {
