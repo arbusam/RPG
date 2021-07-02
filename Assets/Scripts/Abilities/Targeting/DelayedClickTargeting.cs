@@ -58,7 +58,7 @@ namespace RPG.Abilities.Targeting
                         targetingInstance.gameObject.SetActive(false);
                         data.TargetedPoint = raycastHit.point;
                         data.Targets = GetGameObjectsInRadius(raycastHit.point);
-                        data.User.GetComponent<ActionStore>().canUse = false;
+                        data.User.GetComponent<ActionStore>().canUse = true;
                         finished();
                         yield break;
                     }

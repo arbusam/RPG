@@ -6,6 +6,7 @@ namespace RPG.Stats
         ExperienceReward,
         ExperienceToLevelUp,
         Damage,
-        Protection
+        Protection,
+        Mana
     }
 }

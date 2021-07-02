@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using GameDevTV.Inventories;
+using RPG.Attributes;
 using UnityEngine;
 
 namespace RPG.Abilities
@@ -12,11 +13,13 @@ namespace RPG.Abilities
         [SerializeField] FilterStrategy[] filterStrategies;
         [SerializeField] EffectStrategy[] effectStrategies;
 
+        [SerializeField] float manaRequirement;
         [SerializeField] float cooldownTime;
 
         public override void Use(GameObject user)
         {
             if (user.GetComponent<CooldownStore>().GetTimeRemaining(this) != 0) return;
+            
             AbilityData data = new AbilityData(user);
             targetingStrategy.StartTargeting(data, () => {
                 TargetAquired(data);
@@ -25,6 +28,8 @@ namespace RPG.Abilities
 
         private void TargetAquired(AbilityData data)
         {
+            if (!data.User.GetComponent<Mana>().UseMana(manaRequirement)) return;
+            
             data.User.GetComponent<CooldownStore>().StartCooldown(this, cooldownTime);
             foreach (var filterStrategy in filterStrategies)
             {

@@ -30,4 +30,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 16ea0f7da51784970a6e15acc3072673, type: 2}
   - {fileID: 11400000, guid: 12e8ecc9bd05d41868aa6812ff77ee38, type: 2}
   - {fileID: 11400000, guid: ace18db09a8a74cf086202fb5669cb40, type: 2}
+  - {fileID: 11400000, guid: 377c4bfa0924746fa9fed0fee2d0a3fc, type: 2}
+  manaRequirement: 200
   cooldownTime: 10

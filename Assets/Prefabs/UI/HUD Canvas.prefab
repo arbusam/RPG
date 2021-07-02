@@ -686,7 +686,7 @@ GameObject:
   - component: {fileID: 3185108863704502151}
   - component: {fileID: 6904063103840662632}
   m_Layer: 5
-  m_Name: Health Text
+  m_Name: Mana Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -708,8 +708,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 35.771, y: -3.055}
-  m_SizeDelta: {x: 40.505, y: 6.11}
+  m_AnchoredPosition: {x: 34.826, y: -3.055}
+  m_SizeDelta: {x: 42.396, y: 6.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8155136494252052259
 CanvasRenderer:
@@ -762,7 +762,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4493264196481336325}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb0fb115f62224e068b9fcc60296df1d, type: 3}
+  m_Script: {fileID: 11500000, guid: 48613614b06544a8a9764357bf4aaa37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4956301263438783183
@@ -951,7 +951,7 @@ GameObject:
   - component: {fileID: 1057353319717533420}
   - component: {fileID: 4292078971691461420}
   m_Layer: 5
-  m_Name: Health Label
+  m_Name: Mana Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -974,7 +974,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 15.9395, y: 6.11}
+  m_SizeDelta: {x: 13.6273, y: 6.11}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &1057353319717533420
 CanvasRenderer:
@@ -1017,7 +1017,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Health: '
+  m_Text: 'Mana: '
 --- !u!1 &5044117330426309544
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,7 +1107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 890718567763039277}
   m_Layer: 5
-  m_Name: Health
+  m_Name: Mana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

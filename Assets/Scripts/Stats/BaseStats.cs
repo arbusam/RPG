@@ -19,14 +19,15 @@ namespace RPG.Stats
 
         LazyValue<int> currentLevel;
 
-        private void Awake() {
+        private void Awake()
+        {
             experience = GetComponent<Experience>();
             currentLevel = new LazyValue<int>(CalculateLevel);
         }
 
-        private void Start() {
+        private void Start()
+        {
             currentLevel.ForceInit();
-            
         }
 
         private void OnEnable() {
