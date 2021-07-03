@@ -5,7 +5,7 @@ using RPG.Core;
 using RPG.Movement;
 using UnityEngine;
 
-namespace RPG.Abilities.Filters
+namespace RPG.Abilities.Effects
 {
     [CreateAssetMenu(fileName = "Freeze Effect", menuName = "RPG/Abilities/Effects/Freeze")]
     public class FreezeEffect : EffectStrategy

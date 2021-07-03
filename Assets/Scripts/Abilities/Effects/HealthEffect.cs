@@ -2,7 +2,7 @@ using System;
 using RPG.Attributes;
 using UnityEngine;
 
-namespace RPG.Abilities.Filters
+namespace RPG.Abilities.Effects
 {
     [CreateAssetMenu(fileName = "Health Effect", menuName = "RPG/Abilities/Effects/Health")]
     public class HealthEffect : EffectStrategy

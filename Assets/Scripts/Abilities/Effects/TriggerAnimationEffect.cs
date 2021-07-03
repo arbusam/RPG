@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace RPG.Abilities.Filters
+namespace RPG.Abilities.Effects
 {
     [CreateAssetMenu(fileName = "Trigger Animation Effect", menuName = "RPG/Abilities/Effects/Trigger Animation")]
     public class TriggerAnimationEffect : EffectStrategy
@@ -12,6 +12,7 @@ namespace RPG.Abilities.Filters
         {
             Animator animator = data.User.GetComponent<Animator>();
             animator.SetTrigger(animationTrigger);
+            finished();
         }
     }
 }

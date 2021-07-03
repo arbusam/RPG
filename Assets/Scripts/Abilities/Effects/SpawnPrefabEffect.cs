@@ -3,7 +3,7 @@ using System.Collections;
 using RPG.Attributes;
 using UnityEngine;
 
-namespace RPG.Abilities.Filters
+namespace RPG.Abilities.Effects
 {
     [CreateAssetMenu(fileName = "Spawn Prefab Effect", menuName = "RPG/Abilities/Effects/Spawn Prefab")]
     public class SpawnPrefabEffect : EffectStrategy

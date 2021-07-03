@@ -33,7 +33,7 @@ namespace RPG.Attributes
                 Destroy(item.gameObject);
             }
 
-            for (int i = hearts - 1; i >= 0; i--)
+            for (int i = 0; i < hearts; i++)
             {
                 Image heartInstance;
 
@@ -51,6 +51,13 @@ namespace RPG.Attributes
                     heartInstance = Instantiate(heartPrefab, this.transform).heartImage;
                     heartInstance.fillAmount = (health.HealthPoints - (i*10)) / 10;
                 }
+            }
+
+            int emptyHearts = (int) (health.MaxHealthPoints - (hearts * 10)) / 10;
+
+            for (int i = 0; i < emptyHearts; i++)
+            {
+                Instantiate(emptyHealthPrefab, this.transform);
             }
         }
     }
