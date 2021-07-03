@@ -379,6 +379,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SetGameObjectActive.cs" />
      <Compile Include="Assets\Scripts\Scene\Fader.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\FPSCounter.cs" />
+     <Compile Include="Assets\Scripts\Attributes\PlayerHealthIcon.cs" />
      <Compile Include="Assets\Scripts\Attributes\PlayerHealthBar.cs" />
      <Compile Include="Assets\Scripts\Attributes\Mana.cs" />
      <Compile Include="Assets\Scripts\Attributes\ManaDisplay.cs" />

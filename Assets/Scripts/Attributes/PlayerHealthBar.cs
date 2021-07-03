@@ -7,7 +7,7 @@ namespace RPG.Attributes
 {
     public class PlayerHealthBar : MonoBehaviour
     {
-        [SerializeField] Image heartPrefab;
+        [SerializeField] PlayerHealthIcon heartPrefab;
         [SerializeField] Image emptyHealthPrefab;
 
         private void Update()
@@ -35,18 +35,20 @@ namespace RPG.Attributes
 
             for (int i = hearts - 1; i >= 0; i--)
             {
-                Image heartInstance = Instantiate(heartPrefab, this.transform);
+                Image heartInstance;
 
                 if (health.HealthPoints <= i*10)
                 {
-                    heartInstance.fillAmount = 0;
+                    heartInstance = Instantiate(emptyHealthPrefab, this.transform);
                 }
                 else if (health.HealthPoints > (i+1)*10)
                 {
+                    heartInstance = Instantiate(heartPrefab, this.transform).heartImage;
                     heartInstance.fillAmount = 1;
                 }
                 else
                 {
+                    heartInstance = Instantiate(heartPrefab, this.transform).heartImage;
                     heartInstance.fillAmount = (health.HealthPoints - (i*10)) / 10;
                 }
             }

@@ -410,7 +410,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e7aa6a21fb0144dbac290221d362aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heartPrefab: {fileID: 176402838458955816, guid: 7d548465e713240ff86ba9767532672d, type: 3}
+  heartPrefab: {fileID: -2548493434295594826, guid: 7d548465e713240ff86ba9767532672d, type: 3}
+  emptyHealthPrefab: {fileID: 964075948219766079, guid: 996f62d7b0c4b477ab3511845a4e042a, type: 3}
 --- !u!1 &2795854327232439626
 GameObject:
   m_ObjectHideFlags: 0
