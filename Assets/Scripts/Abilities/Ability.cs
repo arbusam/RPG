@@ -35,6 +35,8 @@ namespace RPG.Abilities
 
         private void TargetAquired(AbilityData data)
         {
+            if (data.Cancelled) return;
+
             data.User.GetComponent<CooldownStore>().StartCooldown(this, cooldownTime);
             foreach (var filterStrategy in filterStrategies)
             {

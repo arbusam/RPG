@@ -12,7 +12,7 @@ namespace RPG.Attributes
 
         private void Update()
         {
-            if (heartPrefab == null) return;
+            if (heartPrefab == null || emptyHealthPrefab == null) return;
 
             GetHearts();
         }

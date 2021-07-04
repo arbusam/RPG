@@ -89,7 +89,7 @@ namespace RPG.Attributes
         public void TakeDamage(GameObject instigator, float damage)
         {
             health.value = Mathf.Max(health.value - damage, 0);
-            takeDamage.Invoke(damage);
+            if (damage >= 0) takeDamage.Invoke(damage);
             if (health.value <= 0)
             {
                 if (!isDead)

@@ -386,6 +386,7 @@
      <Compile Include="Assets\Scripts\Abilities\Effects\TriggerAnimationEffect.cs" />
      <Compile Include="Assets\Scripts\Abilities\Effects\OrientToTargetEffect.cs" />
      <Compile Include="Assets\Scripts\Abilities\Effects\DelayCompositeEffect.cs" />
+     <Compile Include="Assets\Scripts\Abilities\Targeting\SelfTargeting.cs" />
      <None Include="Assets\Asset Packs\3DGamekit\Art\Shaders\Firefly.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\3DGamekit\Packages\TextMesh Pro\Resources\Shaders\TMPro.cginc" />

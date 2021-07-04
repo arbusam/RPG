@@ -42,7 +42,7 @@ namespace RPG.Abilities.Targeting
                 targetingInstance.localScale = new Vector3(areaAffectRadius*2, 1, areaAffectRadius*2);
             }
             
-            while (true)
+            while (!data.Cancelled)
             {
                 Cursor.SetCursor(cursorTexture, cursorHotspot, CursorMode.Auto);
 
@@ -54,17 +54,17 @@ namespace RPG.Abilities.Targeting
                     if (Input.GetMouseButtonDown(0))
                     {
                         yield return new WaitWhile(() => Input.GetMouseButton(0));
-                        playerControls.enabled = true;
-                        targetingInstance.gameObject.SetActive(false);
                         data.TargetedPoint = raycastHit.point;
                         data.Targets = GetGameObjectsInRadius(raycastHit.point);
                         data.User.GetComponent<ActionStore>().canUse = true;
-                        finished();
-                        yield break;
+                        break;
                     }
                 }
                 yield return null;
             }
+            playerControls.enabled = true;
+            targetingInstance.gameObject.SetActive(false);
+            finished();
         }
 
         private IEnumerable<GameObject> GetGameObjectsInRadius(Vector3 point)
