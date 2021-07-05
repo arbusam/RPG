@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c63d9bd5b39764c8e89bacae4146bfae, type: 3}
-  m_Name: Spawn Fire Spears
+  m_Name: Spawn Fire At Point
   m_EditorClassIdentifier: 
   projectileToSpawn: {fileID: 5432711566075226127, guid: 00d61088d49a3494486742ab00b75ac9, type: 3}
-  damage: 15
+  damage: 10
   isRightHand: 1
-  useTargetPoint: 0
+  useTargetPoint: 1
+  tagToTarget: Enemy

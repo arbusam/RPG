@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c63d9bd5b39764c8e89bacae4146bfae, type: 3}
-  m_Name: Spawn Fire Spears
+  m_Script: {fileID: 11500000, guid: 897a40e856f7d403e8f69dd7fada6073, type: 3}
+  m_Name: Directional Targeting
   m_EditorClassIdentifier: 
-  projectileToSpawn: {fileID: 5432711566075226127, guid: 00d61088d49a3494486742ab00b75ac9, type: 3}
-  damage: 15
-  isRightHand: 1
-  useTargetPoint: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
