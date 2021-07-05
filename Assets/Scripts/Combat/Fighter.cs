@@ -138,6 +138,12 @@ namespace RPG.Combat
             return weapon.Spawn(rightHandTransform, leftHandTransform, animator);
         }
 
+        public Transform GetHandTransform(bool isRightHand)
+        {
+            if (isRightHand) return rightHandTransform;
+            else return leftHandTransform;
+        }
+
         private void AttackBehavior()
         {
             this.transform.LookAt(target);

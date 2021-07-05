@@ -10,25 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b27ddda6f36c545dc919cffc96419b49, type: 3}
-  m_Name: Ability Magic Splash
+  m_Name: Fire Spear
   m_EditorClassIdentifier: 
-  itemID: cea1ead7-26e2-47ae-abd0-84b5a56bada7
-  displayName: Magic Splash
-  pluralDisplayName: Magic Splashes
-  description: This will deal 25 damage to all enemies targeted but requires 200
-    mana to be activated. This will also freeze targeted enemies for 2 seconds.
-  icon: {fileID: 21300000, guid: 98ceb165e895b7f47ab880e0d1c64104, type: 3}
+  itemID: e9cc23bb-7a1b-4b28-a21e-1b8018d13d06
+  displayName: Fire Spear
+  pluralDisplayName: Fire Spears
+  description: This will throw fire spears at all targeted enemies, dealing 15 damage
+    each,  but needs 50 mana to be activated.
+  icon: {fileID: 21300000, guid: d459b9fcda543454dafcae327ebe0a42, type: 3}
   pickup: {fileID: 6058643964849302115, guid: 34c01f5e357ce4f588878d09f34a1f26, type: 3}
-  stackable: 0
-  price: 20
+  stackable: 1
+  price: 10
   category: 5
-  consumable: 0
+  consumable: 1
   targetingStrategy: {fileID: 11400000, guid: a60f1f52863cb4d7485f7486dac74f61, type: 2}
   filterStrategies:
   - {fileID: 11400000, guid: 45e65c07fdbb544c2987628a275ee69c, type: 2}
   effectStrategies:
-  - {fileID: 11400000, guid: a4280e814456544e2af370f764fd7790, type: 2}
-  - {fileID: 11400000, guid: 377c4bfa0924746fa9fed0fee2d0a3fc, type: 2}
-  - {fileID: 11400000, guid: c7e52b7020fa44cae8627f7f05df8cb6, type: 2}
-  manaRequirement: 200
-  cooldownTime: 10
+  - {fileID: 11400000, guid: 2528cf948057b49d4b030d459bc12695, type: 2}
+  manaRequirement: 50
+  cooldownTime: 5

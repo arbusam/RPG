@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f83b36876ce74ecc94c45e5be8d9388, type: 3}
-  m_Name: Health Effect
+  m_Script: {fileID: 11500000, guid: c63d9bd5b39764c8e89bacae4146bfae, type: 3}
+  m_Name: Spawn Fire Spears
   m_EditorClassIdentifier: 
-  healthChange: -25
+  projectileToSpawn: {fileID: 5432711566075226127, guid: 00d61088d49a3494486742ab00b75ac9, type: 3}
+  damage: 15
+  isRightHand: 1
