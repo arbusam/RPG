@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5685c53b3dad377f5cab7b1288bdf33ee307e84b5fa2657f128327b33a694649
-size 243
+fileFormatVersion: 2
+guid: 5397f019840a10048baa4b2d98b8df21
+timeCreated: 1514983455
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
