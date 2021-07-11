@@ -8,6 +8,7 @@ namespace RPG.Stats
         Damage,
         Protection,
         Mana,
-        ManaRegenRate
+        ManaRegenRate,
+        TotalEnhancementPoints
     }
 }

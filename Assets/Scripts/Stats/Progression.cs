@@ -26,6 +26,8 @@ namespace RPG.Stats
                 return 0;
             }
 
+            if (levels.Length == 0) return 0;
+
             if (levels.Length < level) return levels[levels.Length - 1];
             return levels[level-1];
             // foreach (ProgressionCharacterClass progClass in characterClasses)
