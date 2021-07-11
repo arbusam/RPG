@@ -7,8 +7,6 @@ namespace RPG.Attributes
 {
     public class Mana : MonoBehaviour, ISaveable
     {
-        [Tooltip("How much mana will regen per second")] [SerializeField] float manaRegenRate = 4;
-
         LazyValue<float> mana;
 
         private void Awake() {
@@ -18,7 +16,7 @@ namespace RPG.Attributes
         private void Update() {
             if (mana.value < GetMaxMana())
             {
-                mana.value += manaRegenRate * Time.deltaTime;
+                mana.value += GetComponent<BaseStats>().GetStat(Stat.ManaRegenRate) * Time.deltaTime;
                 if (mana.value > GetMaxMana())
                 {
                     mana.value = GetMaxMana();
