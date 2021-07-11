@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleKey: 101
-  uiContainer: {fileID: 0}
+  uiContainer: {fileID: 3979343483183317357}
 --- !u!1001 &69741444198855011
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -253,6 +253,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7820c934d243d413d82a1f5c0d3f9052, type: 3}
+--- !u!1 &3979343483183317357 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3681940170252806302, guid: 7820c934d243d413d82a1f5c0d3f9052, type: 3}
+  m_PrefabInstance: {fileID: 297684815690377715}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1994331265768241163 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2273437633349849592, guid: 7820c934d243d413d82a1f5c0d3f9052, type: 3}
@@ -457,6 +462,10 @@ PrefabInstance:
     - target: {fileID: 7635941614866306749, guid: 0699783c26e4447c7a7a3f36e70b0fbf, type: 3}
       propertyPath: m_text
       value: Protection
+      objectReference: {fileID: 0}
+    - target: {fileID: 8836460189893195971, guid: 0699783c26e4447c7a7a3f36e70b0fbf, type: 3}
+      propertyPath: category
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0699783c26e4447c7a7a3f36e70b0fbf, type: 3}
@@ -789,6 +798,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Health
       objectReference: {fileID: 0}
+    - target: {fileID: 8836460189893195971, guid: 0699783c26e4447c7a7a3f36e70b0fbf, type: 3}
+      propertyPath: category
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0699783c26e4447c7a7a3f36e70b0fbf, type: 3}
 --- !u!1001 &6567853576404961342
@@ -986,6 +999,10 @@ PrefabInstance:
     - target: {fileID: 7635941614866306749, guid: 0699783c26e4447c7a7a3f36e70b0fbf, type: 3}
       propertyPath: m_text
       value: Magic
+      objectReference: {fileID: 0}
+    - target: {fileID: 8836460189893195971, guid: 0699783c26e4447c7a7a3f36e70b0fbf, type: 3}
+      propertyPath: category
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0699783c26e4447c7a7a3f36e70b0fbf, type: 3}
