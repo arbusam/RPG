@@ -5,60 +5,95 @@ using GameDevTV.Saving;
 using RPG.Scene;
 using RPG.Cinematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class SavingWrapper : MonoBehaviour
+namespace RPG.Scene
 {
-    const string defaultSaveFile = "save1";
-    [SerializeField] float fadeInTime = 0.2f;
-    [SerializeField] float fadeWaitTime = 0.5f;
-
-    private void Awake()
+    public class SavingWrapper : MonoBehaviour
     {
-        StartCoroutine(LoadLastScene());
-    }
+        const string currentSaveKey = "currentSaveName";
+        [SerializeField] float fadeInTime = 0.2f;
+        [SerializeField] float fadeWaitTime = 1;
+        [SerializeField] float fadeOutTime = 0.5f;
 
-    private IEnumerator LoadLastScene() {
-        Fader fader = FindObjectOfType<Fader>();
-        fader.FadeOutImmediate();
-        yield return GetComponent<SavingSystem>().LoadLastScene(defaultSaveFile);
-        yield return new WaitForSeconds(fadeWaitTime);
-        yield return fader.FadeIn(fadeInTime);
-        if (FindObjectOfType<CinematicsStartSequence>() != null)
+        public void ContinueGame()
         {
-            FindObjectOfType<CinematicsStartSequence>().StartSequence();
+            StartCoroutine(LoadLastScene());
         }
-        
-    }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.L) && Debug.isDebugBuild)
+        public void NewGame(string saveFile)
         {
-            Load();
+            SetCurrentSave(saveFile);
+            StartCoroutine(LoadFirstScene());
         }
-        if (Input.GetKeyDown(KeyCode.S) && Debug.isDebugBuild)
+
+        private void SetCurrentSave(string saveFile)
         {
-            Save();
+            PlayerPrefs.SetString(currentSaveKey, saveFile);
         }
-        if (Input.GetKeyDown(KeyCode.Delete) && Debug.isDebugBuild)
+
+        private string GetCurrentSave()
         {
-            Delete();
+            return PlayerPrefs.GetString(currentSaveKey);
+        }
+
+        private IEnumerator LoadLastScene()
+        {
+            Fader fader = FindObjectOfType<Fader>();
+            yield return fader.FadeOut(fadeOutTime);
+            yield return GetComponent<SavingSystem>().LoadLastScene(GetCurrentSave());
+            yield return new WaitForSeconds(fadeWaitTime);
+            yield return fader.FadeIn(fadeInTime);
+            if (FindObjectOfType<CinematicsStartSequence>() != null)
+            {
+                FindObjectOfType<CinematicsStartSequence>().StartSequence();
+            }
+        }
+
+        private IEnumerator LoadFirstScene()
+        {
+            Fader fader = FindObjectOfType<Fader>();
+            yield return fader.FadeOut(fadeOutTime);
+            yield return SceneManager.LoadSceneAsync(1);
+            yield return new WaitForSeconds(fadeWaitTime);
+            yield return fader.FadeIn(fadeInTime);
+            if (FindObjectOfType<CinematicsStartSequence>() != null)
+            {
+                FindObjectOfType<CinematicsStartSequence>().StartSequence();
+            }
+        }
+
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.L) && Debug.isDebugBuild)
+            {
+                Load();
+            }
+            if (Input.GetKeyDown(KeyCode.S) && Debug.isDebugBuild)
+            {
+                Save();
+            }
+            if (Input.GetKeyDown(KeyCode.Delete) && Debug.isDebugBuild)
+            {
+                Delete();
+            }
+        }
+
+        public void Save()
+        {
+            GetComponent<SavingSystem>().Save(GetCurrentSave());
+        }
+
+        public void Load()
+        {
+            GetComponent<SavingSystem>().Load(GetCurrentSave());
+        }
+
+        public void Delete()
+        {
+            GetComponent<SavingSystem>().Delete(GetCurrentSave());
+            print("Reset Save");
         }
     }
 
-    public void Save()
-    {
-        GetComponent<SavingSystem>().Save(defaultSaveFile);
-    }
-
-    public void Load()
-    {
-        GetComponent<SavingSystem>().Load(defaultSaveFile);
-    }
-
-    public void Delete()
-    {
-        GetComponent<SavingSystem>().Delete(defaultSaveFile);
-        print("Reset Save");
-    }
 }
