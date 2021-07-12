@@ -27,6 +27,12 @@ namespace RPG.Scene
             StartCoroutine(LoadFirstScene());
         }
 
+        public void LoadGame(string saveFile)
+        {
+            SetCurrentSave(saveFile);
+            ContinueGame();
+        }
+
         private void SetCurrentSave(string saveFile)
         {
             PlayerPrefs.SetString(currentSaveKey, saveFile);
@@ -65,15 +71,15 @@ namespace RPG.Scene
 
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.L) && Debug.isDebugBuild)
+            if (Input.GetKeyDown(KeyCode.L) && Debug.isDebugBuild && SceneManager.GetActiveScene().buildIndex != 0)
             {
                 Load();
             }
-            if (Input.GetKeyDown(KeyCode.S) && Debug.isDebugBuild)
+            if (Input.GetKeyDown(KeyCode.S) && Debug.isDebugBuild && SceneManager.GetActiveScene().buildIndex != 0)
             {
                 Save();
             }
-            if (Input.GetKeyDown(KeyCode.Delete) && Debug.isDebugBuild)
+            if (Input.GetKeyDown(KeyCode.Delete) && Debug.isDebugBuild && SceneManager.GetActiveScene().buildIndex != 0)
             {
                 Delete();
             }
@@ -93,6 +99,11 @@ namespace RPG.Scene
         {
             GetComponent<SavingSystem>().Delete(GetCurrentSave());
             print("Reset Save");
+        }
+
+        public IEnumerable<string> ListSaves()
+        {
+            return GetComponent<SavingSystem>().ListSaves();
         }
     }
 
