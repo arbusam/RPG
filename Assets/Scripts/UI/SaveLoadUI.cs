@@ -29,8 +29,9 @@ namespace RPG.UI
                 }
 
                 Button button = buttonInstance.GetComponentInChildren<Button>();
-                button.onClick.AddListener(() => {
-                    
+                button.onClick.AddListener(() =>
+                {
+                    savingWrapper.LoadGame(saveName);
                 });
             }
         }
