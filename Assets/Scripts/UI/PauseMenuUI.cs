@@ -1,4 +1,5 @@
 using RPG.Control;
+using RPG.Scene;
 using UnityEngine;
 
 namespace RPG.UI
@@ -23,6 +24,19 @@ namespace RPG.UI
         {
             Time.timeScale = 1;
             playerControls.enabled = true;
+        }
+
+        public void Save()
+        {
+            SavingWrapper savingWrapper = FindObjectOfType<SavingWrapper>();
+            savingWrapper.Save();
+        }
+
+        public void SaveAndQuit()
+        {
+            Save();
+            SavingWrapper savingWrapper = FindObjectOfType<SavingWrapper>();
+            StartCoroutine(savingWrapper.LoadMenu());
         }
     }
 }

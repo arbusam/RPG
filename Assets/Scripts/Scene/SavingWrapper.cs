@@ -33,6 +33,15 @@ namespace RPG.Scene
             ContinueGame();
         }
 
+        public IEnumerator LoadMenu()
+        {
+            Fader fader = FindObjectOfType<Fader>();
+            yield return fader.FadeOut(fadeOutTime);
+            yield return SceneManager.LoadSceneAsync(0);
+            yield return new WaitForSeconds(fadeWaitTime);
+            yield return fader.FadeIn(fadeInTime);
+        }
+
         private void SetCurrentSave(string saveFile)
         {
             PlayerPrefs.SetString(currentSaveKey, saveFile);
