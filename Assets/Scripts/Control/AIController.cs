@@ -52,7 +52,7 @@ namespace RPG.Control
 
         private void Update()
         {
-            if (GetComponent<Health>().IsDead()) return;
+            if (GetComponent<Health>().IsDead) return;
 
             if (IsAggrevated() && fighter.CanAttack(player))
             {

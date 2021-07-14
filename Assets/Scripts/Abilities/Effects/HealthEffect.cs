@@ -15,9 +15,10 @@ namespace RPG.Abilities.Effects
             {
                 Health health = target.GetComponent<Health>();
                 if (health == null) continue;
-                if (health.IsDead()) continue;
-
-                health.TakeDamage(data.User, -healthChange);
+                if (health.IsDead) continue;
+                
+                if (healthChange < 0) health.TakeDamage(data.User, -healthChange);
+                else health.Heal(healthChange);
             }
             finished();
         }

@@ -29,7 +29,7 @@ namespace RPG.Combat
 
         void Update()
         {
-            if (target != null && isHoming && !target.IsDead()) this.transform.LookAt(GetAimLocation());
+            if (target != null && isHoming && !target.IsDead) this.transform.LookAt(GetAimLocation());
             this.transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
 
@@ -72,7 +72,7 @@ namespace RPG.Combat
         {
             Health health = other.GetComponent<Health>();
             if (target != null && health != target) return;
-            if (health == null || health.IsDead()) return;
+            if (health == null || health.IsDead) return;
             if (other.gameObject == instigator) return;
             if (tagToTarget != null && other.tag != tagToTarget) return;
 

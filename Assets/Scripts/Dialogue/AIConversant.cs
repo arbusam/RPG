@@ -22,7 +22,7 @@ namespace RPG.Dialogue
             {
                 return false;
             }
-            if (GetComponent<Health>().IsDead()) return false;
+            if (GetComponent<Health>().IsDead) return false;
 
             if (Input.GetMouseButtonDown(0))
             {

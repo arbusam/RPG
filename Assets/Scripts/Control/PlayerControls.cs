@@ -32,7 +32,7 @@ namespace RPG.Control
         void Update()
         {
             if (InteractWithUI()) return;
-            if (GetComponent<Health>().IsDead())
+            if (GetComponent<Health>().IsDead)
             {
                 SetCursor(CursorType.None);
                 return;

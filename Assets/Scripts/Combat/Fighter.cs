@@ -107,7 +107,7 @@ namespace RPG.Combat
             }
 
             if (target == null) return;
-            if (target.GetComponent<Health>().IsDead()) return;
+            if (target.GetComponent<Health>().IsDead) return;
             if (!GetComponent<Mover>().canMove) return;
 
             if (!GetIsInRange())
@@ -173,7 +173,7 @@ namespace RPG.Combat
         public bool CanAttack(GameObject target)
         {
             if (target == null) return false;
-            if (target.GetComponent<Health>().IsDead()) return false;
+            if (target.GetComponent<Health>().IsDead) return false;
             return true;
         }
 

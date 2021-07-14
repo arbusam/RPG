@@ -15,7 +15,7 @@ namespace RPG.Attributes
         BaseStats baseStats;
 
         [SerializeField] UnityEvent<float> takeDamage;
-        [SerializeField] UnityEvent onDie;
+        public UnityEvent onDie;
 
         public float HealthPoints
         {
@@ -42,9 +42,16 @@ namespace RPG.Attributes
 
         bool isDead = false;
 
-        public bool IsDead()
+        public bool IsDead
         {
-            return isDead;
+            get
+            {
+                return isDead;
+            }
+            set
+            {
+                isDead = value;
+            }
         }
 
         private void Awake() {
@@ -89,7 +96,7 @@ namespace RPG.Attributes
         public void TakeDamage(GameObject instigator, float damage)
         {
             health.value = Mathf.Max(health.value - damage, 0);
-            if (damage >= 0) takeDamage.Invoke(damage);
+            takeDamage.Invoke(damage);
             if (health.value <= 0)
             {
                 if (!isDead)
@@ -100,6 +107,11 @@ namespace RPG.Attributes
                     experience.GainExperience(baseStats.GetStat(Stat.ExperienceReward));
                 }
             }
+        }
+
+        public void Heal(float amount)
+        {
+            health.value += amount;
         }
 
         public object CaptureState()

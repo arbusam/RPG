@@ -26,15 +26,15 @@ namespace RPG.Movement
 
         void Update()
         {
-            navMeshAgent.enabled = !GetComponent<Health>().IsDead();
+            navMeshAgent.enabled = !GetComponent<Health>().IsDead;
 
             if (freezeParticles != null)
             {
-                if (!canMove && freezeParticlesInstance == null && !GetComponent<Health>().IsDead())
+                if (!canMove && freezeParticlesInstance == null && !GetComponent<Health>().IsDead)
                 {
                     freezeParticlesInstance = Instantiate(freezeParticles, this.transform);
                 }
-                else if (!canMove && freezeParticlesInstance != null && freezeParticlesInstance.isStopped && !GetComponent<Health>().IsDead()) // FIX NULL REFERENCE
+                else if (!canMove && freezeParticlesInstance != null && freezeParticlesInstance.isStopped && !GetComponent<Health>().IsDead) // FIX NULL REFERENCE
                 {
                     Destroy(freezeParticlesInstance.gameObject);
                     freezeParticlesInstance = Instantiate(freezeParticles, this.transform);
