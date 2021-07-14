@@ -15,7 +15,7 @@ namespace RPG.Control
 
         [SerializeField] float healthPercentage = 80;
 
-        [SerializeField] float fadeBeforeWaitTime = 1;
+        [SerializeField] float fadeBeforeWaitTime = 2;
         [SerializeField] float fadeOutTime = 0.5f;
         [SerializeField] float fadeWaitTime = 1;
         [SerializeField] float fadeInTime = 0.2f;
@@ -27,6 +27,7 @@ namespace RPG.Control
 
         private IEnumerator Respawn()
         {
+            yield return new WaitForSeconds(fadeBeforeWaitTime);
             Fader fader = FindObjectOfType<Fader>();
             yield return fader.FadeOut(fadeOutTime);
             GetComponent<NavMeshAgent>().Warp(respawnLocation.position);

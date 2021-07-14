@@ -8,13 +8,14 @@ namespace RPG.UI
     {
         PlayerControls playerControls;
 
-        private void Awake()
+        private void Start()
         {
             playerControls = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerControls>();
         }
 
         private void OnEnable()
         {
+            if (playerControls == null) return;
             Time.timeScale = 0;
             playerControls.SetCursor(CursorType.UI);
             playerControls.enabled = false;
