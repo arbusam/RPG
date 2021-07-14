@@ -72,6 +72,11 @@ namespace RPG.Control
             UpdateTimers();
         }
 
+        public void Reset()
+        {
+            throw new NotImplementedException();
+        }
+
         private void UpdateTimers()
         {
             timeSinceLastSeenPlayer += Time.deltaTime;
