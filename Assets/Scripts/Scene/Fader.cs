@@ -27,7 +27,7 @@ namespace RPG.Scene
         {
             while (GetComponent<CanvasGroup>().alpha < 1)
             {
-                GetComponent<CanvasGroup>().alpha += Time.deltaTime / time;
+                GetComponent<CanvasGroup>().alpha += Time.unscaledDeltaTime / time;
                 yield return null;
             }
         }
@@ -46,7 +46,7 @@ namespace RPG.Scene
         {
             while (GetComponent<CanvasGroup>().alpha > 0)
             {
-                GetComponent<CanvasGroup>().alpha -= Time.deltaTime / time;
+                GetComponent<CanvasGroup>().alpha -= Time.unscaledDeltaTime / time;
                 yield return null;
             }
         }

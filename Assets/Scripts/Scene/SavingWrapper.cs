@@ -33,7 +33,12 @@ namespace RPG.Scene
             ContinueGame();
         }
 
-        public IEnumerator LoadMenu()
+        public void LoadMenu()
+        {
+            StartCoroutine(LoadMenuScene());
+        }
+
+        private IEnumerator LoadMenuScene()
         {
             Fader fader = FindObjectOfType<Fader>();
             yield return fader.FadeOut(fadeOutTime);
