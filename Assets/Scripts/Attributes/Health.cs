@@ -10,6 +10,8 @@ namespace RPG.Attributes
 {
     public class Health : MonoBehaviour, ISaveable
     {
+        [SerializeField] bool canGoOverMaxHealth = true;
+
         LazyValue<float> health;
         bool restoredHealth = false;
         BaseStats baseStats;
@@ -112,6 +114,7 @@ namespace RPG.Attributes
         public void Heal(float amount)
         {
             health.value += amount;
+            if (!canGoOverMaxHealth && health.value > MaxHealthPoints) health.value = MaxHealthPoints;
         }
 
         public object CaptureState()

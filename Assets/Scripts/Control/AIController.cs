@@ -5,6 +5,7 @@ using RPG.Movement;
 using RPG.Attributes;
 using GameDevTV.Utils;
 using System;
+using UnityEngine.AI;
 
 namespace RPG.Control
 {
@@ -39,15 +40,12 @@ namespace RPG.Control
             guardPosition = new LazyValue<Vector3>(GetGuardPosition);
             fighter = GetComponent<Fighter>();
             player = GameObject.FindWithTag("Player");
+            guardPosition.ForceInit();
         }
 
         private Vector3 GetGuardPosition()
         {
             return this.transform.position;
-        }
-
-        private void Start() {
-            guardPosition.ForceInit();
         }
 
         private void Update()
@@ -74,7 +72,17 @@ namespace RPG.Control
 
         public void Reset()
         {
-            throw new NotImplementedException();
+            GetComponent<NavMeshAgent>().Warp(guardPosition.value);
+            ResetTimers();
+            waypointIndex = 0;
+            hasShout = true;
+        }
+
+        private void ResetTimers()
+        {
+            timeSinceLastSeenPlayer = Mathf.Infinity;
+            timeWaited = Mathf.Infinity;
+            timeSinceAggrevated = Mathf.Infinity;
         }
 
         private void UpdateTimers()

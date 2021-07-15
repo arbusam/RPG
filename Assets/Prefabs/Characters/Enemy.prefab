@@ -130,6 +130,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -1768897539650785055, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
+      propertyPath: canGoOverMaxHealth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1768897539650785055, guid: b2b3701a0c0804dadb27b56ba5bd8feb, type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.size
       value: 3
       objectReference: {fileID: 0}

@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Destroyer.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\Equipment.cs" />
+     <Compile Include="Assets\Scripts\UI\PauseMenuUI.cs" />
      <Compile Include="Assets\Scripts\Inventories\StatsEquipment.cs" />
      <Compile Include="Assets\Scripts\UI\Quests\QuestTooltipUI.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\UI\Inventories\InventoryDragItem.cs" />
@@ -49,6 +50,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Weapon\MeleeWeapon.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Weapon\Projectile.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" />
+     <Compile Include="Assets\Scripts\UI\UISwitcher.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\EllenSpawn.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Grenadier\GrenadierShield.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\InteractOnButton.cs" />
@@ -73,6 +75,7 @@
      <Compile Include="Assets\Scripts\Core\IAction.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\SetLocation\SetLocationMixerBehaviour.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Utility\SkyboxLookAt.cs" />
+     <Compile Include="Assets\Scripts\UI\SaveLoadUI.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\LerpControlledBob.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Effects\WaterRipple.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Graphics\Dissolve.cs" />
@@ -154,6 +157,7 @@
      <Compile Include="Assets\Scripts\Core\Condition.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\InteractOnTrigger.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TransformTween\TransformTweenMixerBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Control\Respawner.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Scripts\ControlSwitch.cs" />
      <Compile Include="Assets\Scripts\Inventories\StatsEquipableItem.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TextSwitcher\TextSwitcherClip.cs" />
@@ -394,10 +398,6 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SetGameObjectActive.cs" />
      <Compile Include="Assets\Scripts\Scene\Fader.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\FPSCounter.cs" />
-     <Compile Include="Assets\Scripts\UI\UISwitcher.cs" />
-     <Compile Include="Assets\Scripts\UI\SaveLoadUI.cs" />
-     <Compile Include="Assets\Scripts\UI\PauseMenuUI.cs" />
-     <Compile Include="Assets\Scripts\Control\Respawner.cs" />
      <None Include="Assets\Asset Packs\3DGamekit\Art\Shaders\Firefly.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\3DGamekit\Packages\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
