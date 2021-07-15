@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Magic Pair of Gloves
   pluralDisplayName: Magic Pairs of Gloves
   description: These gloves will boost your mana capacity by 100 while equipped.
-  icon: {fileID: 21300000, guid: f84b6dd0347a94f4a9a69ac911fc1f9d, type: 3}
+  icon: {fileID: 21300000, guid: 47684eba410fd484e912dee508527404, type: 3}
   pickup: {fileID: 6058643964849302115, guid: 34c01f5e357ce4f588878d09f34a1f26, type: 3}
   stackable: 1
   price: 7.5
