@@ -16,6 +16,11 @@ namespace RPG.Scene
         [SerializeField] float fadeWaitTime = 1;
         [SerializeField] float fadeOutTime = 0.5f;
 
+        private void Awake()
+        {
+            LoadMenu();
+        }
+
         public void ContinueGame()
         {
             StartCoroutine(LoadLastScene());

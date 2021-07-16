@@ -462,7 +462,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2.38
-  m_Range: 2.39
+  m_Range: 3.08
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -1056,6 +1056,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Menu Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8012087141634124821, guid: 171dc9a122cff43f3822b18fb6a24efd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012087141634124821, guid: 171dc9a122cff43f3822b18fb6a24efd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012087141634124821, guid: 171dc9a122cff43f3822b18fb6a24efd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012087141634124821, guid: 171dc9a122cff43f3822b18fb6a24efd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8053970465445527793, guid: 171dc9a122cff43f3822b18fb6a24efd, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1233,6 +1249,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8682333173040472908, guid: 171dc9a122cff43f3822b18fb6a24efd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8982987766239775855, guid: 171dc9a122cff43f3822b18fb6a24efd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8982987766239775855, guid: 171dc9a122cff43f3822b18fb6a24efd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8982987766239775855, guid: 171dc9a122cff43f3822b18fb6a24efd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8982987766239775855, guid: 171dc9a122cff43f3822b18fb6a24efd, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}

@@ -95,6 +95,15 @@ namespace GameDevTV.Inventories
         /// Attempt to add the items to the first available slot.
         /// </summary>
         /// <param name="item">The item to add.</param>
+        public void AddOneToFirstEmptySlot(InventoryItem item)
+        {
+            AddToFirstEmptySlot(item, 1);
+        }
+
+        /// <summary>
+        /// Attempt to add the items to the first available slot.
+        /// </summary>
+        /// <param name="item">The item to add.</param>
         /// <param name="number">The number to add.</param>
         /// <returns>Whether or not the item could be added.</returns>
         public bool AddToFirstEmptySlot(InventoryItem item, int number)

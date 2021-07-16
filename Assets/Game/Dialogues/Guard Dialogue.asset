@@ -69,13 +69,18 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 601
-    y: 210
+    y: 297
     width: 200
     height: 100
   onEnterAction: Gift
   onExitAction: 
   condition:
-    and: []
+    and:
+    - or:
+      - not: 1
+        predicate: HasInventoryItem
+        parameters:
+        - e9cc23bb-7a1b-4b28-a21e-1b8018d13d06
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,7 +101,38 @@ MonoBehaviour:
   - {fileID: 6260656291438548376}
   - {fileID: -8680318840828993886}
   - {fileID: -1677441233312987311}
+  - {fileID: 2093452397211417224}
   newNodeOffset: {x: 250, y: 0}
+--- !u!114 &2093452397211417224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 6ea228f9-fe3d-4e3b-9d26-1598ab699628
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Nevermind, you already have it
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 605
+    y: 186
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - not: 0
+        predicate: HasInventoryItem
+        parameters:
+        - e9cc23bb-7a1b-4b28-a21e-1b8018d13d06
 --- !u!114 &3234226066700692972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,10 +175,11 @@ MonoBehaviour:
   text: I am a soldier working to kill the adventurer.
   children:
   - 2b04fb42-8b47-43e0-bbc1-2596c72d6dc3
+  - 6ea228f9-fe3d-4e3b-9d26-1598ab699628
   rect:
     serializedVersion: 2
-    x: 351
-    y: 210
+    x: 344
+    y: 209
     width: 200
     height: 100
   onEnterAction: 
@@ -170,7 +207,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 105
-    y: 210
+    y: 209
     width: 200
     height: 100
   onEnterAction: Spoken
@@ -194,8 +231,8 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 592
-    y: 324
+    x: 591
+    y: 406
     width: 200
     height: 100
   onEnterAction: 
