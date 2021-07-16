@@ -1,0 +1,232 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5616578191916478773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 4891d67b-6822-4a30-8efa-992765467145
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: You can buy or sell various items with them.
+  children:
+  - d7c267b1-29bf-4a56-ac58-457baf277689
+  rect:
+    serializedVersion: 2
+    x: 894
+    y: 391
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-2337197432092931797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: a0784f82-520b-4d97-885b-1740d00318a1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: No
+  children:
+  - 992f4bf4-5976-4eb1-ad60-98dfbdb708b5
+  rect:
+    serializedVersion: 2
+    x: 393
+    y: 391
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-2174664421587995733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: fbdfaebe-e014-4a87-8c99-024e26580b80
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Have you heard of Shop Keepers?
+  children:
+  - 8e465454-1dcf-45c5-8611-5b86a250e6d2
+  - a0784f82-520b-4d97-885b-1740d00318a1
+  rect:
+    serializedVersion: 2
+    x: 146
+    y: 296
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa4fa260284840f2891ed65de31d185, type: 3}
+  m_Name: Shop Tutorial Dialogue
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -2174664421587995733}
+  - {fileID: -2337197432092931797}
+  - {fileID: 7297285266815611233}
+  - {fileID: 8632917468422365823}
+  - {fileID: 2267736466519703581}
+  - {fileID: -5616578191916478773}
+  - {fileID: 6473224764827869089}
+  - {fileID: 6783793514256131851}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &2267736466519703581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 992f4bf4-5976-4eb1-ad60-98dfbdb708b5
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Well those people up ahead wearing the white and black are Shop Keepers.
+  children:
+  - 4891d67b-6822-4a30-8efa-992765467145
+  rect:
+    serializedVersion: 2
+    x: 644
+    y: 391
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &6473224764827869089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: d7c267b1-29bf-4a56-ac58-457baf277689
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Different Shop Keepers sell and accept different items and they can restock
+    or get more items over time.
+  children:
+  - 3afbfb58-92a1-4b99-8b3a-b8664475e14f
+  rect:
+    serializedVersion: 2
+    x: 1144
+    y: 391
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &6783793514256131851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 3afbfb58-92a1-4b99-8b3a-b8664475e14f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: That's pretty much everything there is to it.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1394
+    y: 391
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &7297285266815611233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 8e465454-1dcf-45c5-8611-5b86a250e6d2
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Yes
+  children:
+  - 72fe85d1-0a8b-4864-b17b-9f46fbf6b393
+  rect:
+    serializedVersion: 2
+    x: 398
+    y: 223
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &8632917468422365823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 72fe85d1-0a8b-4864-b17b-9f46fbf6b393
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Then I have nothing to tell you
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 649
+    y: 223
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
