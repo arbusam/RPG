@@ -174,6 +174,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Player\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Abilities\Effects\TriggerAnimationEffect.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\InteractOnCollision.cs" />
+     <Compile Include="Assets\Scripts\UI\SettingsUI.cs" />
      <Compile Include="Assets\Scripts\Quests\QuestStatus.cs" />
      <Compile Include="Assets\Scripts\Abilities\Effects\SpawnProjectileEffect.cs" />
      <Compile Include="Assets\Camera\CameraSwitcher1.cs" />
@@ -334,6 +335,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Effects\MirrorReflection.cs" />
      <Compile Include="Assets\Scripts\Abilities\FilterStrategy.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\PlayAnimation.cs" />
+     <Compile Include="Assets\Scripts\Settings.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\CutsceneScriptControl\CutsceneScriptControlBehaviour.cs" />
      <Compile Include="Assets\Scripts\Abilities\Targeting\DelayedClickTargeting.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Effects\EffectStateMachineBehavior.cs" />
@@ -398,8 +400,6 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SetGameObjectActive.cs" />
      <Compile Include="Assets\Scripts\Scene\Fader.cs" />
      <Compile Include="Assets\Asset Packs\Viking Village\Standard Assets\Utility\FPSCounter.cs" />
-     <Compile Include="Assets\Scripts\UI\SettingsUI.cs" />
-     <Compile Include="Assets\Scripts\Settings.cs" />
      <None Include="Assets\Asset Packs\3DGamekit\Art\Shaders\Firefly.shader" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
      <None Include="Assets\Asset Packs\3DGamekit\Packages\TextMesh Pro\Resources\Shaders\TMPro.cginc" />

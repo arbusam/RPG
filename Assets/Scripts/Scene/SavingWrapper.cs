@@ -33,6 +33,11 @@ namespace RPG.Scene
             ContinueGame();
         }
 
+        public void DeleteGame(string saveFile)
+        {
+            GetComponent<SavingSystem>().Delete(saveFile);
+        }
+
         public void LoadMenu()
         {
             StartCoroutine(LoadMenuScene());

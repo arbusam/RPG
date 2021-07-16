@@ -13,6 +13,7 @@ namespace RPG.UI
 
         [SerializeField] TMP_InputField newGameNameField;
         [SerializeField] Button newGameCreateButton;
+        [SerializeField] TMP_InputField deleteGameNameField;
 
         private void Awake()
         {
@@ -38,6 +39,11 @@ namespace RPG.UI
         public void NewGame()
         {
             savingWrapper.value.NewGame(newGameNameField.text);
+        }
+
+        public void DeleteGame()
+        {
+            savingWrapper.value.DeleteGame(deleteGameNameField.text);
         }
 
         public void QuitGame()
