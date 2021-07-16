@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7683260815930224383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: f0b83f2e-e6e5-4fdf-994b-d8917e236c7e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Yes
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 298
+    y: 297
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-5020660500393572224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: c9e2d9a2-5f52-45e4-9eb8-28546ae70fe3
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: No
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 300
+    y: 138
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-2555023204137360563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 302f6970-37ea-46de-8bab-e6227fa79bb7
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Have you heard of Enhancements?
+  children:
+  - c9e2d9a2-5f52-45e4-9eb8-28546ae70fe3
+  - f0b83f2e-e6e5-4fdf-994b-d8917e236c7e
+  rect:
+    serializedVersion: 2
+    x: 48
+    y: 224
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa4fa260284840f2891ed65de31d185, type: 3}
+  m_Name: Enhancements Tutorial Dialogue
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -2555023204137360563}
+  - {fileID: -5020660500393572224}
+  - {fileID: -7683260815930224383}
+  newNodeOffset: {x: 250, y: 0}
