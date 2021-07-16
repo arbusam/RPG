@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 4891d67b-6822-4a30-8efa-992765467145
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: You can buy or sell various items with them.
+  text: You can buy or sell various items with them for money.
   children:
-  - d7c267b1-29bf-4a56-ac58-457baf277689
+  - 4923882a-75f1-49e6-833f-c5552a3be9e9
   rect:
     serializedVersion: 2
     x: 894
@@ -67,8 +67,8 @@ MonoBehaviour:
   isPlayerSpeaking: 0
   text: Have you heard of Shop Keepers?
   children:
-  - 8e465454-1dcf-45c5-8611-5b86a250e6d2
   - a0784f82-520b-4d97-885b-1740d00318a1
+  - 8e465454-1dcf-45c5-8611-5b86a250e6d2
   rect:
     serializedVersion: 2
     x: 146
@@ -100,6 +100,7 @@ MonoBehaviour:
   - {fileID: -5616578191916478773}
   - {fileID: 6473224764827869089}
   - {fileID: 6783793514256131851}
+  - {fileID: 2641963764850137004}
   newNodeOffset: {x: 250, y: 0}
 --- !u!114 &2267736466519703581
 MonoBehaviour:
@@ -127,6 +128,33 @@ MonoBehaviour:
   onExitAction: 
   condition:
     and: []
+--- !u!114 &2641963764850137004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 4923882a-75f1-49e6-833f-c5552a3be9e9
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: You can view your balance in the bottom left corner. If you were lucky you
+    might find some money in a bag on the floor.
+  children:
+  - d7c267b1-29bf-4a56-ac58-457baf277689
+  rect:
+    serializedVersion: 2
+    x: 1105
+    y: 391
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
 --- !u!114 &6473224764827869089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,7 +174,7 @@ MonoBehaviour:
   - 3afbfb58-92a1-4b99-8b3a-b8664475e14f
   rect:
     serializedVersion: 2
-    x: 1144
+    x: 1327
     y: 391
     width: 200
     height: 100
@@ -171,7 +199,7 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 1394
+    x: 1555
     y: 391
     width: 200
     height: 100
