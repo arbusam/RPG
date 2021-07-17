@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8566995025570404618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: c2256cb3-649b-4344-9953-c86ce871760f
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: When you level up you gain more enhancement points that you can assign to
+    4 different categories. The categories are Strength, Protection, Magic and Health.
+  children:
+  - 0f5e6d8e-d592-47bd-ae7a-dcd565695f36
+  rect:
+    serializedVersion: 2
+    x: 796
+    y: 138
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
 --- !u!114 &-7683260815930224383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14,11 +41,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
   text: Yes
-  children: []
+  children:
+  - d618522c-6cf8-4ca5-89d7-326460f3443a
   rect:
     serializedVersion: 2
     x: 298
     y: 297
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-7235355635519194746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 6ea957ad-0c73-4fb6-af17-1031dfa4e72d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Always remember to press 'Confirm Allocation' when you decide on where you
+    want to assign your points. If you don't you won't get any of the bonuses for
+    the points you assign.
+  children:
+  - 5c78bc61-c220-460a-b345-152052180062
+  rect:
+    serializedVersion: 2
+    x: 1296
+    y: 138
     width: 200
     height: 100
   onEnterAction: 
@@ -39,10 +95,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
   text: No
-  children: []
+  children:
+  - 9d6fcbe8-3113-4e1c-8bd8-72abe8609d9a
   rect:
     serializedVersion: 2
     x: 300
+    y: 138
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-4650057010170600536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 0f5e6d8e-d592-47bd-ae7a-dcd565695f36
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Assigning points will increase certain stats based on which category you
+    assign them to. Some items need a certain number of points in a certain category
+    to be used.
+  children:
+  - 6ea957ad-0c73-4fb6-af17-1031dfa4e72d
+  rect:
+    serializedVersion: 2
+    x: 1045
     y: 138
     width: 200
     height: 100
@@ -77,6 +162,31 @@ MonoBehaviour:
   onExitAction: 
   condition:
     and: []
+--- !u!114 &-728845265830013368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: d618522c-6cf8-4ca5-89d7-326460f3443a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Oh...
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 548
+    y: 297
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,4 +203,61 @@ MonoBehaviour:
   - {fileID: -2555023204137360563}
   - {fileID: -5020660500393572224}
   - {fileID: -7683260815930224383}
+  - {fileID: 3645682288674619173}
+  - {fileID: -728845265830013368}
+  - {fileID: -8566995025570404618}
+  - {fileID: -4650057010170600536}
+  - {fileID: -7235355635519194746}
+  - {fileID: 7638226301535151461}
   newNodeOffset: {x: 250, y: 0}
+--- !u!114 &3645682288674619173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 9d6fcbe8-3113-4e1c-8bd8-72abe8609d9a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: You can view your enhancements by pressing 'E'.
+  children:
+  - c2256cb3-649b-4344-9953-c86ce871760f
+  rect:
+    serializedVersion: 2
+    x: 550
+    y: 138
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &7638226301535151461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 5c78bc61-c220-460a-b345-152052180062
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: That's everything I know on the on the subject.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1545
+    y: 138
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []

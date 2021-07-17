@@ -5,6 +5,7 @@ using GameDevTV.Inventories;
 using GameDevTV.Saving;
 using RPG.Control;
 using RPG.Inventories;
+using RPG.Movement;
 using RPG.Stats;
 using UnityEngine;
 
@@ -17,6 +18,8 @@ namespace RPG.Shops
         [SerializeField] StockItemConfig[] stockConfig;
 
         [SerializeField] float sellingPercentage = 80;
+
+        [SerializeField] float shopDistance = 2;
 
         [Serializable]
         class StockItemConfig
@@ -345,9 +348,14 @@ namespace RPG.Shops
         {
             if (Input.GetMouseButtonDown(0))
             {
-                callingControls.GetComponent<Shopper>().SetActiveShop(this);
+                StartCoroutine(callingControls.GetComponent<Mover>().MoveToCoroutine(Vector3.MoveTowards(this.transform.position, callingControls.transform.position, shopDistance), 1f, () => SetShop(callingControls)));
             }
             return true;
+        }
+
+        private void SetShop(PlayerControls callingControls)
+        {
+            callingControls.GetComponent<Shopper>().SetActiveShop(this);
         }
 
         public object CaptureState()

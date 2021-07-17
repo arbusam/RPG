@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using RPG.Control;
 using UnityEngine;
 using RPG.Attributes;
+using RPG.Movement;
+using System;
 
 namespace RPG.Dialogue
 {
@@ -10,13 +12,14 @@ namespace RPG.Dialogue
     {
         public string conversantName = "Name";
         [SerializeField] Dialogue dialogue = null;
+        [SerializeField] float talkDistance = 2;
 
         public CursorMapping GetCursor(PlayerControls callingControls)
         {
             return callingControls.GetCursorMapping(CursorType.Dialogue);
         }
 
-        public bool HandleRaycast(PlayerControls callingController)
+        public bool HandleRaycast(PlayerControls callingControls)
         {
             if (dialogue == null)
             {
@@ -26,9 +29,15 @@ namespace RPG.Dialogue
 
             if (Input.GetMouseButtonDown(0))
             {
-                callingController.GetComponent<PlayerConversant>().StartDialogue(this, dialogue);
+                StartCoroutine(callingControls.GetComponent<Mover>().MoveToCoroutine(Vector3.MoveTowards(this.transform.position, callingControls.transform.position, talkDistance), 1f, () => StartDialogue(callingControls)));
             }
             return true;
+        }
+
+        private void StartDialogue(PlayerControls callingControls)
+        {
+            this.transform.LookAt(callingControls.transform, Vector3.up);
+            callingControls.GetComponent<PlayerConversant>().StartDialogue(this, dialogue);
         }
     }
 }

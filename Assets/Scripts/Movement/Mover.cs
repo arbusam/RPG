@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using GameDevTV.Saving;
 using RPG.Attributes;
+using System;
 
 namespace RPG.Movement
 {
@@ -70,6 +71,13 @@ namespace RPG.Movement
             navMeshAgent.destination = destination;
             navMeshAgent.speed = maxSpeed * Mathf.Clamp01(speedFraction);
             navMeshAgent.isStopped = false;
+        }
+
+        public IEnumerator MoveToCoroutine(Vector3 destination, float speedFraction, Action finished)
+        {
+            MoveTo(destination, speedFraction);
+            yield return new WaitUntil(() => Vector3.Distance(this.transform.position, destination) < 0.5);
+            finished();
         }
 
         public void Cancel()
