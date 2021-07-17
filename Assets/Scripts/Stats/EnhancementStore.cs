@@ -1,10 +1,12 @@
+using System;
 using System.Collections.Generic;
 using GameDevTV.Saving;
+using GameDevTV.Utils;
 using UnityEngine;
 
 namespace RPG.Stats
 {
-    public class EnhancementStore : MonoBehaviour, IModifierProvider, ISaveable
+    public class EnhancementStore : MonoBehaviour, IModifierProvider, ISaveable, IPredicateEvaluator
     {
         [SerializeField] EnhancementBonus[] bonusConfig;
 
@@ -134,6 +136,17 @@ namespace RPG.Stats
         public void RestoreState(object state)
         {
             assignedPoints = new Dictionary<EnhancementCategory, int>((IDictionary<EnhancementCategory, int>)state);
+        }
+
+        public bool? Evaluate(string predicate, string[] parameters)
+        {
+            if (predicate != "MinimumEnhancement") return null;
+
+            EnhancementCategory category;
+            int number;
+            if (!Enum.TryParse<EnhancementCategory>(parameters[0], out category) || !Int32.TryParse(parameters[1], out number)) return null;
+
+            return GetPoints(category) >= number;
         }
     }
 }

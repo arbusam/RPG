@@ -155,7 +155,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Timeline\AudioSnapshot\AudioSnapshotBehaviour.cs" />
      <Compile Include="Assets\Scripts\Dialogue\DialogueTrigger.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\LightControl\LightControlBehaviour.cs" />
-     <Compile Include="Assets\Scripts\Core\Condition.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Utils\Condition.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Core\InteractOnTrigger.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\DefaultPlayables\TransformTween\TransformTweenMixerBehaviour.cs" />
      <Compile Include="Assets\Scripts\Control\Respawner.cs" />
@@ -305,7 +305,7 @@
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Camera\CameraShake.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\DamageSystem\DeathVolume.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Packages\Interactive\Runtime\Actions\SetAnimatorTrigger.cs" />
-     <Compile Include="Assets\Scripts\Core\IPredicateEvaluator.cs" />
+     <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Utils\IPredicateEvaluator.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Utils\UI\Dragging\IDragContainer.cs" />
      <Compile Include="Assets\Asset Packs\3DGamekit\Scripts\Game\Enemies\Chomper\ChomperSMBReturn.cs" />
      <Compile Include="Assets\Asset Packs\GameDev.tv Assets\Scripts\Inventories\ActionItem.cs" />

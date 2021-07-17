@@ -158,7 +158,7 @@ MonoBehaviour:
     y: 224
     width: 200
     height: 100
-  onEnterAction: 
+  onEnterAction: Spoken
   onExitAction: 
   condition:
     and: []

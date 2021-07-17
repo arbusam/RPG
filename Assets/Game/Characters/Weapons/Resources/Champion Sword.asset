@@ -10,26 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e1ef4f0cc5144657911b4bcbad2e28f, type: 3}
-  m_Name: Basic Sword
+  m_Name: Champion Sword
   m_EditorClassIdentifier: 
-  itemID: 71e9656a-d5cc-40eb-a0d3-5faa5ba56217
-  displayName: Basic Sword
-  pluralDisplayName: Basic Swords
-  description: This is a sword that deals 15 damage each hit.
+  itemID: 12e7c67f-5d60-4737-b298-e42e10a0da8a
+  displayName: Champion Sword
+  pluralDisplayName: Champion Swords
+  description: This is a sword for a true champion that deals 30 damage per hit but
+    requires 6 Strength enhancement points to be equipped.
   icon: {fileID: 21300000, guid: dbd0e81ba08974441932c1b53abce311, type: 3}
   pickup: {fileID: 862466072777833391, guid: c8de1c4f4f8f54145ab911e74e81d138, type: 3}
   stackable: 0
-  price: 9.99
+  price: 20
   category: 2
   allowedEquipLocation: 5
   equipCondition:
-    and: []
+    and:
+    - or:
+      - not: 0
+        predicate: MinimumEnhancement
+        parameters:
+        - Strength
+        - 6
   weaponRange: 2.5
   timeBetweenAttacks: 0.5
-  weaponDamage: 15
+  weaponDamage: 40
   isRightHanded: 1
   projectile: {fileID: 0}
-  weaponPrefab: {fileID: 4928806797886673027, guid: eb200ae5c63aa491da0cde0d4acf48b0, type: 3}
+  weaponPrefab: {fileID: 1912304846773104414, guid: 419eec14aa86b4ad0b080cd125aa464e, type: 3}
   animatorOverride: {fileID: 22100000, guid: ff35d1e2543d943ea9d0140fff8e45c1, type: 2}
   cursorMapping:
     type: 2

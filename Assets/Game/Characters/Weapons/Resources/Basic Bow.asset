@@ -15,13 +15,15 @@ MonoBehaviour:
   itemID: 8a14a63d-db91-44fa-beb6-27db7a14c4f8
   displayName: Basic Bow
   pluralDisplayName: Basic Bows
-  description: 
+  description: This is a ranged weapon that does 10 damage per hit.
   icon: {fileID: 21300000, guid: af838e5920baaaa4cbb24dab99c4458d, type: 3}
   pickup: {fileID: 4619523240921783380, guid: 8143ee58153a74beeacaeea73974dd0c, type: 3}
   stackable: 0
   price: 9.99
   category: 2
   allowedEquipLocation: 5
+  equipCondition:
+    and: []
   weaponRange: 15
   timeBetweenAttacks: 1
   weaponDamage: 10
