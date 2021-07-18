@@ -13,7 +13,6 @@ namespace RPG.Movement
     [RequireComponent(typeof(NavMeshAgent))]
     public class Mover : MonoBehaviour, IAction, ISaveable
     {
-        [SerializeField] Transform target;
         [SerializeField] float maxSpeed = 7f;
         [SerializeField] ParticleSystem freezeParticles = null;
         ParticleSystem freezeParticlesInstance = null;
@@ -71,6 +70,11 @@ namespace RPG.Movement
             navMeshAgent.destination = destination;
             navMeshAgent.speed = maxSpeed * Mathf.Clamp01(speedFraction);
             navMeshAgent.isStopped = false;
+        }
+
+        public void MoveToTarget(Transform target)
+        {
+            MoveTo(target.position, 1f);
         }
 
         public IEnumerator MoveToCoroutine(Vector3 destination, float speedFraction, Action finished)

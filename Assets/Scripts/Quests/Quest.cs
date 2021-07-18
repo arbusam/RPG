@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using GameDevTV.Inventories;
+using GameDevTV.Utils;
 
 namespace RPG.Quests
 {
-    using System;
-    using GameDevTV.Inventories;
-    using UnityEngine;
     
     [CreateAssetMenu(fileName = "Quest", menuName = "RPG/Quest", order = 0)]
     public class Quest : ScriptableObject
@@ -26,6 +26,8 @@ namespace RPG.Quests
         {
             public string reference;
             public string description;
+            public bool usesCondition = false;
+            public Condition completionCondition;
         }
 
         public string Title

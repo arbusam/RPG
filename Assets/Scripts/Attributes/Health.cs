@@ -19,6 +19,8 @@ namespace RPG.Attributes
         [SerializeField] UnityEvent<float> takeDamage;
         public UnityEvent onDie;
 
+        public UnityEvent repeatOnDie;
+
         public float HealthPoints
         {
             get
@@ -67,6 +69,13 @@ namespace RPG.Attributes
 
         private void Start() {
             health.ForceInit();
+        }
+
+        private void Update() {
+            if (IsDead)
+            {
+                repeatOnDie.Invoke();
+            }
         }
 
         private float GetInitialHeath()

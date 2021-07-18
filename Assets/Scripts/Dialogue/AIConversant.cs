@@ -26,6 +26,7 @@ namespace RPG.Dialogue
                 return false;
             }
             if (GetComponent<Health>().IsDead) return false;
+            if (!callingControls.GetComponent<PlayerConversant>().CanConverse(dialogue)) return false;
 
             if (Input.GetMouseButtonDown(0))
             {

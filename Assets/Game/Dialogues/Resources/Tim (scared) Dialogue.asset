@@ -1,0 +1,316 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6336542564345811711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 628478a8-bb6a-4112-9ca8-bd46a68de17e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: There are many enemies in this forest that try to kill me. I can't leave
+    this corner until they are gone.
+  children:
+  - aa78ef2a-6a36-4d4d-96f6-0c48d233ec1c
+  rect:
+    serializedVersion: 2
+    x: 544
+    y: 76
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-6222862124062303212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 9766c33f-592b-437c-86f9-8012c5b65450
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I killed all of them
+  children:
+  - 5fbdff05-b14d-4ce3-826e-0f7caf7b0a73
+  rect:
+    serializedVersion: 2
+    x: 305
+    y: 178
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - not: 0
+        predicate: HasQuest
+        parameters:
+        - Forest Enemies
+    - or:
+      - not: 0
+        predicate: CompletedQuest
+        parameters:
+        - Forest Enemies
+--- !u!114 &-3529706855226384546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 5fbdff05-b14d-4ce3-826e-0f7caf7b0a73
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Thank you so much. I'm free!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 555
+    y: 198
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: Free
+  condition:
+    and: []
+--- !u!114 &-2689302884533215198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: e77c5c2d-668b-452d-ae81-392ab159fb23
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Tell me once it's safe
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1290
+    y: 10
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: GiveQuest
+  condition:
+    and: []
+--- !u!114 &-2249117014455189265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 448a19a5-2298-4f8c-a159-7e893781280b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Help me!
+  children:
+  - d9aabe79-014e-418f-917d-0a0f534f2424
+  - d450d71b-e7e2-40e9-8aeb-96a6cc28ca2b
+  - 9766c33f-592b-437c-86f9-8012c5b65450
+  rect:
+    serializedVersion: 2
+    x: 38
+    y: 176
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - not: 1
+        predicate: HasQuest
+        parameters:
+        - Forest Enemies
+      - not: 1
+        predicate: IsClaimed
+        parameters:
+        - Forest Enemies
+--- !u!114 &-1804322160452282953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: aa78ef2a-6a36-4d4d-96f6-0c48d233ec1c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Will you help me?
+  children:
+  - 7920026a-0777-41ab-9d9a-0d123899dbee
+  - d450d71b-e7e2-40e9-8aeb-96a6cc28ca2b
+  rect:
+    serializedVersion: 2
+    x: 794
+    y: 75
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - not: 1
+        predicate: HasQuest
+        parameters:
+        - Forest Enemies
+--- !u!114 &-1335133272168623853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 995314f7-aded-43d2-94bf-c51cdc55980c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Please save me god
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 543
+    y: 413
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa4fa260284840f2891ed65de31d185, type: 3}
+  m_Name: Tim (scared) Dialogue
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -2249117014455189265}
+  - {fileID: 4754018817036364321}
+  - {fileID: 4799993915177639301}
+  - {fileID: -1335133272168623853}
+  - {fileID: -6336542564345811711}
+  - {fileID: -6222862124062303212}
+  - {fileID: -3529706855226384546}
+  - {fileID: -1804322160452282953}
+  - {fileID: 1262265202230895531}
+  - {fileID: -2689302884533215198}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &1262265202230895531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 7920026a-0777-41ab-9d9a-0d123899dbee
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Yes
+  children:
+  - e77c5c2d-668b-452d-ae81-392ab159fb23
+  rect:
+    serializedVersion: 2
+    x: 1040
+    y: 10
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &4754018817036364321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: d9aabe79-014e-418f-917d-0a0f534f2424
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: What's wrong?
+  children:
+  - 628478a8-bb6a-4112-9ca8-bd46a68de17e
+  rect:
+    serializedVersion: 2
+    x: 304
+    y: 76
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &4799993915177639301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: d450d71b-e7e2-40e9-8aeb-96a6cc28ca2b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Not interested
+  children:
+  - 995314f7-aded-43d2-94bf-c51cdc55980c
+  rect:
+    serializedVersion: 2
+    x: 299
+    y: 335
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - not: 1
+        predicate: HasQuest
+        parameters:
+        - Forest Enemies

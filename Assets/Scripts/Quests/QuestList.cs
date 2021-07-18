@@ -22,6 +22,11 @@ namespace RPG.Quests
             }
         }
 
+        private void Update()
+        {
+            CompleteObjectivesByPredicate();
+        }
+
         public void AddQuest(Quest quest)
         {
             if (HasQuest(quest)) return;
@@ -57,6 +62,11 @@ namespace RPG.Quests
             return null;
         }
 
+        public void ClaimQuest(Quest quest)
+        {
+            GetStatus(quest).claimed = true;
+        }
+
         public bool CompleteObjective(Quest quest, string objective)
         {
             QuestStatus status = GetStatus(quest);
@@ -81,6 +91,21 @@ namespace RPG.Quests
                 if (!success)
                 {
                     GetComponent<ItemDropper>().DropItem(reward.item, reward.number);
+                }
+            }
+        }
+
+        private void CompleteObjectivesByPredicate()
+        {
+            foreach (QuestStatus status in statuses)
+            {
+                if (status.IsComplete()) continue;
+                Quest quest = status.Quest;
+                foreach (var objective in quest.Objectives)
+                {
+                    if (status.CompletedObjectives.Contains(objective.reference)) continue;
+                    if (!objective.usesCondition) continue;
+                    if (objective.completionCondition.Check(GetComponents<IPredicateEvaluator>())) CompleteObjective(quest, objective.reference);
                 }
             }
         }
@@ -118,6 +143,8 @@ namespace RPG.Quests
                 return HasQuest(Quest.GetByName(parameters[0]));
                 case "CompletedQuest":
                 return GetStatus(Quest.GetByName(parameters[0])).IsComplete();
+                case "IsClaimed":
+                return GetStatus(Quest.GetByName(parameters[0])).claimed;
             }
 
             return null;

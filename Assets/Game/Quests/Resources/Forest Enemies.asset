@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebc30bd07e5b6412982e97cf41d5500b, type: 3}
+  m_Name: Forest Enemies
+  m_EditorClassIdentifier: 
+  objectives:
+  - reference: 1
+    description: Kill enemy 1
+    usesCondition: 0
+    completionCondition:
+      and: []
+  - reference: 2
+    description: Kill enemy 2
+    usesCondition: 0
+    completionCondition:
+      and: []
+  - reference: 3
+    description: Kill enemy 3
+    usesCondition: 0
+    completionCondition:
+      and: []
+  - reference: 4
+    description: Kill enemy 4
+    usesCondition: 0
+    completionCondition:
+      and: []
+  - reference: 5
+    description: Kill enemy 5
+    usesCondition: 0
+    completionCondition:
+      and: []
+  - reference: 6
+    description: Kill enemy 6
+    usesCondition: 0
+    completionCondition:
+      and: []
+  rewards:
+  - number: 10
+    item: {fileID: 11400000, guid: 9ef4c7a10be81488196a252583669431, type: 2}

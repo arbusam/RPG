@@ -10,6 +10,7 @@ namespace RPG.Quests
     {
         [SerializeField] Quest quest;
         [SerializeField] List<string> completedObjectives = new List<string>();
+        public bool claimed = false;
 
         [Serializable]
         public class QuestStatusRecord

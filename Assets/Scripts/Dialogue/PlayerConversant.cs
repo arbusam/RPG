@@ -56,6 +56,11 @@ namespace RPG.Dialogue
             return isChoosing;
         }
 
+        public bool CanConverse(Dialogue dialogue)
+        {
+            return dialogue.GetRootNode().CheckCondition(GetEvaluators());
+        }
+
         public string GetText()
         {
             if (currentNode == null)

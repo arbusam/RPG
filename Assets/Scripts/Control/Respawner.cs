@@ -22,6 +22,8 @@ namespace RPG.Control
         [SerializeField] float fadeWaitTime = 1;
         [SerializeField] float fadeInTime = 0.2f;
 
+        [SerializeField] float animationTime;
+
         private void Awake()
         {
             GetComponent<Health>().onDie.AddListener(() => StartCoroutine(Respawn()));
@@ -34,6 +36,7 @@ namespace RPG.Control
 
         private IEnumerator Respawn()
         {
+            GetComponent<PlayerControls>().enabled = false;
             SavingWrapper savingWrapper = FindObjectOfType<SavingWrapper>();
             savingWrapper.Save();
             Health health = GetComponent<Health>();
@@ -47,6 +50,8 @@ namespace RPG.Control
             yield return fader.FadeIn(fadeInTime);
             health.IsDead = false;
             GetComponent<Animator>().SetTrigger("revive");
+            yield return new WaitForSeconds(animationTime);
+            GetComponent<PlayerControls>().enabled = true;
         }
 
         private void ResetEnemies()

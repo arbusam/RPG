@@ -21,6 +21,8 @@ MonoBehaviour:
     description: Speak to Fred
   - reference: Adam
     description: Speak to Adam
+  - reference: Tim
+    description: Speak to Tim
   rewards:
   - number: 30
     item: {fileID: 11400000, guid: 9ef4c7a10be81488196a252583669431, type: 2}
