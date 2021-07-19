@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
+using GameDevTV.Inventories;
 using GameDevTV.Saving;
 using GameDevTV.Utils;
 using UnityEngine;
 
 namespace RPG.Stats
 {
-    public class EnhancementStore : MonoBehaviour, IModifierProvider, ISaveable, IPredicateEvaluator
+    public class EnhancementStore : MonoBehaviour, IModifierProvider, ISaveable, IPredicateEvaluator, IItemStore
     {
         [SerializeField] EnhancementBonus[] bonusConfig;
 
@@ -24,6 +25,8 @@ namespace RPG.Stats
 
         Dictionary<Stat, Dictionary<EnhancementCategory, float>> additiveBonusCache;
         Dictionary<Stat, Dictionary<EnhancementCategory, float>> percentageBonusCache;
+
+        int extraPoints = 0;
 
         private void Awake()
         {
@@ -108,6 +111,11 @@ namespace RPG.Stats
 
         public IEnumerable<float> GetAdditiveModifiers(Stat stat)
         {
+            if (stat == Stat.TotalEnhancementPoints)
+            {
+                yield return extraPoints;
+                yield break;
+            }
             if (!additiveBonusCache.ContainsKey(stat)) yield break;
 
             foreach (EnhancementCategory category in additiveBonusCache[stat].Keys)
@@ -147,6 +155,14 @@ namespace RPG.Stats
             if (!Enum.TryParse<EnhancementCategory>(parameters[0], out category) || !Int32.TryParse(parameters[1], out number)) return null;
 
             return GetPoints(category) >= number;
+        }
+
+        public int AddItems(InventoryItem item, int number)
+        {
+            EnhancementItem enhancementItem = item as EnhancementItem;
+            if (enhancementItem == null) return 0;
+            extraPoints += number;
+            return number;
         }
     }
 }
