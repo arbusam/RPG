@@ -80,7 +80,7 @@ MonoBehaviour:
     percentageBonusPerPoint: 30
   - category: 1
     stat: 4
-    additiveBonusPerPoint: 0
+    additiveBonusPerPoint: 0.5
     percentageBonusPerPoint: 30
   - category: 2
     stat: 5

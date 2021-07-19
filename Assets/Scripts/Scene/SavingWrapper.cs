@@ -29,7 +29,9 @@ namespace RPG.Scene
         public void NewGame(string saveFile)
         {
             SetCurrentSave(saveFile);
-            StartCoroutine(LoadFirstScene());
+            StartCoroutine(LoadFirstSceneCompletion(() => {
+                Save();
+            }));
         }
 
         public void LoadGame(string saveFile)
@@ -91,6 +93,12 @@ namespace RPG.Scene
             {
                 FindObjectOfType<CinematicsStartSequence>().StartSequence();
             }
+        }
+
+        private IEnumerator LoadFirstSceneCompletion(Action completion)
+        {
+            yield return LoadFirstScene();
+            completion();
         }
 
         void Update()
