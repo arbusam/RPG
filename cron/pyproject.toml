@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "RPG_Auto_Commit"
+version = "0.1.0"
+description = ""
+authors = ["Arhan Busam <arhan.busam@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+GitPython = "^2.1.11"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+commit_routine = "index:commit_routine"
