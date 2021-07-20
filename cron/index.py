@@ -13,8 +13,9 @@ def alter_file(file):
 def git_activities(repo):
     today = date.today() 
     repo.git.add(A=True)
-    repo.git.commit('-m', "Daily Commit")
-    repo.git.push('origin', 'HEAD:refs/for/master')
+    repo.git.commit('-m', str(today.strftime("%B %d, %Y")))
+    repo.git.pull()
+    repo.git.push('origin', 'HEAD:refs/for/master') 
 
 def commit_routine():
     alter_file(file)
