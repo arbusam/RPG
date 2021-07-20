@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebc30bd07e5b6412982e97cf41d5500b, type: 3}
+  m_Name: Teleportation Hub
+  m_EditorClassIdentifier: 
+  objectives:
+  - reference: Gather
+    description: Gather 10 pieces of Old Armor and give it to The Teleporter so he
+      can fix the Teleportation Hub.
+    usesCondition: 1
+    completionCondition:
+      and:
+      - or:
+        - not: 0
+          predicate: HasInventoryItem
+          parameters:
+          - 1e2eb0d9-ea47-4bec-9742-ce3ad4ac2239
+          - 10
+  - reference: Give
+    description: Give the Old Armor to The Teleporter.
+    usesCondition: 0
+    completionCondition:
+      and: []
+  rewards: []

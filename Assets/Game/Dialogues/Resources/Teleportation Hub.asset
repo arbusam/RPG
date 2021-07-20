@@ -1,0 +1,428 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7989299840507545877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: b1652ab0-1d71-4c4c-99ec-c01a9e7ebc3e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: No
+  children:
+  - 5fe91799-1dc0-470f-bf17-2ad5cc325589
+  rect:
+    serializedVersion: 2
+    x: 795
+    y: 532
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-6669197417359937060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: ca95b514-0ba2-4cee-85f0-2bcd3e8b8b94
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Sorry but you don't have enough
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 554
+    y: 335
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - not: 1
+        predicate: HasInventoryItem
+        parameters:
+        - 1e2eb0d9-ea47-4bec-9742-ce3ad4ac2239
+        - 10
+--- !u!114 &-4687036145863090411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: ebb72b71-ea1f-4b0b-9f81-acb88c300e22
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: That may be be what it looks like at first sight but it is a lot more.
+  children:
+  - 1a9c9221-d4a5-475b-8e8f-0182338cd135
+  rect:
+    serializedVersion: 2
+    x: 555
+    y: 238
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-4257646783949003756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 9d5b4854-13fa-4ea6-8cd7-3de697e2b4a1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Yes that's perfect. Can I have it to repair the Teleportation Hub?
+  children:
+  - 7e6d9ed3-ddea-40ef-88d8-ba8e9f882f45
+  - b1652ab0-1d71-4c4c-99ec-c01a9e7ebc3e
+  rect:
+    serializedVersion: 2
+    x: 550
+    y: 467
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - not: 0
+        predicate: HasInventoryItem
+        parameters:
+        - 1e2eb0d9-ea47-4bec-9742-ce3ad4ac2239
+        - 10
+--- !u!114 &-2812052758361423359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 5fe91799-1dc0-470f-bf17-2ad5cc325589
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Oh...
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1028
+    y: 604
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-2435390476265094372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 38d2da72-4a49-4b52-9cbb-82ab711417df
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Correct.
+  children:
+  - 1a9c9221-d4a5-475b-8e8f-0182338cd135
+  rect:
+    serializedVersion: 2
+    x: 549
+    y: 102
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &-1707809184413814650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: e2b0966d-b72c-4520-96cc-18b4a2957b51
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I have the armor
+  children:
+  - ca95b514-0ba2-4cee-85f0-2bcd3e8b8b94
+  - 9d5b4854-13fa-4ea6-8cd7-3de697e2b4a1
+  rect:
+    serializedVersion: 2
+    x: 303
+    y: 356
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - not: 0
+        predicate: HasQuest
+        parameters:
+        - Teleportation Hub
+    - or:
+      - not: 0
+        predicate: HasInventoryItem
+        parameters:
+        - 1e2eb0d9-ea47-4bec-9742-ce3ad4ac2239
+--- !u!114 &-88526428636030910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 0e63b7a7-6f8b-4ca0-9253-03bc38562c08
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Thank you. You can now use the Teleportation Hub. Just step inside and select
+    where to go.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 1036
+    y: 406
+    width: 200
+    height: 100
+  onEnterAction: CompleteQuest
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa4fa260284840f2891ed65de31d185, type: 3}
+  m_Name: Teleportation Hub
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 8474968689222184780}
+  - {fileID: 8659068240773829169}
+  - {fileID: 1473025098644672235}
+  - {fileID: 2475538275607282715}
+  - {fileID: -2435390476265094372}
+  - {fileID: -4687036145863090411}
+  - {fileID: 277776898988716287}
+  - {fileID: -1707809184413814650}
+  - {fileID: -6669197417359937060}
+  - {fileID: -4257646783949003756}
+  - {fileID: 7814446327102721505}
+  - {fileID: -7989299840507545877}
+  - {fileID: -2812052758361423359}
+  - {fileID: -88526428636030910}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &277776898988716287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 1a9c9221-d4a5-475b-8e8f-0182338cd135
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: This machine can teleport you to any location you've been before. Sadly it
+    doesn't work anymore and the only way I can fix it is with 10 old armor.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 799
+    y: 102
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: GiveQuest
+  condition:
+    and: []
+--- !u!114 &1473025098644672235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: f4f3a2ca-18c7-4682-bc22-7ea399aa322e
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: An old shed?
+  children:
+  - ebb72b71-ea1f-4b0b-9f81-acb88c300e22
+  rect:
+    serializedVersion: 2
+    x: 305
+    y: 238
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &2475538275607282715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: cd690cdd-935b-425f-a4e3-2e8e097117d9
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I have no idea
+  children:
+  - 1a9c9221-d4a5-475b-8e8f-0182338cd135
+  rect:
+    serializedVersion: 2
+    x: 291
+    y: 626
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &7814446327102721505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 7e6d9ed3-ddea-40ef-88d8-ba8e9f882f45
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Sure thing
+  children:
+  - 0e63b7a7-6f8b-4ca0-9253-03bc38562c08
+  rect:
+    serializedVersion: 2
+    x: 796
+    y: 406
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+--- !u!114 &8474968689222184780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: b787f7a1-b03c-41d0-8c3a-c1f90d1d854c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Do you know what this amazing machine behind me is?
+  children:
+  - 23de7509-71f2-49d1-a014-4e723d0df15c
+  - f4f3a2ca-18c7-4682-bc22-7ea399aa322e
+  - e2b0966d-b72c-4520-96cc-18b4a2957b51
+  - cd690cdd-935b-425f-a4e3-2e8e097117d9
+  rect:
+    serializedVersion: 2
+    x: 49
+    y: 239
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and:
+    - or:
+      - not: 1
+        predicate: HasQuest
+        parameters:
+        - Teleportation Hub
+      - not: 1
+        predicate: ClaimedQuest
+        parameters:
+        - Teleportation Hub
+--- !u!114 &8659068240773829169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5296ec9d7225464e90542f4971fe73f, type: 3}
+  m_Name: 23de7509-71f2-49d1-a014-4e723d0df15c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Something magical?
+  children:
+  - 38d2da72-4a49-4b52-9cbb-82ab711417df
+  rect:
+    serializedVersion: 2
+    x: 299
+    y: 102
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []

@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Name: 4923882a-75f1-49e6-833f-c5552a3be9e9
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: You can view your balance in the bottom left corner. If you were lucky you
+  text: You can view your balance in the bottom left corner. If you are lucky you
     might find some money in a bag on the floor.
   children:
   - d7c267b1-29bf-4a56-ac58-457baf277689

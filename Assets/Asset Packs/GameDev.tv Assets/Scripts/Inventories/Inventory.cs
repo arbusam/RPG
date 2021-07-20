@@ -146,6 +146,20 @@ namespace GameDevTV.Inventories
             return false;
         }
 
+        public bool HasItems(InventoryItem item, int number)
+        {
+            int total = 0;
+            for (int i = 0; i < slots.Length; i++)
+            {
+                if (object.ReferenceEquals(slots[i].item, item))
+                {
+                    total++;
+                }
+            }
+            if (total >= number) return true;
+            return false;
+        }
+
         /// <summary>
         /// Return the item type in the given slot.
         /// </summary>
@@ -309,7 +323,8 @@ namespace GameDevTV.Inventories
             switch (predicate)
             {
                 case "HasInventoryItem":
-                return HasItem(InventoryItem.GetFromID(parameters[0]));
+                if (parameters.Length == 1) return HasItem(InventoryItem.GetFromID(parameters[0]));
+                return HasItems(InventoryItem.GetFromID(parameters[0]), Int32.Parse(parameters[1]));
             }
 
             return null;
