@@ -11,11 +11,10 @@ def alter_file(file):
         f.write(today.strftime("%B %d, %Y") + "\n")
 
 def git_activities(repo):
-    if len(repo.untracked_files):
-        today = date.today() 
-        repo.git.add(A=True)
-        repo.git.commit('-m', today.strftime("%B %d, %Y"))
-        repo.git.push('origin', 'HEAD:refs/for/master') 
+    today = date.today() 
+    repo.git.add(A=True)
+    repo.git.commit('-m', "Daily Commit")
+    repo.git.push('origin', 'HEAD:refs/for/master') 
 
 def commit_routine():
     alter_file(file)
