@@ -271,8 +271,9 @@ MonoBehaviour:
   m_Name: 1a9c9221-d4a5-475b-8e8f-0182338cd135
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: This machine can teleport you to any location you've been before. Sadly it
-    doesn't work anymore and the only way I can fix it is with 10 old armor.
+  text: This machine is called a Teleportation Hub. It can teleport you to any Teleportation
+    Hub you've been before. Sadly it doesn't work anymore and the only way I can
+    fix it is with 10 old armor.
   children: []
   rect:
     serializedVersion: 2
